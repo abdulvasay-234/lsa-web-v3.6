@@ -1,0 +1,3441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+	<link rel="icon" type="image/png" sizes="32x32" href="../imgs/Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../imgs/Favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../imgs/Favicon/apple-touch-icon.png">
+	<link rel="shortcut icon" href="../imgs/Favicon/favicon.ico">
+	<link rel="manifest" href="../imgs/Favicon/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="School of Programming at Lords Skill Academy (LSA) - Transform your coding skills into a real software career.  Learn Data Science, Full Stack Java, Cyber Security, Python & Java.  Industry-ready programming courses with hands-on projects & placement support.">
+    <meta name="keywords" content="programming courses, coding bootcamp, data science course, full stack development, cyber security training, Python programming, Java programming, software developer course, LSA programming school">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lordsskillacademy.com/school-of-programming/">
+    
+    <link rel='stylesheet' href='../css/global.css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="theme-color" content="#2142a4">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+	--ds-bg: #f5f8ff;
+	--ds-surface: #ffffff;
+	--ds-surface-alt: #f7fbff;
+	--ds-text: #10213a;
+	--ds-muted: #4d5f7b;
+	--ds-primary: #0c4a9a;
+	--ds-primary-strong: #07346f;
+	--ds-accent: #9f1239;
+	--ds-warm: #f59e0b;
+	--ds-border: #dbe7fb;
+	--ds-shadow: 0 14px 40px rgba(16, 33, 58, 0.1);
+	--ds-radius: 18px;
+	--ds-container: min(1160px, 92vw);
+	--section-gap: clamp(3rem, 7vw, 5rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+	font-family: 'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif;
+	color: var(--ds-text);
+	background:
+        radial-gradient(circle at 92% 8%, rgba(159, 18, 57, 0.22), transparent 30%),
+        radial-gradient(circle at 6% 30%, rgba(12, 74, 154, 0.2), transparent 28%),
+        radial-gradient(circle at 52% 68%, rgba(37, 99, 235, 0.08), transparent 36%),
+		var(--ds-bg);
+    background-attachment: fixed;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { text-decoration: none; color: inherit; display: inline-block; }
+
+button { cursor: pointer; border: none; font-family: inherit; min-width: 44px; min-height: 44px; -webkit-tap-highlight-color: transparent; }
+
+p, li { color: var(--ds-muted); }
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+	button:active, a:active { opacity: 0.8; }
+	.faq-question:active, .course-card:active { opacity: 0.95; }
+}
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(20px); }
+.reveal.active { animation: revealUp 0.3s ease-out forwards; }
+@keyframes revealUp {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* CONTAINERS */
+.container { width: var(--ds-container); margin: 0 auto; padding: 0 1rem; }
+.container-wide { width: min(1360px, 96vw); margin: 0 auto; padding: 0 1rem; }
+
+main section { padding: var(--section-gap) 0; }
+
+/* SECTION HEADINGS */
+.section-head {
+    margin-bottom: clamp(1.3rem, 3vw, 2rem);
+}
+
+.section-kicker {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ds-primary);
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+}
+
+.section-title {
+	font-size: clamp(1.6rem, 3vw, 2.35rem);
+	line-height: 1.2;
+	font-weight: 800;
+	margin-bottom: 0.7rem;
+	color: var(--ds-text);
+}
+.section-subtitle {
+	max-width: 720px;
+	font-size: clamp(0.98rem, 1.6vw, 1.06rem);
+	color: var(--ds-muted);
+    margin: 0 0 2rem;
+	line-height: 1.7;
+}
+.intro-heading {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-weight: 800;
+	margin-bottom: 2.5rem;
+	color: var(--ds-text);
+	text-align: center;
+	line-height: 1.3;
+}
+
+/* BUTTONS */
+.btn {
+	border: 0;
+	border-radius: 12px;
+	padding: 0.85rem 1.4rem;
+	font-weight: 700;
+	font-size: 0.95rem;
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 44px;
+	transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.btn-primary {
+	background: linear-gradient(135deg, var(--ds-primary), #2563eb);
+	color: #ffffff;
+	box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 26px rgba(37, 99, 235, 0.34); }
+.btn-secondary {
+	background: #ffffff;
+	border: 1px solid var(--ds-border);
+	color: var(--ds-primary-strong);
+}
+.btn-secondary:hover { border-color: #adc8f8; background: #f8fbff; }
+.btn-white {
+	background: #ffffff;
+	color: var(--ds-primary-strong);
+	border: 1px solid rgba(203, 216, 255, 0.72);
+	box-shadow: 0 10px 24px rgba(7, 29, 86, 0.22);
+}
+.btn-white:hover { background: #f8fbff; transform: translateY(-2px); }
+
+/* HEADER */
+.header {
+	background-color: #ffffff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	padding: 0.5rem 0;
+}
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo img { width: clamp(120px, 20vw, 160px); height: auto; }
+.hamburger-menu { display: none; flex-direction: column; cursor: pointer; gap: 5px; z-index: 1001; }
+.hamburger-menu span { width: 25px; height: 3px; background-color: var(--ds-primary); border-radius: 2px; transition: all 0.3s ease; }
+.hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+.hamburger-menu.active span:nth-child(2) { opacity: 0; }
+.hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+.nav-menu { display: none; }
+.nav-menu.active {
+	display: flex;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	right: 0;
+	flex-direction: column;
+	background: #ffffff;
+	padding: 1.25rem;
+	box-shadow: 0 8px 16px rgba(30, 64, 175, 0.1);
+	z-index: 1000;
+}
+.nav-menu ul { display: flex; flex-direction: column; list-style: none; gap: 0.75rem; }
+.nav-menu a { font-weight: 600; color: var(--ds-muted); transition: color 0.2s ease; padding: 0.75rem 0; display: block; }
+.nav-menu a:hover { color: var(--ds-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--ds-muted); }
+.breadcrumb a { color: var(--ds-primary); }
+
+main { position: relative; }
+
+/* ==============================
+   PAGE HERO — DS navy blue
+   ============================== */
+.page-hero {
+	padding: clamp(3rem, 7vw, 5.5rem) 0;
+	background-color: #2142a4;
+	background-image:
+		linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px),
+		linear-gradient(180deg, #2848ad 0%, #213f9a 100%);
+	background-size: 44px 44px, 44px 44px, 100% 100%;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.page-hero h1 {
+	font-size: clamp(2.25rem, 6vw, 4rem);
+	font-weight: 800;
+	line-height: 1.05;
+	color: #eff4ff;
+	margin-bottom: 1.1rem;
+	letter-spacing: -0.02em;
+}
+.page-hero-description {
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	color: #d8e4ff;
+	max-width: 640px;
+	margin: 0 auto 2rem;
+	line-height: 1.65;
+}
+
+/* ==============================
+   SCHOOL INTRO
+   ============================== */
+.school-intro {
+    background: linear-gradient(180deg, #eef5ff 0%, #f8fbff 100%);
+    border-top: 1px solid #d8e6fb;
+    border-bottom: 1px solid #d8e6fb;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.95fr) minmax(320px, 1.05fr);
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.intro-media {
+    position: relative;
+    min-height: clamp(280px, 34vw, 390px);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #cfe1ff;
+    box-shadow: 0 18px 38px rgba(16, 33, 58, 0.15);
+    background: #dce8fb;
+}
+
+.intro-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 47, 86, 0.08), rgba(15, 47, 86, 0.48));
+}
+
+.intro-image {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-stat-tag {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.48rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(9, 35, 74, 0.74);
+    border: 1px solid rgba(205, 224, 255, 0.44);
+    color: #eaf2ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    backdrop-filter: blur(3px);
+}
+
+.intro-stat-tag::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.22);
+}
+
+.intro-panel {
+    background: linear-gradient(160deg, #ffffff 0%, #f5f9ff 100%);
+    border: 1px solid var(--ds-border);
+    border-radius: 18px;
+    padding: clamp(1.1rem, 2.3vw, 1.65rem);
+    box-shadow: 0 12px 26px rgba(16, 33, 58, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.95rem;
+}
+
+.intro-text p {
+    font-size: clamp(0.96rem, 1.7vw, 1.03rem);
+    color: var(--ds-muted);
+    margin: 0;
+    line-height: 1.68;
+}
+
+.intro-highlights {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.72rem;
+    margin-top: 0.2rem;
+    padding: 0;
+}
+
+.intro-highlights li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 0.72rem 0.72rem 0.72rem 2.1rem;
+    font-size: 0.89rem;
+    line-height: 1.48;
+    color: #3e5576;
+    background: #ffffff;
+    border: 1px solid #dbe7fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(16, 33, 58, 0.05);
+}
+
+.intro-highlights li::before {
+    content: "✓";
+    position: absolute;
+    left: 0.68rem;
+    top: 0.7rem;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.66rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(180deg, var(--ds-primary) 0%, #1d4ed8 100%);
+}
+
+/* ==============================
+   CAREER PATHS
+   ============================== */
+.career-paths {
+	background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+	border-top: 1px solid #d8e6fb;
+	border-bottom: 1px solid #d8e6fb;
+}
+.paths-grid { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: 2rem; }
+.path-card {
+	background: linear-gradient(155deg, #ffffff 0%, #f4f9ff 100%);
+	border: 1px solid var(--ds-border);
+	border-radius: var(--ds-radius);
+	padding: 1.4rem;
+	box-shadow: 0 8px 20px rgba(14, 24, 44, 0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.path-card:hover { transform: translateY(-3px); border-color: #b9cceb; box-shadow: 0 14px 28px rgba(20, 44, 86, 0.14); }
+.path-icon {
+	width: 56px; height: 56px;
+	background: linear-gradient(160deg, #e8f0ff, #fbe7ee);
+	border: 1px solid #cfe1ff;
+	border-radius: 12px;
+	display: flex; align-items: center; justify-content: center;
+	margin-bottom: 1rem;
+	color: var(--ds-primary-strong);
+	font-weight: 800; font-size: 0.78rem;
+}
+.path-card h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; margin-bottom: 0.75rem; color: var(--ds-text); }
+.path-card p { font-size: clamp(0.92rem, 1.8vw, 1rem); color: var(--ds-muted); margin-bottom: 1.1rem; line-height: 1.6; }
+.path-progression { font-size: 0.9rem; color: var(--ds-primary); font-weight: 700; margin-bottom: 0.75rem; }
+.path-roles { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.path-roles li { font-size: 0.92rem; color: var(--ds-muted); padding-left: 1.25rem; position: relative; }
+.path-roles li::before { content: "→"; position: absolute; left: 0; color: var(--ds-primary); font-weight: 700; }
+
+/* ==============================
+   COURSES SECTION
+   ============================== */
+.courses { background: var(--ds-surface); }
+.courses-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; margin-top: 2rem; align-items: start; }
+
+.course-card {
+	background: var(--ds-surface);
+	border: 1px solid var(--ds-border);
+	border-radius: var(--ds-radius);
+	overflow: hidden;
+	box-shadow: 0 8px 20px rgba(16, 33, 58, 0.07);
+	transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+	display: flex;
+	flex-direction: column;
+}
+.course-card:hover { transform: translateY(-3px); border-color: #b9cceb; box-shadow: 0 16px 32px rgba(16, 44, 84, 0.14); }
+.course-image { width: 100%; height: 220px; background: linear-gradient(160deg, #e8f0ff 0%, #fbe7ee 100%); overflow: hidden; }
+.course-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+.course-card:hover .course-image img { transform: scale(1.02); }
+.course-content { padding: 1.4rem; display: flex; flex-direction: column; flex: 1; gap: 0.7rem; }
+.course-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.7rem; flex-wrap: wrap; gap: 0.7rem; width: 100%; }
+.course-title { font-size: clamp(1.25rem, 2.5vw, 1.6rem); font-weight: 800; color: var(--ds-text); flex: 1; margin: 0; line-height: 1.2; }
+.course-duration {
+	background: #ecf3ff;
+	border: 1px solid #cde0ff;
+	color: var(--ds-primary-strong);
+	border-radius: 999px;
+	padding: 0.35rem 0.85rem;
+	font-size: 0.84rem;
+	font-weight: 700;
+	white-space: nowrap;
+	flex-shrink: 0;
+	align-self: flex-start;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.course-card:hover .course-duration { background: linear-gradient(180deg, var(--ds-primary) 0%, #1d4ed8 100%); color: #ffffff; border-color: transparent; }
+.course-level { display: inline-block; background-color: #ecf3ff; color: var(--ds-primary); padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+.course-summary { font-size: clamp(0.9rem, 1.8vw, 0.98rem); color: var(--ds-muted); margin: 0 0 0.5rem 0; line-height: 1.55; }
+.course-skills { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 0.5rem 0 0.8rem 0; padding: 0; }
+.course-skills li {
+	display: flex; align-items: flex-start; gap: 0.65rem;
+	font-size: clamp(0.9rem, 1.7vw, 0.98rem); color: var(--ds-muted); line-height: 1.45;
+	background: #f7fbff; border: 1px solid var(--ds-border); border-radius: 10px; padding: 0.5rem 0.65rem;
+}
+.course-skills li::before { content: "✓"; color: var(--ds-primary); font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem; }
+.course-skills li:nth-child(n+5) { display: none; }
+.course-meta { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 0.5rem 0; font-size: 0.82rem; align-items: center; }
+.meta-item { display: flex; align-items: center; gap: 0.4rem; color: var(--ds-muted); font-weight: 600; background: #ecf3ff; border: 1px solid #cde0ff; padding: 0.28rem 0.6rem; border-radius: 999px; font-size: 0.78rem; }
+.meta-item.meta-item-highlight { background: #e8f0ff; border-color: #adc8f8; color: var(--ds-primary-strong); }
+.meta-item.meta-item-job { background: #dcfce7; border-color: #86efac; color: #166534; }
+.meta-item.meta-item-date { background: #fef3c7; border-color: #fcd34d; color: #92400e; }
+.course-actions { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.8rem; margin-top: auto; padding-top: 0.8rem; }
+.course-details-btn {
+	flex: 1 1 48%;
+	background: linear-gradient(135deg, var(--ds-primary), #2563eb);
+	color: #ffffff;
+	padding: 0.75rem;
+	border-radius: 12px;
+	font-weight: 700; font-size: 0.92rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	cursor: pointer; min-width: 140px; text-align: center; border: none;
+	box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+.course-details-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3); }
+.course-details-btn:focus { outline: 3px solid rgba(37, 99, 235, 0.4); outline-offset: 2px; }
+.course-advisor-btn {
+	flex: 1 1 48%;
+	background: #ffffff;
+	border: 1px solid var(--ds-border);
+	color: var(--ds-primary-strong);
+	padding: 0.75rem;
+	border-radius: 12px;
+	font-weight: 700; font-size: 0.92rem;
+	transition: border-color 0.2s ease, background 0.2s ease;
+	cursor: pointer; text-align: center; min-width: 140px;
+}
+.course-advisor-btn:hover { border-color: #adc8f8; background: #f8fbff; }
+
+/* Course details expandable */
+.course-details { display: none !important; }
+.course-details.active { display: none !important; }
+.course-details-content { padding: 1.5rem; background: #f7fbff; border-top: 1px solid var(--ds-border); }
+
+.detail-section { margin-bottom: 2rem; }
+.detail-section h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; margin-bottom: 1rem; margin-top: 0; color: var(--ds-text); padding-bottom: 0.75rem; border-bottom: 2px solid var(--ds-border); }
+.detail-section h4 { font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 700; margin-bottom: 0.85rem; margin-top: 1.5rem; color: var(--ds-text); }
+.detail-section h4:first-of-type { margin-top: 0; }
+.detail-section p { font-size: clamp(0.92rem, 1.8vw, 1rem); color: var(--ds-muted); line-height: 1.7; margin-bottom: 1rem; }
+.detail-section ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-left: 0.5rem; }
+.detail-section ul li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: clamp(0.9rem, 1.8vw, 1rem); color: var(--ds-muted); line-height: 1.65; padding: 0.5rem 0; }
+.detail-section ul li::before { content: "▸"; color: var(--ds-primary); font-weight: 700; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.2rem; }
+
+/* Skill categories / tools */
+.skill-categories { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: 0.75rem; }
+.skill-category {
+	background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+	border: 1px solid var(--ds-border);
+	padding: 1.25rem; border-radius: 14px;
+	box-shadow: 0 8px 18px rgba(14, 24, 44, 0.06);
+	transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.skill-category:hover { border-color: #b9cceb; box-shadow: 0 12px 24px rgba(16, 44, 84, 0.12); }
+.skill-category h4 { margin-top: 0; }
+.tools-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1rem; }
+.tool-tag {
+	background: #ecf3ff; color: var(--ds-primary-strong);
+	padding: 0.38rem 0.8rem; border-radius: 8px; border: 1px solid #cde0ff;
+	font-size: 0.84rem; font-weight: 700;
+	transition: transform 0.18s ease, box-shadow 0.18s ease; display: inline-block;
+}
+.tool-tag:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(12, 74, 154, 0.15); background: #dde9ff; }
+
+/* Projects list */
+.projects-list { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: 0.75rem; }
+.project-item {
+	background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+	padding: 1.25rem; border-radius: 14px;
+	border: 1px solid var(--ds-border);
+	box-shadow: 0 8px 18px rgba(16, 33, 58, 0.06);
+	transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+.project-item:hover { border-color: #b9cceb; box-shadow: 0 14px 26px rgba(16, 44, 84, 0.12); transform: translateY(-2px); }
+.project-item h5 { font-size: clamp(0.95rem, 2vw, 1.05rem); font-weight: 700; color: var(--ds-text); margin: 0 0 0.6rem 0; }
+.project-item p { margin: 0; font-size: 0.92rem; color: var(--ds-muted); line-height: 1.55; }
+
+/* Skill badges */
+.skill-badge {
+	display: inline-flex; align-items: center; gap: 0.45rem;
+	padding: 0.38rem 0.8rem;
+	background: #ecf3ff; border: 1px solid #cde0ff; border-radius: 999px;
+	color: var(--ds-primary-strong); font-weight: 700; font-size: 0.8rem;
+	transition: transform 0.18s ease;
+}
+.skill-badge:hover { transform: translateY(-1px); background: #dde9ff; }
+.skill-badge::before { content: "✓"; display: flex; align-items: center; justify-content: center; width: 18px; height: 18px; background: var(--ds-primary); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; }
+
+/* Learning outcomes */
+.learning-outcomes {
+	margin: 1.5rem 0; padding: 1.4rem;
+	background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+	border: 1px solid var(--ds-border); border-radius: 12px; border-left: 4px solid var(--ds-primary);
+	box-shadow: 0 6px 18px rgba(16, 33, 58, 0.06);
+}
+.learning-outcomes h4 { font-size: 0.92rem; font-weight: 800; color: var(--ds-primary-strong); margin: 0 0 1rem 0; text-transform: uppercase; letter-spacing: 0.06em; }
+.learning-outcomes ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin: 0; padding: 0; }
+.learning-outcomes li { font-size: 0.94rem; color: var(--ds-muted); display: flex; align-items: flex-start; gap: 0.65rem; line-height: 1.5; }
+.learning-outcomes li::before { content: "→"; color: var(--ds-primary); font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 0.12rem; }
+
+/* Difficulty badges */
+.difficulty-badge { display: inline-block; padding: 0.28rem 0.7rem; border-radius: 999px; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.difficulty-beginner { background-color: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.difficulty-intermediate { background-color: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+.difficulty-advanced { background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+/* Prereq / cert badges */
+.prerequisite-badge { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; color: #92400e; font-weight: 600; font-size: 0.82rem; white-space: nowrap; }
+.prerequisite-badge::before { content: "⚡"; font-size: 0.85rem; }
+.certification-badge { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem; background: #dcfce7; border: 1px solid #86efac; border-radius: 8px; color: #166534; font-weight: 700; font-size: 0.88rem; white-space: nowrap; }
+.certification-badge::before { content: "🎓"; font-size: 1rem; }
+
+/* Outcomes grid */
+.outcomes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 1.75rem; }
+
+/* ==============================
+   LEARNING METHODOLOGY
+   ============================== */
+.learning-methodology {
+	background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+    border-top: 1px solid #d9e8ff;
+    border-bottom: 1px solid #d9e8ff;
+}
+.journey-title-highlight {
+    color: inherit;
+}
+.journey-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.journey-timeline-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    z-index: 2;
+    pointer-events: none;
+}
+.journey-road-path {
+    fill: none;
+    stroke: #b91c1c;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.98;
+    filter: drop-shadow(0 0 3px rgba(185, 28, 28, 0.24));
+}
+.journey-road-glow-orb {
+    fill: #ffd8dc;
+    filter: drop-shadow(0 0 10px rgba(185, 28, 28, 0.48));
+    opacity: 0.92;
+}
+.journey-road-glow-core {
+    fill: #ffffff;
+    opacity: 0.98;
+}
+.journey-road-glow-halo {
+    fill: rgba(248, 113, 113, 0.26);
+    filter: drop-shadow(0 0 14px rgba(185, 28, 28, 0.34));
+}
+.journey-road-node {
+    fill: #991b1b;
+    stroke: #ffffff;
+    stroke-width: 1.3;
+}
+.journey-road-nodes {
+    display: none;
+}
+.journey-item {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    width: 100%;
+}
+.journey-left {
+    justify-content: flex-end;
+    padding-right: calc(50% + 1.5rem);
+}
+.journey-left::before {
+    content: none;
+    display: none;
+}
+.journey-right {
+    justify-content: flex-start;
+    padding-left: calc(50% + 1.5rem);
+}
+.journey-right::before {
+    content: none;
+    display: none;
+}
+.journey-box {
+    background: #ffffff;
+    border: 1px solid var(--ds-border);
+    border-radius: 16px;
+    padding: 1.8rem;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 2px 8px rgba(16, 33, 58, 0.04);
+    transition: all 0.3s ease;
+    position: relative;
+}
+.journey-left .journey-box::after,
+.journey-right .journey-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    width: 11px;
+    height: 11px;
+    transform: translateY(-50%);
+    background: #991b1b;
+    opacity: 0.95;
+    border-radius: 50%;
+    border: 1px solid #ffe6ea;
+    box-shadow:
+        0 0 0 1px rgba(153, 27, 27, 0.34),
+        0 0 8px rgba(185, 28, 28, 0.34),
+        0 11px 0 -3px rgba(185, 28, 28, 0.34),
+        0 21px 0 -4px rgba(185, 28, 28, 0.26),
+        0 31px 0 -4px rgba(185, 28, 28, 0.2),
+        0 40px 0 -5px rgba(185, 28, 28, 0.14);
+    z-index: 3;
+}
+.journey-left .journey-box::after {
+    right: -14px;
+}
+.journey-right .journey-box::after {
+    left: -14px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .journey-road-glow-halo animateMotion,
+    .journey-road-glow-orb animateMotion,
+    .journey-road-glow-core animateMotion {
+        display: none;
+    }
+}
+.journey-box:hover {
+    box-shadow: 0 8px 24px rgba(16, 33, 58, 0.12);
+    border-color: #c7d9f7;
+}
+.journey-box-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #10213a;
+    margin-bottom: 0.6rem;
+}
+.journey-box-desc {
+    font-size: 0.95rem;
+    color: #4d5f7b;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.journey-check {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #0c4a9a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.journey-quote {
+    margin-top: 2rem;
+    padding: 1.6rem;
+    background: linear-gradient(155deg, #ffffff 0%, #eef5ff 100%);
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid var(--ds-border);
+}
+.journey-quote p {
+    font-size: clamp(1.02rem, 2.2vw, 1.32rem);
+    font-weight: 800;
+    color: var(--ds-primary-strong);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ==============================
+   OUTCOMES — Light like DS
+   ============================== */
+.outcomes {
+    background:
+        radial-gradient(circle at 92% 8%, rgba(159, 18, 57, 0.12), transparent 34%),
+        radial-gradient(circle at 12% 82%, rgba(12, 74, 154, 0.14), transparent 36%),
+        linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+	border-top: 1px solid #d8e6fb;
+	border-bottom: 1px solid #d8e6fb;
+}
+.outcomes > .container > .section-title,
+.outcomes > .container > .section-subtitle { color: var(--ds-text); }
+
+.outcomes-grid {
+    gap: 1.4rem;
+    margin-top: 2rem;
+}
+
+.outcome-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 249, 255, 0.96) 100%);
+    border: 1px solid #d4e3fb;
+    border-radius: 20px;
+    padding: 1.35rem;
+    box-shadow: 0 12px 28px rgba(16, 33, 58, 0.1);
+	transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.outcome-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0c4a9a 0%, #1d4ed8 55%, #9f1239 100%);
+}
+
+.outcome-card:hover {
+    transform: translateY(-6px);
+    border-color: #b9cceb;
+    box-shadow: 0 18px 36px rgba(16, 44, 84, 0.16), 0 0 0 1px rgba(159, 18, 57, 0.1);
+}
+
+.outcome-icon {
+    width: 78px;
+    height: 78px;
+	background: linear-gradient(160deg, #e8f0ff, #fbe7ee);
+	border: 1px solid #cfe1ff;
+    border-radius: 16px;
+	display: flex; align-items: center; justify-content: center;
+    margin: 0 0 1rem;
+	overflow: hidden; box-shadow: 0 8px 18px rgba(12, 74, 154, 0.16); flex-shrink: 0;
+}
+.outcome-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.outcome-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.62rem;
+    border-radius: 999px;
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0c4a9a;
+    background: #ecf3ff;
+    border: 1px solid #cde0ff;
+    margin-bottom: 0.65rem;
+}
+
+.outcome-card h3 {
+    font-size: clamp(1.08rem, 2vw, 1.3rem);
+    font-weight: 800;
+    margin: 0 0 0.55rem;
+    color: var(--ds-text);
+    line-height: 1.3;
+}
+
+.outcome-card p {
+    font-size: clamp(0.9rem, 1.7vw, 0.97rem);
+    color: var(--ds-muted);
+    line-height: 1.63;
+    margin: 0;
+}
+
+.outcome-points {
+    list-style: none;
+    margin: 0.85rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+}
+
+.outcome-points li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: #4d5f7b;
+}
+
+.outcome-points li::before {
+    content: '?';
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: #1d4ed8;
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.outcome-foot {
+    margin-top: auto;
+    padding-top: 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0c4a9a;
+    letter-spacing: 0.02em;
+    border-top: 1px dashed #d7e5fb;
+}
+
+/* ==============================
+   CAREER ROLES
+   ============================== */
+.career-roles { background: var(--ds-surface); }
+.roles-section { margin-top: 0; padding: 0; background: transparent; border: none; border-radius: 0; }
+.roles-section h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; margin-bottom: 1.25rem; color: var(--ds-text); text-align: center; }
+.roles-section .faq-container { padding: 0; }
+
+/* Progression tracker */
+.progression-tracker { margin: 1.75rem 0; padding: 1.6rem; background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%); border: 1px solid var(--ds-border); border-radius: 14px; }
+.progression-tracker h4 { font-size: 0.88rem; font-weight: 800; color: var(--ds-primary-strong); margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.progression-steps { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.progression-step { flex: 1; min-width: 110px; text-align: center; position: relative; }
+.progression-step::after { content: ''; position: absolute; right: -0.5rem; top: 28px; width: calc(100% + 1rem); height: 2px; background: linear-gradient(90deg, var(--ds-border), transparent); z-index: 0; }
+.progression-step:last-child::after { display: none; }
+.progression-circle {
+	width: 56px; height: 56px; margin: 0 auto 0.6rem;
+	background: linear-gradient(160deg, #e8f0ff, #dde9ff);
+	border: 2px solid #cde0ff; border-radius: 50%;
+	display: flex; align-items: center; justify-content: center;
+	font-weight: 800; color: var(--ds-primary); font-size: 1.35rem; position: relative; z-index: 1;
+}
+.progression-label { font-size: 0.82rem; font-weight: 700; color: var(--ds-text); }
+.progression-sublabel { font-size: 0.72rem; color: var(--ds-muted); margin-top: 0.2rem; }
+
+/* ==============================
+   FAQ
+   ============================== */
+.faq-container { display: flex; flex-direction: column; gap: 0.8rem; }
+.faq-item {
+	background: var(--ds-surface); border: 1px solid var(--ds-border); border-radius: 14px;
+	overflow: hidden; box-shadow: 0 6px 16px rgba(16, 33, 58, 0.05);
+	transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.faq-item:hover { border-color: #b9cceb; box-shadow: 0 10px 22px rgba(16, 44, 84, 0.1); }
+.faq-question {
+	width: 100%; padding: 1.2rem; background: transparent; border: none; text-align: left;
+	font-size: clamp(0.95rem, 2vw, 1.06rem); font-weight: 700; color: var(--ds-text);
+	cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+	transition: color 0.2s ease;
+}
+.faq-question:hover { color: var(--ds-primary); }
+.faq-question::after { content: "+"; color: var(--ds-primary); font-weight: 800; font-size: 1.15rem; transition: transform 0.2s ease; }
+.faq-item.active .faq-question { background: #eef5ff; color: var(--ds-primary-strong); }
+.faq-item.active .faq-question::after { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+.faq-item.active .faq-answer { max-height: 500px; }
+.faq-answer-content { padding: 1.2rem; background: #f7fbff; border-top: 1px solid var(--ds-border); font-size: clamp(0.9rem, 1.8vw, 1rem); color: var(--ds-muted); line-height: 1.65; }
+
+/* ==============================
+   HIRING PARTNERS
+   ============================== */
+.partners { background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%); border-top: 1px solid #d8e6fb; border-bottom: 1px solid #d8e6fb; }
+.partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; align-items: center; }
+.partner-card {
+	background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+	border: 1px solid var(--ds-border); border-radius: 14px; padding: 1.5rem;
+	display: flex; align-items: center; justify-content: center; min-height: 110px;
+	box-shadow: 0 8px 18px rgba(16, 33, 58, 0.06);
+	transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+}
+.partner-card:hover { border-color: #b9cceb; box-shadow: 0 14px 26px rgba(16, 44, 84, 0.12); transform: translateY(-3px); }
+.partner-card img, .partner-logo { max-width: 160px; width: 100%; height: 60px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: opacity 0.22s ease, filter 0.22s ease; }
+.partner-card:hover img { opacity: 0.9; filter: grayscale(30%); }
+.partners-single { display: flex; justify-content: center; }
+.partners-single .partner-card { width: min(100%, 980px); min-height: 0; padding: 0.55rem; border-radius: 16px; height: auto; overflow: hidden; }
+.partners-single .partner-logo { width: 100%; height: auto; max-height: 420px; object-fit: contain; border-radius: 12px; filter: none; opacity: 1; }
+
+/* ==============================
+   FINAL CTA
+   ============================== */
+.final-cta { background: var(--ds-bg); padding: var(--section-gap) 0; }
+.final-cta .container { background: transparent; }
+.cta-shell {
+	background: linear-gradient(145deg, #0f2f56, #0b457f);
+	border-radius: 24px;
+	padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+	color: #d9e8ff; text-align: center;
+	box-shadow: var(--ds-shadow);
+	max-width: 900px; margin: 0 auto;
+}
+.cta-shell h2, .final-cta h2 { color: #ffffff; font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 0.9rem; font-weight: 800; }
+.cta-shell p, .final-cta p { color: #d9e8ff; margin-bottom: 1.5rem; font-size: clamp(1rem, 2vw, 1.12rem); }
+.final-cta .btn-primary { background: linear-gradient(180deg, #ffc31a 0%, #f3af00 100%); color: #1343af; box-shadow: 0 10px 24px rgba(234, 177, 24, 0.38); }
+.final-cta .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(234, 177, 24, 0.46); }
+.final-cta .btn-secondary { background: rgba(245, 248, 252, 0.1); border: 1px solid rgba(203, 216, 255, 0.5); color: #d9e8ff; }
+.final-cta .btn-secondary:hover { background: rgba(245, 248, 252, 0.18); border-color: rgba(203, 216, 255, 0.75); }
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer { background: #11233c; color: #d2e2ff; padding: 3rem 0 2.5rem; margin-top: 1.6rem; }
+footer > div { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.footer-logo { display: inline-flex; align-items: center; }
+.footer-logo img { width: 160px; height: auto; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem; margin-top: 1.2rem; }
+.footer-section h3, .footer-title { color: #ffffff; margin-top: 0; margin-bottom: 0.6rem; font-size: 1rem; font-weight: 700; }
+.footer-section ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.footer-section li { margin-bottom: 0; }
+.footer-section a { color: #d2e2ff; text-decoration: none; transition: color 0.18s ease; }
+.footer-section a:hover { color: #6ee7df; }
+.footer-bottom { border-top: 1px solid rgba(211, 229, 255, 0.2); padding-top: 1rem; margin-top: 1.2rem; text-align: center; font-size: 0.86rem; color: #c0d5f4; }
+.footer-bottom p { margin: 0; line-height: 1.5; color: #c0d5f4; }
+
+/* ==============================
+   WHATSAPP WIDGET
+   ============================== */
+.whatsapp-widget { position: fixed; right: 1rem; bottom: 1rem; z-index: 1200; display: flex; align-items: center; gap: 0.75rem; }
+.whatsapp-toggle { width: 62px; height: 62px; border-radius: 50%; background: linear-gradient(135deg, #25d366, #128c7e); color: #ffffff; display: grid; place-items: center; box-shadow: 0 12px 28px rgba(18, 140, 126, 0.35); animation: whatsappFloat 2.2s ease-in-out infinite; border: 2px solid rgba(255, 255, 255, 0.85); cursor: pointer; }
+.whatsapp-toggle:hover { transform: scale(1.05); }
+.whatsapp-popup { background: #ffffff; color: #0f172a; font-weight: 600; font-size: 0.9rem; padding: 0.55rem 0.75rem; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16); white-space: nowrap; animation: whatsappPopupPulse 2.6s ease-in-out infinite; }
+@keyframes whatsappFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes whatsappPopupPulse { 0%, 100% { opacity: 0.9; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+
+/* ==============================
+   CURSOR GLOW (disabled)
+   ============================== */
+.cursor-glow { display: none; }
+
+/* ==============================
+   ACCESSIBILITY
+   ============================== */
+a:focus, button:focus { outline: 3px solid rgba(37, 99, 235, 0.45); outline-offset: 2px; }
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 767px) {
+	.hamburger-menu { display: flex; }
+    .intro-content { grid-template-columns: 1fr; gap: 1rem; }
+    .intro-media { min-height: 230px; }
+    .intro-highlights { grid-template-columns: 1fr; }
+	.courses-grid { grid-template-columns: 1fr; }
+	.paths-grid { grid-template-columns: 1fr; }
+	.whatsapp-widget { right: 0.75rem; bottom: 0.75rem; gap: 0.5rem; }
+	.whatsapp-toggle { width: 56px; height: 56px; }
+	.whatsapp-popup { font-size: 0.82rem; padding: 0.45rem 0.6rem; }
+}
+
+@media (min-width: 640px) {
+	.footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.skill-categories { grid-template-columns: repeat(2, 1fr); }
+	.projects-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+	.nav-menu { display: flex !important; position: static !important; flex-direction: row; background: transparent !important; padding: 0 !important; box-shadow: none !important; animation: none !important; }
+	.nav-menu ul { flex-direction: row; gap: 1.5rem; }
+	.hamburger-menu { display: none !important; }
+	.paths-grid { grid-template-columns: repeat(2, 1fr); }
+	.outcomes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+	.footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.paths-grid { grid-template-columns: repeat(4, 1fr); }
+	.outcomes-grid { grid-template-columns: repeat(3, 1fr); }
+	.skill-categories { grid-template-columns: repeat(3, 1fr); }
+	.projects-list { grid-template-columns: repeat(3, 1fr); }
+    .journey-timeline { gap: 3rem; }
+    .journey-box { padding: 2rem; }
+}
+
+@media (max-width: 899px) {
+    .journey-timeline-svg {
+        opacity: 0.9;
+        z-index: 0;
+    }
+    .journey-item {
+        width: 100%;
+        justify-content: center !important;
+    }
+    .journey-left {
+        padding-right: 0;
+    }
+    .journey-right {
+        padding-left: 0;
+    }
+    .journey-left::before,
+    .journey-right::before {
+        display: none;
+    }
+    .journey-box {
+        max-width: min(72vw, 320px);
+        width: 100%;
+    }
+    .journey-left .journey-box {
+        transform: translateX(-18%);
+    }
+    .journey-right .journey-box {
+        transform: translateX(18%);
+    }
+}
+
+@media (max-width: 639px) {
+    .journey-timeline {
+        gap: 1.5rem;
+    }
+    .journey-box {
+        padding: 1.2rem;
+    }
+    .journey-box-title {
+        font-size: 1rem;
+    }
+    .journey-box-desc {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 900px) {
+	.courses-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+	.whatsapp-toggle { animation: none; }
+}
+
+/* Global header/footer layout */
+header, .header { padding: 0 !important; }
+header nav, .header-content { max-width: min(1200px, 100%) !important; width: min(1200px, 100%) !important; margin: 0 auto !important; padding: 0.38rem 0.85rem !important; gap: 1rem !important; align-items: center !important; justify-content: flex-start !important; }
+.nav-menu { margin-left: auto !important; }
+.nav-menu > ul { gap: 0.7rem !important; align-items: center !important; margin: 0 !important; padding: 0 !important; }
+.nav-menu a, .nav-links a, .nav-links li a, .nav-menu .dropdown-toggle { padding: 0.34rem 0.45rem !important; }
+footer, footer#contact, #contact { margin-top: 1.6rem !important; padding: 3rem 0 2.6rem !important; }
+footer [style*="max-width: 1400px"], footer .container { width: min(1200px, 100%) !important; max-width: min(1200px, 100%) !important; margin: 0 auto !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+footer .footer-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 1.2rem !important; margin-top: 1.2rem !important; }
+footer .footer-bottom { margin-top: 1.2rem !important; padding-top: 1rem !important; }
+@media (min-width: 640px) { footer .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (min-width: 900px) { footer .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 1.2rem !important; } }
+@media (max-width: 991px) { .nav-menu.active, .nav-links.active { padding: 0.85rem 1rem !important; gap: 0.4rem !important; } .nav-menu.active ul, .nav-links.active { gap: 0.35rem !important; margin: 0 !important; padding: 0 !important; } .nav-menu.active a, .nav-links.active a, .nav-links.active li a, .nav-menu.active .dropdown-toggle { padding: 0.75rem 0.4rem !important; } }
+
+</style>
+                <style id="local-header-footer-fixes">
+/* Shared header alignment across all pages */
+
+@keyframes headerLogoOrbit {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-4px) rotate(-0.6deg);
+    }
+}
+
+@keyframes headerSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header,
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-bottom: 1px solid #dbe8ff;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+header .container,
+.header .container,
+header .container-wide,
+.header .container-wide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+header nav,
+.header-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.38rem 0.85rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 1rem;
+}
+
+.logo,
+header nav > a:first-child {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.logo img {
+    width: clamp(112px, 14vw, 156px);
+    height: auto;
+    object-fit: contain;
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 4px;
+    animation: headerLogoOrbit 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #1e40af;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu ul,
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul,
+.nav-links {
+    justify-content: flex-end !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-links a:hover,
+.nav-links li a:hover {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+    text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+}
+
+.nav-menu a::after,
+.nav-links a::after,
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #1e40af);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-links a:hover::after,
+.nav-links li a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+}
+
+@media (max-width: 991px) {
+    .hamburger-menu {
+        display: flex !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        display: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 62px !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column !important;
+        gap: 0.4rem;
+        padding: 0.85rem 1rem !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12) !important;
+        border-bottom: 1px solid #dbe8ff;
+        z-index: 1190;
+        animation: headerSlideDown 0.3s ease-out;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.35rem;
+        width: 100%;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a {
+        width: 100%;
+        padding: 0.75rem 0.4rem;
+        display: block;
+    }
+
+    .nav-menu a::after,
+    .nav-links a::after,
+    .nav-links li a::after {
+        bottom: 0.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        margin-left: auto !important;
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+    }
+
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a {
+        padding: 0.4rem 0.55rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo img {
+        animation: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active,
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a,
+    .hamburger-menu span {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Shared programs mega-menu */
+.nav-menu > ul {
+    align-items: center;
+}
+
+.nav-menu .has-dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.nav-menu .dropdown-toggle:hover,
+.nav-menu .has-dropdown.open .dropdown-toggle {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+}
+
+.nav-menu .dropdown-caret {
+    font-size: 0.72rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-menu .has-dropdown.open .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-menu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #dbe8ff;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    min-width: 640px;
+    overflow: hidden;
+    z-index: 1210;
+}
+
+.nav-menu .programs-mega {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 320px;
+}
+
+.nav-menu .program-domains {
+    padding: 1.05rem;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+.nav-menu .program-domains-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.65rem;
+    color: #1f2937;
+}
+
+.nav-menu .program-domain-list {
+    list-style: none;
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+}
+
+.nav-menu .program-domain-list button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.72rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-menu .program-domain-list button:hover,
+.nav-menu .program-domain-list button.active {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.nav-menu .program-results {
+    padding: 1rem 1.05rem;
+}
+
+.nav-menu .program-panel {
+    display: none;
+}
+
+.nav-menu .program-panel.active {
+    display: block;
+}
+
+.nav-menu .program-group {
+    margin-bottom: 0.95rem;
+}
+
+.nav-menu .program-group:last-child {
+    margin-bottom: 0;
+}
+
+.nav-menu .program-group h4 {
+    margin: 0 0 0.55rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.nav-menu .program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.nav-menu .program-card-link {
+    display: block;
+    padding: 0.72rem 0.78rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+.nav-menu .program-card-title {
+    display: block;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.18rem;
+}
+
+.nav-menu .program-card-meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.nav-menu .dropdown-menu a::after,
+.nav-menu .program-domain-list button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.nav-menu .dropdown-menu a:hover {
+    transform: none;
+    text-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .nav-menu .has-dropdown:hover .dropdown-menu,
+    .nav-menu .has-dropdown:focus-within .dropdown-menu,
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: calc(100% + 0.45rem);
+        left: 0;
+        transform: none;
+        width: min(860px, 88vw);
+    }
+
+    .nav-menu .program-card-link:hover {
+        border-color: #fecaca;
+        background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    }
+
+    .nav-menu .program-card-link:hover .program-card-title {
+        color: #b91c1c;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 0.3rem;
+        width: 100%;
+        transform: none;
+    }
+
+    .nav-menu .programs-mega {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .nav-menu .program-domains {
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-menu .program-domains-title {
+        font-size: 1rem;
+    }
+
+    .nav-menu .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Final consistency override for pages with local header/nav styles */
+header,
+.header {
+    padding: 0 !important;
+}
+
+header nav,
+.header-content {
+    max-width: min(1200px, 100%) !important;
+    width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 0.38rem 0.85rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
+}
+
+.nav-menu {
+    margin-left: auto !important;
+}
+
+.nav-menu > ul {
+    gap: 1.25rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a,
+.nav-menu .dropdown-toggle {
+    padding: 0.4rem 0.55rem !important;
+}
+
+@media (max-width: 991px) {
+    .nav-menu.active,
+    .nav-links.active {
+        padding: 0.85rem 1rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        gap: 0.35rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a,
+    .nav-menu.active .dropdown-toggle {
+        padding: 0.75rem 0.4rem !important;
+    }
+}
+
+/* Shared footer spacing and layout */
+footer,
+footer#contact,
+#contact {
+    margin-top: 1.6rem !important;
+    padding: 3rem 0 2.6rem !important;
+}
+
+footer [style*="max-width: 1400px"],
+footer .container {
+    width: min(1200px, 100%) !important;
+    max-width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+footer .footer-logo {
+    margin-bottom: 0.5rem !important;
+}
+
+footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    margin-top: 1.2rem !important;
+}
+
+footer .footer-section ul,
+footer .footer-col ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.4rem !important;
+}
+
+footer .footer-office-list {
+    list-style: none !important;
+    display: grid !important;
+    gap: 0.68rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .footer-office-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+footer .footer-icon {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 0.08rem !important;
+    color: #9fc1f0 !important;
+}
+
+footer .footer-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    fill: currentColor !important;
+}
+
+footer .footer-office-item strong {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid rgba(211, 229, 255, 0.2) !important;
+    margin-top: 1.2rem !important;
+    padding-top: 0.95rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.01em !important;
+    color: #b2c8ea !important;
+}
+
+footer .footer-bottom p {
+    margin: 0 !important;
+    line-height: 1.45 !important;
+    color: inherit !important;
+}
+
+@media (min-width: 640px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.2rem !important;
+    }
+
+    footer .footer-bottom {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+footer,
+footer#contact,
+#contact {
+    padding: 1.6rem 0 1.2rem !important;
+    margin-top: 1rem !important;
+}
+.footer-grid {
+    margin-top: 0.8rem !important;
+}
+.footer-bottom {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+}
+.footer-map {
+    margin-top: 0.5rem;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111827;
+}
+.footer-map iframe {
+    width: 100%;
+    min-height: 130px;
+    border: 0;
+    display: block;
+}
+    </style>
+
+    <link rel='stylesheet' href='../css/header-unify.css'>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../">
+                            <img src="../imgs/home/LSA-Logo.png" 
+                             alt="Lords Skill Academy Logo" 
+                             width="160" 
+                             height="48">
+                    </a>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+<ul>
+<li><a href="../">Home</a></li>
+<li class="has-dropdown">
+<button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Programs menu">Programs <span class="dropdown-caret" aria-hidden="true">&#9662;</span></button>
+<div class="dropdown-menu" aria-label="Programs submenu">
+<div class="programs-mega">
+<aside class="program-domains">
+<p class="program-domains-title">Domains</p>
+<ul class="program-domain-list">
+<li><button type="button" class="active" data-program-target="programming" aria-selected="true">School of Programming</button></li>
+<li><button type="button" data-program-target="safety" aria-selected="false">School of Safety</button></li>
+</ul>
+</aside>
+<div class="program-results">
+<section class="program-panel active" data-program-panel="programming">
+<section class="program-group">
+<h4>School of Programming</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../school-of-programming/"><span class="program-card-title">School of Programming</span><span class="program-card-meta">Overview of all programming tracks</span></a>
+<a class="program-card-link" href="../ds/"><span class="program-card-title">Data Science Course</span><span class="program-card-meta">Dedicated data science program page</span></a>
+<a class="program-card-link" href="../full-stack-java/"><span class="program-card-title">Full Stack Development</span><span class="program-card-meta">Dedicated Full Stack Java program page</span></a>
+<a class="program-card-link" href="../python-programming/"><span class="program-card-title">Python and Java Tracks</span><span class="program-card-meta">Dedicated Python program page</span></a>
+</div>
+</section>
+</section>
+<section class="program-panel" data-program-panel="safety">
+<section class="program-group">
+<h4>School of Safety</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../cyber-security/"><span class="program-card-title">Cyber Security Course</span><span class="program-card-meta">Dedicated cyber security course page</span></a>
+<a class="program-card-link" href="../cyber-security/#course-structure"><span class="program-card-title">Ethical Hacking Track</span><span class="program-card-meta">Modules and practical coverage</span></a>
+<a class="program-card-link" href="../cyber-security/#projects"><span class="program-card-title">SOC Analyst Path</span><span class="program-card-meta">Project-based SOC readiness</span></a>
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+</li>
+<li><a href="../faq/">Community Guidelines</a></li>
+<li><a href="../career-guidance/">Career Guidance</a></li>
+<li><a href="../community-events/">Community</a></li>
+<li><a href="../blog/">Blog</a></li>
+<li><a href="../contact-us/">Contact Us</a></li>
+</ul>
+</nav>
+            </div>
+          
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-hero">
+            <div class="container">
+                <h1>School of Programming</h1>
+                <p class="page-hero-description">
+                    Where coding skills are transformed into real software careers. 
+                </p>
+                <a href="../contact-us/" class="btn btn-white">Talk to a Career Advisor</a>
+            </div>
+        </section>
+
+        
+        <section class="school-intro">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker">School of Programming</p>
+                    <h2 class="section-title">Programming at LSA: Career-Ready, Not Just Classroom-Ready</h2>
+                    <p class="section-subtitle">Build practical coding skills, problem-solving ability, and software career confidence through real projects and guided mentorship.</p>
+                </div>
+                
+                <div class="intro-content">
+                    <div class="intro-media">
+                        <div class="intro-image">
+                            <img src="../imgs/programming/Labs.jpg" 
+                                 alt="Students collaborating on programming projects in modern coding lab" 
+                                 loading="lazy">
+                        </div>
+                        <span class="intro-stat-tag">Project-led learning environment</span>
+                    </div>
+
+                    <div class="intro-panel">
+                        <div class="intro-text">
+                            <p>At the School of Programming, we do not stop at syntax. We train problem-solvers, developers, and software professionals for real-world work.</p>
+                            <p>Every track is built around practical execution: clean coding habits, product thinking, debugging depth, and team collaboration.</p>
+                        </div>
+                        <ul class="intro-highlights">
+                            <li>Logic building over rote learning</li>
+                            <li>Real-world problem solving over textbook-only practice</li>
+                            <li>Projects that strengthen your resume and portfolio</li>
+                            <li>Career readiness built from day one</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+                    
+                    
+                    
+                    
+        
+        <section class="courses" id="courses">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker">Programs</p>
+                    <h2 class="section-title">Programming Courses We Offer</h2>
+                    <p class="section-subtitle">
+                        Industry-aligned courses designed to make you job-ready.  
+                        Each course includes hands-on projects, real-world tools, and career support.
+                    </p>
+                </div>
+
+                <div class="courses-grid">
+                    
+                    
+                    <article class="course-card" data-link="/ds/">
+                        <div class="course-image">
+                            <img src="../imgs/programming/ds.png" 
+                                 alt="Data Science course - Students analyzing data with Python and machine learning" 
+                                 loading="lazy"
+                                 style="width: 100%; height: 100%; object-fit: fill;">
+                         
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3 class="course-title">Data Science</h3>
+                                <span class="course-duration">4 Months</span>
+                            </div>
+                            <p class="course-summary">Tech-first curriculum focused on analytics, ML pipelines, and deployment-ready skills.</p>
+                            <div class="course-meta">
+                                <span class="meta-item">120+ Hours Learning</span>
+                                <span class="meta-item">5 Real Projects</span>
+                                <span class="meta-item">Industry Mentors</span>
+                                <span class="meta-item meta-item-highlight">Certification Included</span>
+                                <span class="meta-item meta-item-job">Job Assurance Support</span>
+                                <span class="meta-item meta-item-date">Next Batch: 15 Jun 2026</span>
+                            </div>
+                            <ul class="course-skills">
+                                <li>Python programming & data structures</li>
+                                <li>Machine Learning & AI fundamentals</li>
+                                <li>Data visualization with Matplotlib & Seaborn</li>
+                                <li>Statistical analysis & predictive modeling</li>
+                            </ul>
+                            <div class="course-actions">
+                                <button class="course-details-btn" onclick="toggleCourseDetails(event, 'course-1')" aria-expanded="false" aria-controls="details-course-1">
+                                    Explore Course
+                                </button>
+                                <button class="course-advisor-btn" onclick="contactAdvisor(event)">Contact Career Advisor</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="course-details" id="details-course-1">
+                            <div class="course-details-content">
+                                
+                                
+                                <div class="detail-section">
+                                    <h3>What You Will Learn</h3>
+                                    <div class="progression-tracker">
+                                        <h4>Learning Path Progression</h4>
+                                        <div class="progression-steps">
+                                            <div class="progression-step">
+                                                <div class="progression-circle">1</div>
+                                                <div class="progression-label">Foundations</div>
+                                                <div class="progression-sublabel">Python & Libraries</div>
+                                            </div>
+                                            <div class="progression-step">
+                                                <div class="progression-circle">2</div>
+                                                <div class="progression-label">Data Analysis</div>
+                                                <div class="progression-sublabel">EDA & Visualization</div>
+                                            </div>
+                                            <div class="progression-step">
+                                                <div class="progression-circle">3</div>
+                                                <div class="progression-label">ML Algorithms</div>
+                                                <div class="progression-sublabel">Models & Training</div>
+                                            </div>
+                                            <div class="progression-step">
+                                                <div class="progression-circle">4</div>
+                                                <div class="progression-label">Deployment</div>
+                                                <div class="progression-sublabel">Production Ready</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="learning-outcomes">
+                                        <h4>Learning Outcomes</h4>
+                                        <ul>
+                                            <li>Build and deploy machine learning models in production</li>
+                                            <li>Analyze and visualize complex datasets effectively</li>
+                                            <li>Implement predictive algorithms for real-world problems</li>
+                                            <li>Work with big data frameworks and cloud platforms</li>
+                                            <li>Present data-driven insights to stakeholders</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Course Overview</h3>
+                                    <p>
+                                        Data Science is one of the most in-demand fields today. This course teaches you 
+                                        how to extract insights from data, build predictive models, and make data-driven decisions.  
+                                        You'll work with real-world datasets and industry-standard tools used by companies like Google, Amazon, and Microsoft.
+                                    </p>
+                                    <p>
+                                        By the end of this course, you'll be able to analyze complex datasets, build machine learning models, 
+                                        and communicate insights effectively through visualizations. 
+                                    </p>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Who This Course Is For</h3>
+                                    <ul>
+                                        <li>Engineering students looking to enter the data science field</li>
+                                        <li>Fresh graduates seeking high-demand tech careers</li>
+                                        <li>Career switchers interested in analytics and AI</li>
+                                        <li>Working professionals upskilling in data-driven roles</li>
+                                    </ul>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Skills You Will Master</h3>
+                                    <div class="skill-categories">
+                                        <div class="skill-category">
+                                            <h4>Programming & Data Handling</h4>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                                                <span class="skill-badge">Python Programming</span>
+                                                <span class="skill-badge">NumPy & Pandas</span>
+                                                <span class="skill-badge">SQL Databases</span>
+                                                <span class="skill-badge">Data Wrangling</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Machine Learning & AI</h4>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                                                <span class="skill-badge">Scikit-learn</span>
+                                                <span class="skill-badge">Supervised Learning</span>
+                                                <span class="skill-badge">Unsupervised Learning</span>
+                                                <span class="skill-badge">Deep Learning Basics</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Data Visualization</h4>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                                                <span class="skill-badge">Matplotlib</span>
+                                                <span class="skill-badge">Seaborn</span>
+                                                <span class="skill-badge">Power BI</span>
+                                                <span class="skill-badge">Dashboard Creation</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Statistics & Analysis</h4>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;">
+                                                <span class="skill-badge">Statistical Testing</span>
+                                                <span class="skill-badge">Hypothesis Testing</span>
+                                                <span class="skill-badge">Inferential Analysis</span>
+                                                <span class="skill-badge">A/B Testing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Tools & Technologies</h3>
+                                    <div class="tools-grid">
+                                        <span class="tool-tag">Python</span>
+                                        <span class="tool-tag">NumPy</span>
+                                        <span class="tool-tag">Pandas</span>
+                                        <span class="tool-tag">Scikit-learn</span>
+                                        <span class="tool-tag">Matplotlib</span>
+                                        <span class="tool-tag">Seaborn</span>
+                                        <span class="tool-tag">Jupyter Notebook</span>
+                                        <span class="tool-tag">SQL</span>
+                                        <span class="tool-tag">Git & GitHub</span>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Projects You Will Build</h3>
+                                    <p style="margin-bottom: 1rem; color: #6b7280; font-size: 0.95rem;">
+                                        <strong>Complexity Progression:</strong> Beginner → Intermediate → Advanced
+                                    </p>
+                                    <div class="projects-list">
+                                        <div class="project-item">
+                                            <h5>🔵 Customer Segmentation System <span class="difficulty-badge difficulty-intermediate" style="float: right; margin-top: -0.25rem;">Intermediate</span></h5>
+                                            <p>Use clustering algorithms to segment customers based on purchasing behavior for targeted marketing strategies.</p>
+                                            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280;">
+                                                <strong>Tech Stack:</strong> Python, Scikit-learn, Pandas
+                                            </div>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>🟢 Sales Forecasting Model <span class="difficulty-badge difficulty-beginner" style="float: right; margin-top: -0.25rem;">Beginner</span></h5>
+                                            <p>Build a regression model to predict future sales based on historical data and seasonal trends.</p>
+                                            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280;">
+                                                <strong>Tech Stack:</strong> Python, NumPy, Matplotlib
+                                            </div>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>🟠 Sentiment Analysis Tool <span class="difficulty-badge difficulty-advanced" style="float: right; margin-top: -0.25rem;">Advanced</span></h5>
+                                            <p>Analyze social media or product reviews using natural language processing to gauge customer sentiment.</p>
+                                            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280;">
+                                                <strong>Tech Stack:</strong> Python, NLP Libraries, TensorFlow
+                                            </div>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>🔴 Healthcare Prediction System <span class="difficulty-badge difficulty-advanced" style="float: right; margin-top: -0.25rem;">Advanced</span></h5>
+                                            <p>Create a machine learning model to predict disease outcomes based on patient data. </p>
+                                            <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280;">
+                                                <strong>Tech Stack:</strong> Python, Scikit-learn, Medical Datasets
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="detail-section">
+                                    <h3>Career Outcomes & Support</h3>
+                                    <div class="certification-badge" style="margin-bottom: 1.5rem; font-size: 1rem;">
+                                        Completion Certificate + Digital Badge
+                                    </div>
+                                    <p>
+                                        Upon successful completion, you'll be prepared for roles such as:
+                                    </p>
+                                    <ul>
+                                        <li>Data Analyst (Entry-level: ₹3-5 LPA)</li>
+                                        <li>Junior Data Scientist (Entry-level: ₹5-7 LPA)</li>
+                                        <li>Machine Learning Engineer (Experience: ₹8-12 LPA)</li>
+                                        <li>Business Intelligence Analyst (Entry-level: ₹4-6 LPA)</li>
+                                        <li>Research Analyst (Entry-level: ₹3.5-5 LPA)</li>
+                                    </ul>
+                                    <p style="margin-top: 1.5rem; padding: 1rem; background: rgba(34, 197, 94, 0.1); border-left: 4px solid #22c55e; border-radius: 6px;">
+                                        <strong style="color: #166534;">Career Support Included:</strong> Resume building, mock interviews, 
+                                        portfolio development, internship opportunities, and placement assistance.  
+                                        <em style="display: block; margin-top: 0.5rem; color: #4b5563;">Note: Placement is based on performance and availability; no guarantees provided.</em>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="course-card" data-link="/full-stack-java/">
+                        <div class="course-image">
+                            <img src="../imgs/programming/fsj.png" 
+                                 alt="Full Stack Java course - Building web applications with Spring Boot" 
+                                 style="width: 100%; height:  100%; object-fit: fill;">
+                        
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3 class="course-title">Full Stack Java</h3>
+                                <span class="course-duration">4 Months</span>
+                            </div>
+                            <p class="course-summary">End-to-end application development with backend architecture and modern UI delivery.</p>
+                            <div class="course-meta">
+                                <span class="meta-item">160+ Hours Learning</span>
+                                <span class="meta-item">5 Real Projects</span>
+                                <span class="meta-item">Industry Mentors</span>
+                                <span class="meta-item meta-item-highlight">Certification Included</span>
+                                <span class="meta-item meta-item-job">Job Assurance Support</span>
+                                <span class="meta-item meta-item-date">Next Batch: 22 Jun 2026</span>
+                            </div>
+                            <ul class="course-skills">
+                                <li>Java programming & object-oriented design</li>
+                                <li>Spring Boot & REST API development</li>
+                                <li>Frontend with HTML, CSS, JavaScript & React</li>
+                                <li>Database management with MySQL & MongoDB</li>
+                            </ul>
+                            <div class="course-actions">
+                                <button class="course-details-btn" onclick="toggleCourseDetails(event, 'course-2')" aria-expanded="false" aria-controls="details-course-2">
+                                    Explore Course
+                                </button>
+                                <button class="course-advisor-btn" onclick="contactAdvisor(event)">Contact Career Advisor</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="course-details" id="details-course-2">
+                            <div class="course-details-content">
+                                
+                                <div class="detail-section">
+                                    <h3>Course Overview</h3>
+                                    <p>
+                                        Full Stack Java development is the backbone of enterprise applications worldwide. 
+                                        This course teaches you to build complete web applications from frontend to backend using Java ecosystem technologies. 
+                                    </p>
+                                    <p>
+                                        You'll master both client-side and server-side development, database integration, 
+                                        API creation, and deployment strategies used in professional software companies.
+                                    </p>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Who This Course Is For</h3>
+                                    <ul>
+                                        <li>Computer science and IT students</li>
+                                        <li>Aspiring full stack developers</li>
+                                        <li>Backend developers wanting to learn frontend</li>
+                                        <li>Anyone targeting enterprise software careers</li>
+                                    </ul>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Skills You Will Master</h3>
+                                    <div class="skill-categories">
+                                        <div class="skill-category">
+                                            <h4>Backend Development</h4>
+                                            <ul>
+                                                <li>Core Java & OOP principles</li>
+                                                <li>Spring Framework & Spring Boot</li>
+                                                <li>RESTful API design and development</li>
+                                                <li>Microservices architecture basics</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Frontend Development</h4>
+                                            <ul>
+                                                <li>HTML5, CSS3, and responsive design</li>
+                                                <li>JavaScript ES6+ fundamentals</li>
+                                                <li>React.js for building UIs</li>
+                                                <li>State management and component design</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Database & Storage</h4>
+                                            <ul>
+                                                <li>SQL and relational database design (MySQL)</li>
+                                                <li>NoSQL databases (MongoDB)</li>
+                                                <li>Database normalization and optimization</li>
+                                                <li>ORM with Hibernate/JPA</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>DevOps & Deployment</h4>
+                                            <ul>
+                                                <li>Git version control</li>
+                                                <li>CI/CD pipeline basics</li>
+                                                <li>Docker containerization</li>
+                                                <li>Cloud deployment fundamentals</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Tools & Technologies</h3>
+                                    <div class="tools-grid">
+                                        <span class="tool-tag">Java</span>
+                                        <span class="tool-tag">Spring Boot</span>
+                                        <span class="tool-tag">React.js</span>
+                                        <span class="tool-tag">HTML/CSS</span>
+                                        <span class="tool-tag">JavaScript</span>
+                                        <span class="tool-tag">MySQL</span>
+                                        <span class="tool-tag">MongoDB</span>
+                                        <span class="tool-tag">Postman</span>
+                                        <span class="tool-tag">Git & GitHub</span>
+                                        <span class="tool-tag">IntelliJ IDEA</span>
+                                        <span class="tool-tag">VS Code</span>
+                                        <span class="tool-tag">Docker</span>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Projects You Will Build</h3>
+                                    <div class="projects-list">
+                                        <div class="project-item">
+                                            <h5>E-Commerce Platform</h5>
+                                            <p>Build a complete online shopping system with product catalog, shopping cart, user authentication, and payment integration.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Task Management System</h5>
+                                            <p>Create a collaborative project management tool with user roles, task assignment, and real-time updates.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Blog & Content Management System</h5>
+                                            <p>Develop a full-featured blogging platform with CRUD operations, user comments, and content moderation.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Social Media Dashboard</h5>
+                                            <p>Build a social networking application with user profiles, posts, likes, and follower systems.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Career Outcomes & Support</h3>
+                                    <p>Upon completion, you'll be ready for roles such as:</p>
+                                    <ul>
+                                        <li>Full Stack Developer</li>
+                                        <li>Java Developer</li>
+                                        <li>Backend Engineer</li>
+                                        <li>Web Application Developer</li>
+                                        <li>Software Engineer</li>
+                                    </ul>
+                                    <p style="margin-top: 1rem;">
+                                        <strong>Career Support Includes:</strong> Technical interview preparation, 
+                                        resume optimization, GitHub portfolio review, internship opportunities, and placement assistance. 
+                                        <em>Note: Placement is performance-based; no guarantees provided. </em>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="course-card" data-link="/cyber-security/">
+                        <div class="course-image">
+                            <img src="../imgs/programming/cs.png" 
+                                 alt="Cyber Security course - Ethical hacking and network security training" 
+                                 style="width: 100%; height: 100%; object-fit: fill;">
+                         
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3 class="course-title">Cyber Security</h3>
+                                <span class="course-duration">4 Months</span>
+                            </div>
+                            <p class="course-summary">Hands-on security labs with threat analysis, hardening, and incident response.</p>
+                            <div class="course-meta">
+                                <span class="meta-item">140+ Hours Learning</span>
+                                <span class="meta-item">4 Real Projects</span>
+                                <span class="meta-item">Industry Experts</span>
+                                <span class="meta-item meta-item-highlight">Certification Included</span>
+                                <span class="meta-item meta-item-job">Job Assurance Support</span>
+                                <span class="meta-item meta-item-date">Next Batch: 29 Jun 2026</span>
+                            </div>
+                            <ul class="course-skills">
+                                <li>Network security & threat detection</li>
+                                <li>Ethical hacking & penetration testing</li>
+                                <li>Security tools:  Kali Linux, Wireshark, Metasploit</li>
+                                <li>Incident response & vulnerability assessment</li>
+                            </ul>
+                            <div class="course-actions">
+                                <button class="course-details-btn" onclick="toggleCourseDetails(event, 'course-3')" aria-expanded="false" aria-controls="details-course-3">
+                                    Explore Course
+                                </button>
+                                <button class="course-advisor-btn" onclick="contactAdvisor(event)">Contact Career Advisor</button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="course-details" id="details-course-3">
+                            <div class="course-details-content">
+                                
+                                <div class="detail-section">
+                                    <h3>Course Overview</h3>
+                                    <p>
+                                        Cyber security is critical in today's digital world. This course prepares you to protect 
+                                        systems, networks, and data from cyber threats. Learn ethical hacking, penetration testing, 
+                                        and security best practices used by security professionals worldwide.
+                                    </p>
+                                    <p>
+                                        You'll gain hands-on experience with industry-standard security tools and techniques, 
+                                        preparing you for roles in cybersecurity operations and defense.
+                                    </p>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Who This Course Is For</h3>
+                                    <ul>
+                                        <li>IT and networking students</li>
+                                        <li>System administrators wanting to specialize in security</li>
+                                        <li>Anyone interested in ethical hacking careers</li>
+                                        <li>Security enthusiasts and career switchers</li>
+                                    </ul>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Skills You Will Master</h3>
+                                    <div class="skill-categories">
+                                        <div class="skill-category">
+                                            <h4>Network Security</h4>
+                                            <ul>
+                                                <li>TCP/IP networking fundamentals</li>
+                                                <li>Firewall configuration and management</li>
+                                                <li>VPN and encryption protocols</li>
+                                                <li>Network traffic analysis</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Ethical Hacking</h4>
+                                            <ul>
+                                                <li>Penetration testing methodologies</li>
+                                                <li>Vulnerability scanning and exploitation</li>
+                                                <li>Social engineering techniques</li>
+                                                <li>Web application security testing</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Security Tools & Platforms</h4>
+                                            <ul>
+                                                <li>Kali Linux operating system</li>
+                                                <li>Wireshark for packet analysis</li>
+                                                <li>Metasploit framework</li>
+                                                <li>Nmap, Burp Suite, and more</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h4>Incident Response</h4>
+                                            <ul>
+                                                <li>Threat detection and monitoring</li>
+                                                <li>Security incident handling</li>
+                                                <li>Forensic analysis basics</li>
+                                                <li>Security policy development</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Tools & Technologies</h3>
+                                    <div class="tools-grid">
+                                        <span class="tool-tag">Kali Linux</span>
+                                        <span class="tool-tag">Wireshark</span>
+                                        <span class="tool-tag">Metasploit</span>
+                                        <span class="tool-tag">Nmap</span>
+                                        <span class="tool-tag">Burp Suite</span>
+                                        <span class="tool-tag">Nessus</span>
+                                        <span class="tool-tag">OWASP ZAP</span>
+                                        <span class="tool-tag">John the Ripper</span>
+                                        <span class="tool-tag">Python (Security Scripting)</span>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Projects You Will Build</h3>
+                                    <div class="projects-list">
+                                        <div class="project-item">
+                                            <h5>Network Vulnerability Scanner</h5>
+                                            <p>Build a tool to scan networks for vulnerabilities and generate security reports.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Penetration Testing Lab</h5>
+                                            <p>Set up and conduct ethical hacking exercises on vulnerable systems in a controlled environment.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Security Monitoring Dashboard</h5>
+                                            <p>Create a real-time dashboard for monitoring network traffic and detecting anomalies.</p>
+                                        </div>
+                                        <div class="project-item">
+                                            <h5>Incident Response Simulation</h5>
+                                            <p>Simulate a security breach and practice incident response procedures and forensic analysis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail-section">
+                                    <h3>Career Outcomes & Support</h3>
+                                    <p>After completing this course, you'll be prepared for:</p>
+                                    <ul>
+                                        <li>Cyber Security Analyst</li>
+                                        <li>Ethical Hacker</li>
+                                        <li>Penetration Tester</li>
+                                        <li>Security Operations Center (SOC) Analyst</li>
+                                        <li>Information Security Specialist</li>
+                                    </ul>
+                                    <p style="margin-top: 1rem;">
+                                        <strong>Career Support Includes:</strong> Certification guidance (CEH, CompTIA Security+), 
+                                        resume building, interview preparation, internship opportunities, and placement assistance. 
+                                        <em>Note:  Placement depends on performance; no guarantees provided. </em>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                                        
+                                        <article class="course-card" data-link="/python-programming/">
+                                            <div class="course-image">
+                                                <img src="../imgs/programming/python.png" 
+                                                     alt="Python Programming course - Learning Python fundamentals and automation" 
+                                                     style="width: 100%; height: 100%; object-fit: fill;">
+                                             
+                                            </div>
+                                            <div class="course-content">
+                                                <div class="course-header">
+                                                    <h3 class="course-title">Python Programming</h3>
+                                                    <span class="course-duration">1 Month</span>
+                                                </div>
+                                                <div class="course-meta">
+                                                    <span class="meta-item">40+ Hours Learning</span>
+                                                    <span class="meta-item">3 Real Projects</span>
+                                                    <span class="meta-item">Hands-on Training</span>
+                                                    <span class="meta-item meta-item-highlight">Certification Included</span>
+                                                    <span class="meta-item meta-item-job">Job Assurance Support</span>
+                                                    <span class="meta-item meta-item-date">Next Batch: 06 Jul 2026</span>
+                                                </div>
+                                                <ul class="course-skills">
+                                                    <li>Python syntax & programming fundamentals</li>
+                                                    <li>Data structures: lists, dictionaries, sets</li>
+                                                    <li>Object-oriented programming in Python</li>
+                                                    <li>File handling & automation scripting</li>
+                                                </ul>
+                                                <div class="course-actions">
+                                                    <button class="course-details-btn" onclick="toggleCourseDetails(event, 'course-4')" aria-expanded="false" aria-controls="details-course-4">
+                                                        Explore Course
+                                                    </button>
+                                                    <button class="course-advisor-btn" onclick="contactAdvisor(event)">Contact Career Advisor</button>
+                                                </div>
+                                            </div>
+                    
+                                            
+                                            <div class="course-details" id="details-course-4">
+                                                <div class="course-details-content">
+                                                    
+                                                    <div class="detail-section">
+                                                        <h3>Course Overview</h3>
+                                                        <p>
+                                                            Python is the most beginner-friendly programming language and is used across data science, web development, and automation. 
+                                                            This course teaches you Python fundamentals from scratch, building a strong foundation for advanced programming.
+                                                        </p>
+                                                        <p>
+                                                            You'll learn to write clean, efficient code and solve real-world problems using Python's powerful libraries and frameworks.
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Who This Course Is For</h3>
+                                                        <ul>
+                                                            <li>Complete beginners with no programming experience</li>
+                                                            <li>Students looking to transition into tech careers</li>
+                                                            <li>Anyone interested in data science or web development</li>
+                                                            <li>Career changers seeking foundational programming skills</li>
+                                                        </ul>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Skills You Will Master</h3>
+                                                        <div class="skill-categories">
+                                                            <div class="skill-category">
+                                                                <h4>Python Fundamentals</h4>
+                                                                <ul>
+                                                                    <li>Variables, data types, and operators</li>
+                                                                    <li>Control flow: if, loops, and functions</li>
+                                                                    <li>String manipulation and formatting</li>
+                                                                    <li>Error handling and debugging</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>Data Structures</h4>
+                                                                <ul>
+                                                                    <li>Lists, tuples, and sets</li>
+                                                                    <li>Dictionaries and nested structures</li>
+                                                                    <li>List comprehensions</li>
+                                                                    <li>Working with collections module</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>Object-Oriented Programming</h4>
+                                                                <ul>
+                                                                    <li>Classes and objects</li>
+                                                                    <li>Inheritance and polymorphism</li>
+                                                                    <li>Encapsulation principles</li>
+                                                                    <li>Design patterns basics</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>Practical Applications</h4>
+                                                                <ul>
+                                                                    <li>File I/O operations</li>
+                                                                    <li>Working with APIs and libraries</li>
+                                                                    <li>Automation scripting</li>
+                                                                    <li>Web scraping basics</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Tools & Technologies</h3>
+                                                        <div class="tools-grid">
+                                                            <span class="tool-tag">Python 3</span>
+                                                            <span class="tool-tag">VS Code</span>
+                                                            <span class="tool-tag">Jupyter Notebook</span>
+                                                            <span class="tool-tag">Git & GitHub</span>
+                                                            <span class="tool-tag">PyCharm</span>
+                                                            <span class="tool-tag">requests library</span>
+                                                            <span class="tool-tag">BeautifulSoup</span>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Projects You Will Build</h3>
+                                                        <div class="projects-list">
+                                                            <div class="project-item">
+                                                                <h5>Calculator & Automation Tools</h5>
+                                                                <p>Build practical tools like calculators and file automation scripts that solve real-world problems.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Student Grade Management System</h5>
+                                                                <p>Create a system to manage student data, calculate grades, and generate reports using Python.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Web Scraper</h5>
+                                                                <p>Build a web scraper to extract data from websites and organize it for analysis.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Personal Finance Tracker</h5>
+                                                                <p>Develop an application to track income, expenses, and budgeting with data visualization.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Career Outcomes & Support</h3>
+                                                        <p>Upon completion, this course prepares you for:</p>
+                                                        <ul>
+                                                            <li>Junior Python Developer</li>
+                                                            <li>Data Analyst</li>
+                                                            <li>Automation Engineer</li>
+                                                            <li>Web Developer (with additional frameworks)</li>
+                                                            <li>Foundation for advanced programming roles</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem;">
+                                                            <strong>Career Support Includes:</strong> Portfolio building, code review, GitHub setup, 
+                                                            interview preparation, and internship opportunities. 
+                                                            <em>Note: Placement support provided; success depends on individual performance.</em>
+                                                        </p>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+                                        </article>
+                    
+                                        
+                                        <article class="course-card" data-link="/java-programming/">
+                                            <div class="course-image">
+                                                <img src="../imgs/programming/jp.png" 
+                                                     alt="Java Programming course - Object-oriented programming and enterprise development" 
+                                                     style="width: 100%; height: 100%; object-fit: fill;">
+                                             
+                                            </div>
+                                            <div class="course-content">
+                                                <div class="course-header">
+                                                    <h3 class="course-title">Java Programming</h3>
+                                                    <span class="course-duration">2 Months</span>
+                                                </div>
+                                                <div class="course-meta">
+                                                    <span class="meta-item">80+ Hours Learning</span>
+                                                    <span class="meta-item">3 Real Projects</span>
+                                                    <span class="meta-item">Hands-on Training</span>
+                                                    <span class="meta-item meta-item-highlight">Certification Included</span>
+                                                    <span class="meta-item meta-item-job">Job Assurance Support</span>
+                                                    <span class="meta-item meta-item-date">Next Batch: 13 Jul 2026</span>
+                                                </div>
+                                                <ul class="course-skills">
+                                                    <li>Java syntax and object-oriented programming</li>
+                                                    <li>Collections framework and exception handling</li>
+                                                    <li>Multithreading and concurrency</li>
+                                                    <li>File I/O and stream processing</li>
+                                                </ul>
+                                                <div class="course-actions">
+                                                    <button class="course-details-btn" onclick="toggleCourseDetails(event, 'course-5')" aria-expanded="false" aria-controls="details-course-5">
+                                                        Explore Course
+                                                    </button>
+                                                    <button class="course-advisor-btn" onclick="contactAdvisor(event)">Contact Career Advisor</button>
+                                                </div>
+                                            </div>
+                    
+                                            
+                                            <div class="course-details" id="details-course-5">
+                                                <div class="course-details-content">
+                                                    
+                                                    <div class="detail-section">
+                                                        <h3>Course Overview</h3>
+                                                        <p>
+                                                            Java is one of the most widely-used programming languages for enterprise applications. 
+                                                            This course teaches you core Java concepts and prepares you for advanced frameworks like Spring Boot.
+                                                        </p>
+                                                        <p>
+                                                            Master object-oriented principles, build robust applications, and understand why Java is the backbone of many Fortune 500 companies.
+                                                        </p>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Who This Course Is For</h3>
+                                                        <ul>
+                                                            <li>Beginner programmers learning their first language</li>
+                                                            <li>Python programmers wanting to learn Java</li>
+                                                            <li>Students aiming for enterprise software roles</li>
+                                                            <li>Anyone interested in Android development</li>
+                                                        </ul>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Skills You Will Master</h3>
+                                                        <div class="skill-categories">
+                                                            <div class="skill-category">
+                                                                <h4>Core Java</h4>
+                                                                <ul>
+                                                                    <li>Java syntax and variables</li>
+                                                                    <li>Control structures and loops</li>
+                                                                    <li>Methods and function design</li>
+                                                                    <li>Access modifiers and encapsulation</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>Object-Oriented Programming</h4>
+                                                                <ul>
+                                                                    <li>Classes, objects, and constructors</li>
+                                                                    <li>Inheritance and polymorphism</li>
+                                                                    <li>Abstraction and interfaces</li>
+                                                                    <li>Design patterns introduction</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>Advanced Concepts</h4>
+                                                                <ul>
+                                                                    <li>Collections framework (List, Set, Map)</li>
+                                                                    <li>Exception handling and try-catch</li>
+                                                                    <li>Multithreading and synchronization</li>
+                                                                    <li>Generics and type safety</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="skill-category">
+                                                                <h4>File & Stream Processing</h4>
+                                                                <ul>
+                                                                    <li>File input/output operations</li>
+                                                                    <li>Serialization and deserialization</li>
+                                                                    <li>Stream API and functional programming</li>
+                                                                    <li>Working with JSON and XML</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Tools & Technologies</h3>
+                                                        <div class="tools-grid">
+                                                            <span class="tool-tag">Java 11+</span>
+                                                            <span class="tool-tag">IntelliJ IDEA</span>
+                                                            <span class="tool-tag">Eclipse IDE</span>
+                                                            <span class="tool-tag">Maven</span>
+                                                            <span class="tool-tag">JUnit Testing</span>
+                                                            <span class="tool-tag">Git & GitHub</span>
+                                                            <span class="tool-tag">Gradle</span>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Projects You Will Build</h3>
+                                                        <div class="projects-list">
+                                                            <div class="project-item">
+                                                                <h5>Banking System</h5>
+                                                                <p>Build a console-based banking application with account management and transactions using OOP principles.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Library Management System</h5>
+                                                                <p>Create a system to manage books, members, and borrowing operations with proper error handling.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Employee Payroll System</h5>
+                                                                <p>Develop a payroll application with salary calculations, deductions, and report generation.</p>
+                                                            </div>
+                                                            <div class="project-item">
+                                                                <h5>Quiz Application</h5>
+                                                                <p>Build an interactive quiz application with score tracking and user management features.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div class="detail-section">
+                                                        <h3>Career Outcomes & Support</h3>
+                                                        <p>After this course, you'll be ready for:</p>
+                                                        <ul>
+                                                            <li>Junior Java Developer</li>
+                                                            <li>Software Developer</li>
+                                                            <li>Android Developer (with additional training)</li>
+                                                            <li>Backend Developer</li>
+                                                            <li>Enterprise Application Developer</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem;">
+                                                            <strong>Career Support Includes:</strong> Code mentoring, portfolio development, 
+                                                            technical interviews, and job placement assistance. 
+                                                            <em>Note: Placement based on individual performance and market availability.</em>
+                                                        </p>
+                                                    </div>
+                    
+                                                </div>
+                                            </div>
+                                        </article>
+                    
+                                    </div>
+                                </div>
+                            </section>
+                    
+                            
+                            <section class="learning-methodology">
+                                <div class="container">
+                                    <div class="section-head">
+                                        <p class="section-kicker">Learning Journey</p>
+                                        <h2 class="section-title"><span class="journey-title-highlight">Our Learning Methodology:</span> Your Path to Career Readiness</h2>
+                                        <p class="section-subtitle">
+                                            Your journey from beginner to job-ready developer unfolds through these key milestones.
+                                        </p>
+                                    </div>
+
+                                    <div class="journey-timeline">
+                                        <svg class="journey-timeline-svg" viewBox="0 0 210 1000" preserveAspectRatio="none" aria-hidden="true">
+                                            <path id="journey-road-main" class="journey-road-path" d="" />
+                                            <circle class="journey-road-glow-halo" r="9.2">
+                                                <animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+                                                    <mpath href="#journey-road-main"></mpath>
+                                                </animateMotion>
+                                            </circle>
+                                            <circle class="journey-road-glow-orb" r="5.6">
+                                                <animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+                                                    <mpath href="#journey-road-main"></mpath>
+                                                </animateMotion>
+                                            </circle>
+                                            <circle class="journey-road-glow-core" r="2.4">
+                                                <animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+                                                    <mpath href="#journey-road-main"></mpath>
+                                                </animateMotion>
+                                            </circle>
+                                            <g class="journey-road-nodes"></g>
+                                        </svg>
+
+                                        <div class="journey-item journey-left">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Learn by Doing</h3>
+                                                <p class="journey-box-desc">Write code from day one with hands-on labs and real-world practice.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="journey-item journey-right">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Build Your Portfolio</h3>
+                                                <p class="journey-box-desc">Create industry-standard projects that impress employers.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="journey-item journey-left">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Industry Mentorship</h3>
+                                                <p class="journey-box-desc">Get guided by experienced professionals on best practices and standards.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="journey-item journey-right">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Master Collaboration</h3>
+                                                <p class="journey-box-desc">Work in teams with code reviews mirroring real software development.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="journey-item journey-left">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Develop Problem-Solving</h3>
+                                                <p class="journey-box-desc">Master debugging and professional development workflows.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="journey-item journey-right">
+                                            <div class="journey-box">
+                                                <h3 class="journey-box-title">Career-Ready Mindset</h3>
+                                                <p class="journey-box-desc">Build the habits and thinking patterns of successful developers.</p>
+                                                <div class="journey-check">&#10003;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="journey-quote">
+                                        <p>"We don't just teach coding. We teach you how to think like a programmer and solve real-world problems."</p>
+                                    </div>
+                                </div>
+                            </section>
+ 
+                            
+                            <section class="partners" aria-labelledby="partners-title">
+                                <div class="container">
+                                    <div class="section-head">
+                                        <p class="section-kicker">Hiring Network</p>
+                                        <h2 id="partners-title" class="section-title">Our Hiring Partners</h2>
+                                        <p class="section-subtitle">
+                                            Trusted companies that recruit our learners. Logos are placeholders-swap with your partner brands.
+                                        </p>
+                                    </div>
+
+                              
+                                
+                            </section>
+
+                            
+                            <div style="display: flex; justify-content: center; align-items: center; padding: 0 1rem 3rem 1rem !important; margin: 0 !important; background-color: #f9fafb;">
+                                <img src="../imgs/programming/hiring-partner.png" alt="Our Hiring Partners" loading="lazy" style="max-width: 100%; height: auto; max-height: 600px;">
+                            </div>
+ 
+                            
+                            <section class="outcomes">
+                                <div class="container">
+                                    <div class="section-head">
+                                        <p class="section-kicker">Outcomes</p>
+                                        <h2 class="section-title">What You'll Achieve</h2>
+                                        <p class="section-subtitle">
+                                            Beyond technical skills, you'll develop the mindset and habits of successful developers.
+                                        </p>
+                                    </div>
+                    
+                                    <div class="outcomes-grid">
+                                        <div class="outcome-card">
+                                            <div class="outcome-icon">
+                                                <img src="../imgs/programming/career-focus.png" alt="Career ready portfolio and interview skills" loading="lazy">
+                                            </div>
+                                            <span class="outcome-label">Professional Edge</span>
+                                            <h3>Career Ready</h3>
+                                            <p>
+                                                Complete projects, polished resume, and interview-ready. 
+                                                You'll know how to present yourself as a professional developer.
+                                            </p>
+                                            <ul class="outcome-points">
+                                                <li>Showcase-ready portfolio storytelling</li>
+                                                <li>Confident interview communication</li>
+                                            </ul>
+                                            <span class="outcome-foot">Outcome: Employer-ready profile</span>
+                                        </div>
+                    
+                                        <div class="outcome-card">
+                                            <div class="outcome-icon">
+                                                <img src="../imgs/programming/logic-img.png" alt="Problem solving mindset and logic skills" loading="lazy">
+                                            </div>
+                                            <span class="outcome-label">Thinking Power</span>
+                                            <h3>Problem Solver</h3>
+                                            <p>
+                                                Develop logical thinking and the ability to break down complex problems. 
+                                                These skills transfer across all programming languages.
+                                            </p>
+                                            <ul class="outcome-points">
+                                                <li>Structured breakdown of complex tasks</li>
+                                                <li>Debug-first and optimize-later mindset</li>
+                                            </ul>
+                                            <span class="outcome-foot">Outcome: Strong engineering mindset</span>
+                                        </div>
+                    
+                                        <div class="outcome-card">
+                                            <div class="outcome-icon">
+                                                <img src="../imgs/programming/job-ready.png" alt="Job ready developer with portfolio projects" loading="lazy">
+                                            </div>
+                                            <span class="outcome-label">Execution Confidence</span>
+                                            <h3>Job Ready Developer</h3>
+                                            <p>
+                                                Armed with a portfolio of real projects, you'll be attractive to employers 
+                                                and confident in technical interviews and on the job.
+                                            </p>
+                                            <ul class="outcome-points">
+                                                <li>Role-aligned project experience</li>
+                                                <li>Hands-on confidence for real teams</li>
+                                            </ul>
+                                            <span class="outcome-foot">Outcome: Smooth transition to work</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            
+                        
+                            
+                        </main>
+                    
+                        
+                                <footer id="contact">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+            <div class="footer-logo">
+                <img src="../imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="../school-of-programming/">Programming</a></li>
+                        <li><a href="../ds/">Data Science</a></li>
+                        <li><a href="../career-guidance/">Career Guidance</a></li>
+                        <li><a href="../trainers/">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../community-events/">Community Events</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="../about-us/">About Us</a></li>
+                        <li><a href="../contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="../terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-office">
+                    <h3>LSA Office</h3>
+                    <ul class="footer-office-list">
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5zm2.2-.5 6.8 5.53L18.8 5zM19 18.5V7.04l-6.37 5.18a1 1 0 0 1-1.26 0L5 7.04V18.5z"></path>
+                                </svg>
+                            </span>
+                            <a href="mailto:enquiry@lordsskillacademy.com">enquiry@lordsskillacademy.com</a>
+                        </li>
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
+                                </svg>
+                            </span>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </li>
+                    </ul>
+                    <div class="footer-map" aria-label="LSA office map">
+                        <iframe
+                            title="Lords Skill Academy Office Location"
+                            src="https://maps.google.com/maps?q=Lords%20Skill%20Academy%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lords Skill Academy. All rights reserved.</p>
+                <p>Crafted with &#10084; for future innovators.</p>
+                <p>Designed &amp; Developed by AV Digitals for Lords Skill Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="whatsapp-widget" aria-label="WhatsApp contact toggle">
+        <div class="whatsapp-popup">Contact LSA for assistance</div>
+        <a class="whatsapp-toggle"
+           href="https://wa.me/919963051403?text=hello%20Lords%20Skill%20Academy%20Iam%20intrested%20in%20____%20course"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contact LSA on WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M27.3 4.7A15.8 15.8 0 0 0 2.5 23.6L1 31l7.6-1.9A15.8 15.8 0 1 0 27.3 4.7ZM16 29a13 13 0 0 1-6.6-1.8l-.5-.3-4.5 1.1 1.2-4.3-.3-.6A13 13 0 1 1 16 29Zm7.4-9.6c-.4-.2-2.3-1.1-2.7-1.2-.4-.2-.6-.2-.9.2l-.8 1c-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.2-2.1-2.5-.2-.4 0-.5.2-.7l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7 0-.2-.9-2.1-1.3-2.9-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2 0 1.9 1.4 3.7 1.6 3.9.2.3 2.7 4.1 6.6 5.7.9.4 1.7.6 2.3.8.9.3 1.8.2 2.5.1.8-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5Z" fill="white"/>
+            </svg>
+        </a>
+    </div>
+                    
+                        
+                        <script>
+                            // Scroll reveal for animations
+                            const revealElements = document.querySelectorAll('.reveal');
+                            
+                            if ('IntersectionObserver' in window) {
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('active');
+                                            observer.unobserve(entry.target);
+                                        }
+                                    });
+                                }, {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                });
+                                
+                                revealElements.forEach(el => observer.observe(el));
+                            } else {
+                                // Fallback for browsers without IntersectionObserver
+                                revealElements.forEach(el => el.classList.add('active'));
+                            }
+
+                            // Reuse the details button as a direct explore action
+                            function toggleCourseDetails(event, courseId) {
+                                event.stopPropagation();
+                                const card = event.target.closest('.course-card');
+                                const targetLink = card && card.dataset.link ? card.dataset.link.replace(/\.html$/i, '') : '/ds/';
+                                window.location.href = targetLink;
+                            }
+
+                            // Update button labels for simpler action intent
+                            document.querySelectorAll('.course-details-btn').forEach(btn => {
+                                btn.textContent = 'Explore Course';
+                                btn.setAttribute('aria-expanded', 'false');
+                            });
+
+                            // Add concise summaries to course cards (if missing)
+                            document.querySelectorAll('.course-card .course-content').forEach(content => {
+                                if (content.querySelector('.course-summary')) return;
+                                const summary = document.createElement('p');
+                                summary.className = 'course-summary';
+                                summary.textContent = 'Tech-forward curriculum with labs, code reviews, and real-world tools.';
+                                const header = content.querySelector('.course-header');
+                                if (header) {
+                                    header.insertAdjacentElement('afterend', summary);
+                                }
+                            });
+
+                            // Make entire course cards clickable (except the details button)
+                            document.querySelectorAll('.course-card').forEach(card => {
+                                const targetLink = card.dataset.link;
+                                if (!targetLink) return;
+
+                                card.addEventListener('click', () => {
+                                    window.location.href = targetLink.replace(/\.html$/i, '');
+                                });
+                            });
+
+                            // Contact advisor buttons should not trigger card navigation
+                            function contactAdvisor(event) {
+                                event.stopPropagation();
+                                const card = event.target.closest('.course-card');
+                                const courseTitleEl = card ? card.querySelector('.course-title') : null;
+                                const courseTitle = courseTitleEl ? courseTitleEl.textContent.trim() : 'your';
+
+                                const courseShortMap = {
+                                    'Data Science': 'DS',
+                                    'Cyber Security': 'CS',
+                                    'Full Stack Java': 'Full Stack Java',
+                                    'Python Programming': 'Python',
+                                    'Java Programming': 'Java'
+                                };
+
+                                const programName = courseShortMap[courseTitle] || courseTitle;
+                                const message = 'hello Lords skill academy iam intrested in ' + programName + ' program can you share more info on this';
+                                const whatsappUrl = 'https://wa.me/919963051403?text=' + encodeURIComponent(message);
+
+                                const win = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                                if (!win) {
+                                    window.location.href = whatsappUrl;
+                                }
+                            }
+                    
+                            // Smooth scroll for anchor links
+                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                anchor.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    const target = document.querySelector(this.getAttribute('href'));
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });
+                            });
+
+                            // FAQ Accordion functionality
+                            const faqItems = document.querySelectorAll('.faq-item');
+                            
+                            faqItems.forEach(item => {
+                                const question = item.querySelector('.faq-question');
+                                
+                                question.addEventListener('click', function() {
+                                    // Close all other FAQ items
+                                    faqItems.forEach(otherItem => {
+                                        if (otherItem !== item) {
+                                            otherItem.classList.remove('active');
+                                        }
+                                    });
+                                    
+                                    // Toggle current item
+                                    item.classList.toggle('active');
+                                });
+                            });
+
+                            (function () {
+                                const timeline = document.querySelector('.journey-timeline');
+                                if (!timeline) {
+                                    return;
+                                }
+
+                                const svg = timeline.querySelector('.journey-timeline-svg');
+                                const roadPath = timeline.querySelector('.journey-road-path');
+                                const nodesGroup = timeline.querySelector('.journey-road-nodes');
+
+                                if (!svg || !roadPath || !nodesGroup) {
+                                    return;
+                                }
+
+                                let resizeTimer;
+
+                                function drawJourneyRoad() {
+                                    const items = Array.from(timeline.querySelectorAll('.journey-item'));
+                                    if (items.length < 2) {
+                                        return;
+                                    }
+
+                                    const timelineRect = timeline.getBoundingClientRect();
+                                    const svgWidth = svg.clientWidth || 210;
+                                    const points = [];
+
+                                    items.forEach(function (item) {
+                                        const box = item.querySelector('.journey-box');
+                                        if (!box) {
+                                            return;
+                                        }
+
+                                        const boxRect = box.getBoundingClientRect();
+                                        const y = (boxRect.top - timelineRect.top) + (boxRect.height * 0.5);
+                                        const x = item.classList.contains('journey-left')
+                                            ? ((boxRect.right - timelineRect.left) + 9)
+                                            : ((boxRect.left - timelineRect.left) - 9);
+
+                                        points.push({
+                                            x: x,
+                                            y: y,
+                                            side: item.classList.contains('journey-left') ? 'left' : 'right'
+                                        });
+                                    });
+
+                                    if (points.length < 2) {
+                                        return;
+                                    }
+
+                                    const allPoints = points;
+                                    const viewHeight = Math.max(Math.ceil(points[points.length - 1].y + 24), 120);
+
+                                    svg.setAttribute('viewBox', '0 0 ' + svgWidth + ' ' + viewHeight);
+
+                                    let d = 'M ' + allPoints[0].x.toFixed(1) + ' ' + allPoints[0].y.toFixed(1);
+
+                                    if (allPoints.length === 2) {
+                                        d += ' L ' + allPoints[1].x.toFixed(1) + ' ' + allPoints[1].y.toFixed(1);
+                                    } else {
+                                        for (let i = 1; i < allPoints.length; i += 1) {
+                                            const prev = allPoints[i - 1];
+                                            const curr = allPoints[i];
+                                            const dy = curr.y - prev.y;
+                                            const c1x = prev.x;
+                                            const c2x = curr.x;
+                                            const c1y = prev.y + dy * 0.52;
+                                            const c2y = curr.y - dy * 0.52;
+
+                                            d += ' C ' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) +
+                                                ' ' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) +
+                                                ' ' + curr.x.toFixed(1) + ' ' + curr.y.toFixed(1);
+                                        }
+                                    }
+
+                                    roadPath.setAttribute('d', d);
+                                    nodesGroup.innerHTML = '';
+                                }
+
+                                function scheduleRoadDraw() {
+                                    window.clearTimeout(resizeTimer);
+                                    resizeTimer = window.setTimeout(drawJourneyRoad, 120);
+                                }
+
+                                window.addEventListener('resize', scheduleRoadDraw);
+                                window.addEventListener('load', scheduleRoadDraw);
+                                scheduleRoadDraw();
+                            })();
+
+                            /* ===================================
+                               SCROLL ANIMATION WITH INTERSECTION OBSERVER
+                            =================================== */
+                            // Simplified scroll animation - only for elements with reveal class
+                            const revealElementsFinal = document.querySelectorAll('.course-card, .section-title');
+                            
+                            if ('IntersectionObserver' in window) {
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting) {
+                                            entry.target.classList.add('animated');
+                                            observer.unobserve(entry.target);
+                                        }
+                                    });
+                                }, {
+                                    threshold: 0.1,
+                                    rootMargin: '0px 0px -50px 0px'
+                                });
+                                
+                                revealElementsFinal.forEach(el => observer.observe(el));
+                            }
+                        </script>
+                    
+                        <script>
+                            (function() {
+                                const glow = document.querySelector('.cursor-glow');
+                                if (!glow) return;
+
+                                let currentX = window.innerWidth / 2;
+                                let currentY = window.innerHeight / 2;
+                                let targetX = currentX;
+                                let targetY = currentY;
+                                let size = 24;
+                                let t = 0;
+
+                                function updateSize() {
+                                    size = glow.offsetWidth / 2 || 24;
+                                }
+
+                                updateSize();
+                                window.addEventListener('resize', updateSize);
+
+                                function animate() {
+                                    t += 0.04;
+                                    const wobbleX = Math.sin(t) * 4;
+                                    const wobbleY = Math.cos(t * 0.9) * 4;
+
+                                    currentX += (targetX - currentX) * 0.14;
+                                    currentY += (targetY - currentY) * 0.14;
+                                    glow.style.transform = `translate3d(${currentX - size + wobbleX}px, ${currentY - size + wobbleY}px, 0)`;
+                                    requestAnimationFrame(animate);
+                                }
+
+                                function parseRgb(color) {
+                                    const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+                                    if (!match) return null;
+                                    return {
+                                        r: parseInt(match[1], 10),
+                                        g: parseInt(match[2], 10),
+                                        b: parseInt(match[3], 10),
+                                        a: match[4] !== undefined ? parseFloat(match[4]) : 1
+                                    };
+                                }
+
+                                function getEffectiveBgColor(el) {
+                                    let node = el;
+                                    while (node && node !== document.documentElement) {
+                                        const bg = window.getComputedStyle(node).backgroundColor;
+                                        const rgb = parseRgb(bg);
+                                        if (rgb && rgb.a > 0) {
+                                            return rgb;
+                                        }
+                                        node = node.parentElement;
+                                    }
+                                    return { r: 255, g: 255, b: 255, a: 1 };
+                                }
+
+                                function updateGlowColor(x, y) {
+                                    const el = document.elementFromPoint(x, y);
+                                    if (!el) return;
+
+                                    const bg = getEffectiveBgColor(el);
+                                    const luminance = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
+
+                                    if (luminance > 0.55) {
+                                        glow.style.setProperty('--glow-core', 'rgba(37, 99, 235, 0.55)');
+                                        glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.32)');
+                                        glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                                        glow.style.boxShadow = '0 0 18px rgba(37, 99, 235, 0.35)';
+                                    } else {
+                                        glow.style.setProperty('--glow-core', 'rgba(56, 189, 248, 0.6)');
+                                        glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.35)');
+                                        glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                                        glow.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.32)';
+                                    }
+                                }
+
+                                window.addEventListener('mousemove', (event) => {
+                                    targetX = event.clientX;
+                                    targetY = event.clientY;
+                                    glow.style.opacity = '1';
+                                    updateGlowColor(event.clientX, event.clientY);
+                                });
+
+                                window.addEventListener('mouseleave', () => {
+                                    glow.style.opacity = '0';
+                                });
+
+                                animate();
+                            })();
+
+                            /**
+                             * HAMBURGER MENU TOGGLE
+                             */
+                            (function() {
+                                const hamburgerBtn = document.getElementById('hamburger-menu');
+                                const navMenu = document.getElementById('nav-menu');
+                                
+                                if (!hamburgerBtn || !navMenu) return;
+
+                                hamburgerBtn.addEventListener('click', function() {
+                                    hamburgerBtn.classList.toggle('active');
+                                    navMenu.classList.toggle('active');
+                                });
+
+                                // Close menu when clicking on a link
+                                const navLinks = navMenu.querySelectorAll('a');
+                                navLinks.forEach(link => {
+                                    link.addEventListener('click', function() {
+                                        hamburgerBtn.classList.remove('active');
+                                        navMenu.classList.remove('active');
+                                    });
+                                });
+
+                                // Close menu when clicking outside
+                                document.addEventListener('click', function(event) {
+                                    const isClickInsideHeader = event.target.closest('.header');
+                                    if (!isClickInsideHeader && navMenu.classList.contains('active')) {
+                                        hamburgerBtn.classList.remove('active');
+                                        navMenu.classList.remove('active');
+                                    }
+                                });
+                            })();
+                        </script>
+                    
+<script src='../js/programs-mega-menu.js'></script>
+</body>
+                    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

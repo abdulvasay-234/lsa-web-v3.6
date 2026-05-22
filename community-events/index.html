@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../imgs/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../imgs/Favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../imgs/Favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../imgs/Favicon/favicon.ico">
+    <link rel="manifest" href="../imgs/Favicon/site.webmanifest">
+    <meta name="description" content="Join LSA Community Events & Workshops - Learn, connect, and grow through hands-on workshops, webinars, bootcamps, and seminars with industry experts.">
+    <meta name="keywords" content="community events, workshops, webinars, bootcamps, seminars, skill academy, learning community, tech events">
+    <meta name="author" content="Lords Skill Academy">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="LSA Community Events & Workshops | Lords Skill Academy">
+    <meta property="og:description" content="Join hands-on workshops, webinars, bootcamps, and seminars. Be part of a learning community that grows together.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lordsskillacademy.com/community-events">
+    <meta property="og:image" content="https://lordsskillacademy.com/imgs/community/grp-photo.jpg">
+    
+    <link rel='stylesheet' href='../css/global.css'>
+<link rel="canonical" href="https://lordsskillacademy.com/community-events">
+    
+    <style>
+        /* ==========================================
+           DATA SCIENCE PAGE DESIGN SYSTEM
+           ========================================== */
+        
+        :root {
+            /* DS Page Color Palette */
+            --ds-bg: #f5f8ff;
+            --ds-surface: #ffffff;
+            --ds-surface-alt: #f7fbff;
+            --ds-text: #10213a;
+            --ds-muted: #4d5f7b;
+            --ds-primary: #0c4a9a;
+            --ds-primary-strong: #07346f;
+            --ds-accent: #9f1239;
+            --ds-warm: #f59e0b;
+            --ds-border: #dbe7fb;
+            --ds-shadow: 0 14px 40px rgba(16, 33, 58, 0.1);
+            --ds-radius: 18px;
+            --ds-container: min(1160px, 92vw);
+            --section-gap: clamp(3rem, 7vw, 5rem);
+            
+            /* Backward Compatibility with Theme Variables */
+            --primary-color: #0c4a9a;
+            --primary-dark: #07346f;
+            --primary-light: #f7fbff;
+            --accent-neon: #0ea5e9;
+            --accent-cyan: #06b6d4;
+            --accent-violet: #8b5cf6;
+            --secondary-color: #ec4899;
+            --text-dark: #10213a;
+            --text-gray: #4d5f7b;
+            --text-light: #94a3b8;
+            --border-light: #dbe7fb;
+            --bg-light: #f5f8ff;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            
+            /* Typography */
+            --font-sans: 'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: var(--ds-shadow);
+        }
+
+        /* ==========================================
+           TECH ANIMATIONS & EFFECTS
+           ========================================== */
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes neonGlow {
+            0%, 100% { text-shadow: 0 0 10px currentColor, 0 0 20px rgba(12, 74, 154, 0.5); }
+            50% { text-shadow: 0 0 20px currentColor, 0 0 40px rgba(12, 74, 154, 0.8); }
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(12, 74, 154, 0.3); box-shadow: 0 0 10px rgba(12, 74, 154, 0.1); }
+            50% { border-color: rgba(12, 74, 154, 0.8); box-shadow: 0 0 20px rgba(12, 74, 154, 0.4); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(12, 74, 154, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(12, 74, 154, 0); }
+        }
+
+        /* ==========================================
+           RESET & BASE STYLES
+           ========================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--ds-text);
+            background:
+                radial-gradient(circle at 92% 8%, rgba(159, 18, 57, 0.14), transparent 24%),
+                radial-gradient(circle at 5% 32%, rgba(12, 74, 154, 0.12), transparent 22%),
+                var(--ds-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p,
+        li {
+            color: var(--ds-muted);
+        }
+
+        /* ==========================================
+           TYPOGRAPHY
+           ========================================== */
+        
+        h1 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--ds-text);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-md);
+            color: var(--ds-text);
+        }
+
+        h3 {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+            color: var(--ds-text);
+        }
+
+        p {
+            margin-bottom: var(--space-sm);
+            color: var(--ds-muted);
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        li {
+            margin-bottom: var(--space-sm);
+            color: var(--ds-muted);
+            line-height: 1.8;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--ds-text);
+        }
+
+        /* ==========================================
+           HEADER & NAVIGATION
+           ========================================== */
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo img {
+            width: clamp(120px, 20vw, 160px);
+            height: auto;
+            background-color: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        /* Hamburger Menu Button */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        header nav a:first-child {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: none;
+            gap: var(--space-lg);
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-weight: 500;
+            color: #4b5563;
+            position: relative;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #1e40af, #0ea5e9);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #1e40af;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+            box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+        }
+
+        .nav-links.active {
+            display: flex;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            padding: var(--space-lg);
+            box-shadow: 0 8px 16px rgba(0, 102, 204, 0.1);
+            z-index: 1000;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .nav-links.active {
+            gap: var(--space-md);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==========================================
+           HERO SECTION
+           ========================================== */
+        
+        .hero {
+            padding: clamp(2.9rem, 6vw, 4.8rem) 0 clamp(2.5rem, 6vw, 4rem);
+            background-color: #2142a4;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(180deg, #2848ad 0%, #213f9a 100%);
+            background-size: 44px 44px, 44px 44px, 100% 100%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(45deg, transparent 30%, rgba(12, 74, 154, 0.05) 50%, transparent 70%),
+                linear-gradient(-45deg, transparent 30%, rgba(159, 18, 57, 0.03) 50%, transparent 70%);
+            background-size: 100% 100%, 100% 100%;
+            pointer-events: none;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: var(--ds-container);
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 var(--space-lg);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5vw, 4.35rem);
+            line-height: 1.05;
+            font-weight: 800;
+            color: #eff4ff;
+            margin-bottom: 1.05rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-description {
+            max-width: 620px;
+            color: #e4edff;
+            font-size: clamp(1rem, 1.7vw, 1.15rem);
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+
+        /* ==========================================
+           CONTAINER & SECTION STYLES
+           ========================================== */
+        
+        .container {
+            width: var(--ds-container);
+            margin: 0 auto;
+        }
+
+        main section {
+            padding: var(--section-gap) 0;
+        }
+
+        section {
+            padding: var(--section-gap) 0;
+        }
+
+        .section-head {
+            margin-bottom: clamp(1.3rem, 3vw, 2rem);
+        }
+
+        .section-kicker {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--ds-primary);
+            font-weight: 700;
+            margin-bottom: 0.55rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.35rem);
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 0.7rem;
+            color: var(--ds-text);
+        }
+
+        .section-subtitle {
+            max-width: 720px;
+            font-size: clamp(0.98rem, 1.6vw, 1.06rem);
+            color: var(--ds-muted);
+        }
+
+        .section-intro {
+            font-size: clamp(0.98rem, 1.6vw, 1.06rem);
+            color: var(--ds-muted);
+            max-width: 720px;
+            margin: 0 auto var(--section-gap);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* ==========================================
+           BUTTON STYLES
+           ========================================== */
+        
+        .btn {
+            border: 0;
+            border-radius: 12px;
+            padding: 0.85rem 1.25rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 44px;
+            transition: 0.24s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--ds-primary), #2563eb);
+            color: #ffffff;
+            box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 26px rgba(37, 99, 235, 0.34);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            border: 1px solid var(--ds-border);
+            color: var(--ds-primary-strong);
+        }
+
+        .btn-secondary:hover {
+            border-color: #adc8f8;
+            background: #f8fbff;
+        }
+
+        .btn-white {
+            background-color: #fff;
+            color: var(--ds-primary);
+            border: 1px solid rgba(203, 216, 255, 0.72);
+            box-shadow: 0 10px 24px rgba(7, 29, 86, 0.22);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(7, 29, 86, 0.28);
+        }
+
+        /* ==========================================
+           GRID & CARD STYLES
+           ========================================== */
+        
+        .grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--ds-surface);
+            border: 1px solid var(--ds-border);
+            border-radius: var(--ds-radius);
+            padding: 1.1rem;
+            box-shadow: 0 8px 18px rgba(16, 33, 58, 0.06);
+            transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #bfd4f4;
+            box-shadow: 0 14px 28px rgba(16, 33, 58, 0.12);
+        }
+
+        .card h3,
+        .card h4 {
+            margin-bottom: 0.45rem;
+            color: var(--ds-text);
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 10px;
+            background: linear-gradient(160deg, #e8f0ff, #fbe7ee);
+            color: var(--ds-primary-strong);
+            border: 1px solid #cfe1ff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 0.55rem;
+            overflow: hidden;
+        }
+
+        .icon-mark {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 10px;
+            background: linear-gradient(160deg, #e8f0ff, #fbe7ee);
+            color: var(--ds-primary-strong);
+            border: 1px solid #cfe1ff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.78rem;
+            margin-bottom: 0.55rem;
+            overflow: hidden;
+        }
+
+        .icon-mark svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* ==========================================
+           EVENT CARD STYLES
+           ========================================== */
+        
+        .event-card {
+            background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+            border: 1px solid var(--ds-border);
+            border-radius: var(--ds-radius);
+            overflow: hidden;
+            transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+            box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);
+        }
+
+        .event-card:hover {
+            transform: translateY(-3px);
+            border-color: #bfd4f4;
+            box-shadow: 0 14px 28px rgba(16, 33, 58, 0.14);
+        }
+
+        .event-card-header {
+            padding: 1rem 1.15rem;
+            background: linear-gradient(180deg, #f0f8ff 0%, #f7fbff 100%);
+            border-bottom: 1px solid var(--ds-border);
+        }
+
+        .event-type {
+            display: inline-block;
+            background: #ecf3ff;
+            border: 1px solid #cde0ff;
+            color: #16417f;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .event-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            color: var(--ds-text);
+        }
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            font-size: 0.9rem;
+            color: var(--ds-muted);
+            margin-top: 0.55rem;
+        }
+
+        .event-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .event-card-body {
+            padding: 1rem 1.15rem;
+        }
+
+        .event-card-body p {
+            margin-bottom: 0.85rem;
+        }
+
+        /* ==========================================
+           CARDS GRID
+           ========================================== */
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.9rem;
+            margin-top: var(--section-gap);
+        }
+
+        /* ==========================================
+           GALLERY & PAST EVENTS
+           ========================================== */
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.9rem;
+            margin-top: var(--section-gap);
+        }
+
+        .gallery-item {
+            background: var(--ds-surface);
+            border: 1px solid var(--ds-border);
+            border-radius: var(--ds-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);
+            transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            border-color: #bfd4f4;
+            box-shadow: 0 14px 28px rgba(16, 33, 58, 0.14);
+        }
+
+        .gallery-item-image {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .event-type-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: linear-gradient(180deg, var(--ds-accent) 0%, #7f1d1d 100%);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 1;
+            box-shadow: 0 8px 16px rgba(127, 29, 29, 0.28);
+            letter-spacing: 0.01em;
+        }
+
+        .gallery-caption {
+            padding: 1rem 1.15rem;
+        }
+
+        .gallery-caption h4 {
+            margin: 0 0 0.3rem;
+            font-size: 1.02rem;
+            color: var(--ds-text);
+        }
+
+        .gallery-caption p {
+            margin: 0 0 0.55rem;
+            font-size: 0.9rem;
+            color: var(--ds-muted);
+        }
+
+        .event-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--ds-muted);
+            font-size: 0.86rem;
+            margin-bottom: 0.55rem;
+            font-weight: 500;
+        }
+
+        .gallery-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid var(--ds-border);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.55rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ecf3ff;
+            color: var(--ds-primary);
+            transition: all 0.24s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background-color: var(--ds-primary);
+            color: #fff;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .social-link svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .view-photos-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1rem;
+            background-color: var(--ds-primary);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.24s ease;
+            text-decoration: none;
+            box-shadow: 0 8px 16px rgba(12, 74, 154, 0.24);
+        }
+
+        .view-photos-btn:hover {
+            background-color: var(--ds-primary-strong);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(12, 74, 154, 0.32);
+            text-decoration: none;
+        }
+
+        .view-photos-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ==========================================
+           VIDEO SECTION
+           ========================================== */
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.9rem;
+            margin-top: var(--section-gap);
+        }
+
+        .video-card {
+            background: var(--ds-surface);
+            border: 1px solid var(--ds-border);
+            border-radius: var(--ds-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);
+            transition: transform 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(16, 33, 58, 0.14);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-info {
+            padding: 1rem 1.15rem;
+        }
+
+        .video-info h4 {
+            margin: 0 0 0.3rem;
+            font-size: 1.02rem;
+            color: var(--ds-text);
+        }
+
+        .video-info p {
+            margin: 0;
+            color: var(--ds-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+           BENEFITS & FEATURES SECTION
+           ========================================== */
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.9rem;
+            margin-top: var(--section-gap);
+        }
+
+        .benefit-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: 0.9rem;
+            padding: 1rem 1rem 1rem 0.95rem;
+            background: linear-gradient(150deg, #ffffff 0%, #f7fbff 100%);
+            border: 1px solid var(--ds-border);
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(14, 24, 44, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-3px);
+            border-color: #b9cceb;
+            box-shadow: 0 14px 28px rgba(20, 44, 86, 0.14);
+        }
+
+        .benefit-icon {
+            min-width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            border-radius: 10px;
+            background: transparent;
+            color: inherit;
+            box-shadow: none;
+        }
+
+        .benefit-content h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        .benefit-content p {
+            margin: 0;
+        }
+
+        /* ==========================================
+           SPEAKER & MENTOR CARDS
+           ========================================== */
+        
+        .speaker-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.9rem;
+            align-items: start;
+            padding: 1rem 1rem 1rem 0.95rem;
+            background: linear-gradient(150deg, #ffffff 0%, #f7fbff 100%);
+            border: 1px solid var(--ds-border);
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(14, 24, 44, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-3px);
+            border-color: #b9cceb;
+            box-shadow: 0 14px 28px rgba(20, 44, 86, 0.14);
+        }
+
+        .speaker-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background-color: #f0f8ff;
+        }
+
+        .speaker-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .speaker-info h4 {
+            margin: 0 0 0.25rem;
+            color: var(--ds-text);
+        }
+
+        .speaker-role {
+            color: var(--ds-primary);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .speaker-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--ds-muted);
+        }
+
+        /* ==========================================
+           CTA SECTION
+           ========================================== */
+        
+        .cta-section {
+            padding: clamp(1.3rem, 4vw, 2.4rem);
+            background: linear-gradient(145deg, #0f2f56, #0b457f);
+            border-radius: var(--ds-radius);
+            color: #d9e8ff;
+            text-align: center;
+            box-shadow: var(--ds-shadow);
+            margin: var(--section-gap) 0;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            margin-bottom: 0.9rem;
+            margin-top: 0;
+        }
+
+        .cta-section p {
+            color: #d9e8ff;
+            margin-bottom: 1.15rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* ==========================================
+           FILTER BUTTONS
+           ========================================== */
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin: var(--section-gap) 0;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.2rem;
+            border: 1px solid var(--ds-border);
+            background: #ffffff;
+            color: var(--ds-primary);
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.24s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            font-size: 0.8rem;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .filter-btn:hover::before {
+            left: 100%;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--ds-primary), #1d4ed8);
+            color: #fff;
+            border-color: #1d4ed8;
+            box-shadow: 0 10px 22px rgba(29, 78, 216, 0.28);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        
+        footer {
+            background: #11233c;
+            color: #d2e2ff;
+            padding: 3rem 0 6rem;
+            margin-top: var(--section-gap);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            height: auto;
+        }
+
+        .footer-title,
+        .footer-section h3 {
+            color: #ffffff;
+            margin-bottom: 0.55rem;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-col ul,
+        .footer-section ul {
+            list-style: none;
+            display: grid;
+            gap: 0.4rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col a,
+        .footer-section a {
+            color: #d2e2ff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover,
+        .footer-section a:hover {
+            color: #6ee7df;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(211, 229, 255, 0.2);
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            font-size: 0.88rem;
+            color: #c0d5f4;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ==========================================
+           RESPONSIVE BREAKPOINTS
+           ========================================== */
+        
+        /* Tablets (min-width: 640px) */
+        @media (min-width: 640px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex !important;
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                flex-direction: row;
+                background: transparent !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                animation: none !important;
+            }
+
+            .hamburger-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Desktop (min-width: 900px) */
+        @media (min-width: 900px) {
+            .cards-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        /* Large Desktops (min-width: 1440px) */
+        @media (min-width: 1440px) {
+            .hero {
+                padding: clamp(3rem, 6vw, 5rem) 0;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .hero h1 {
+                font-size: clamp(1.75rem, 5vw, 2.5rem);
+            }
+
+            .section-title {
+                font-size: clamp(1.4rem, 3vw, 2rem);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons a {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card,
+            .gallery-item,
+            .event-card,
+            .benefit-item,
+            .speaker-card,
+            .video-card {
+                transition: none;
+            }
+
+            @keyframes floatIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 1; }
+            }
+        }
+        
+        /* ===================================
+           CURSOR GLOW EFFECT
+        =================================== */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                var(--glow-core, rgba(12, 74, 154, 0.55)) 0%,
+                var(--glow-mid, rgba(29, 78, 216, 0.3)) 35%,
+                var(--glow-edge, rgba(29, 78, 216, 0)) 70%
+            );
+            box-shadow: 0 0 18px rgba(12, 74, 154, 0.25);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            mix-blend-mode: normal;
+            transform: translate3d(-9999px, -9999px, 0);
+            will-change: transform, opacity, background;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .cursor-glow {
+                display: none;
+            }
+        }
+    
+</style>
+                <style id="local-header-footer-fixes">
+/* Shared header alignment across all pages */
+
+@keyframes headerLogoOrbit {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-4px) rotate(-0.6deg);
+    }
+}
+
+@keyframes headerSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header,
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-bottom: 1px solid #dbe8ff;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+header .container,
+.header .container,
+header .container-wide,
+.header .container-wide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+header nav,
+.header-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.38rem 0.85rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 1rem;
+}
+
+.logo,
+header nav > a:first-child {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.logo img {
+    width: clamp(112px, 14vw, 156px);
+    height: auto;
+    object-fit: contain;
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 4px;
+    animation: headerLogoOrbit 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #1e40af;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu ul,
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul,
+.nav-links {
+    justify-content: flex-end !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-links a:hover,
+.nav-links li a:hover {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+    text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+}
+
+.nav-menu a::after,
+.nav-links a::after,
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #1e40af);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-links a:hover::after,
+.nav-links li a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+}
+
+@media (max-width: 991px) {
+    .hamburger-menu {
+        display: flex !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        display: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 62px !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column !important;
+        gap: 0.4rem;
+        padding: 0.85rem 1rem !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12) !important;
+        border-bottom: 1px solid #dbe8ff;
+        z-index: 1190;
+        animation: headerSlideDown 0.3s ease-out;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.35rem;
+        width: 100%;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a {
+        width: 100%;
+        padding: 0.75rem 0.4rem;
+        display: block;
+    }
+
+    .nav-menu a::after,
+    .nav-links a::after,
+    .nav-links li a::after {
+        bottom: 0.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        margin-left: auto !important;
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+    }
+
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a {
+        padding: 0.4rem 0.55rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo img {
+        animation: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active,
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a,
+    .hamburger-menu span {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Shared programs mega-menu */
+.nav-menu > ul {
+    align-items: center;
+}
+
+.nav-menu .has-dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.nav-menu .dropdown-toggle:hover,
+.nav-menu .has-dropdown.open .dropdown-toggle {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+}
+
+.nav-menu .dropdown-caret {
+    font-size: 0.72rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-menu .has-dropdown.open .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-menu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #dbe8ff;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    min-width: 640px;
+    overflow: hidden;
+    z-index: 1210;
+}
+
+.nav-menu .programs-mega {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 320px;
+}
+
+.nav-menu .program-domains {
+    padding: 1.05rem;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+.nav-menu .program-domains-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.65rem;
+    color: #1f2937;
+}
+
+.nav-menu .program-domain-list {
+    list-style: none;
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+}
+
+.nav-menu .program-domain-list button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.72rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-menu .program-domain-list button:hover,
+.nav-menu .program-domain-list button.active {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.nav-menu .program-results {
+    padding: 1rem 1.05rem;
+}
+
+.nav-menu .program-panel {
+    display: none;
+}
+
+.nav-menu .program-panel.active {
+    display: block;
+}
+
+.nav-menu .program-group {
+    margin-bottom: 0.95rem;
+}
+
+.nav-menu .program-group:last-child {
+    margin-bottom: 0;
+}
+
+.nav-menu .program-group h4 {
+    margin: 0 0 0.55rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.nav-menu .program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.nav-menu .program-card-link {
+    display: block;
+    padding: 0.72rem 0.78rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+.nav-menu .program-card-title {
+    display: block;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.18rem;
+}
+
+.nav-menu .program-card-meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.nav-menu .dropdown-menu a::after,
+.nav-menu .program-domain-list button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.nav-menu .dropdown-menu a:hover {
+    transform: none;
+    text-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .nav-menu .has-dropdown:hover .dropdown-menu,
+    .nav-menu .has-dropdown:focus-within .dropdown-menu,
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: calc(100% + 0.45rem);
+        left: 0;
+        transform: none;
+        width: min(860px, 88vw);
+    }
+
+    .nav-menu .program-card-link:hover {
+        border-color: #fecaca;
+        background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    }
+
+    .nav-menu .program-card-link:hover .program-card-title {
+        color: #b91c1c;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 0.3rem;
+        width: 100%;
+        transform: none;
+    }
+
+    .nav-menu .programs-mega {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .nav-menu .program-domains {
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-menu .program-domains-title {
+        font-size: 1rem;
+    }
+
+    .nav-menu .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Final consistency override for pages with local header/nav styles */
+header,
+.header {
+    padding: 0 !important;
+}
+
+header nav,
+.header-content {
+    max-width: min(1200px, 100%) !important;
+    width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 0.38rem 0.85rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
+}
+
+.nav-menu {
+    margin-left: auto !important;
+}
+
+.nav-menu > ul {
+    gap: 1.25rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a,
+.nav-menu .dropdown-toggle {
+    padding: 0.4rem 0.55rem !important;
+}
+
+@media (max-width: 991px) {
+    .nav-menu.active,
+    .nav-links.active {
+        padding: 0.85rem 1rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        gap: 0.35rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a,
+    .nav-menu.active .dropdown-toggle {
+        padding: 0.75rem 0.4rem !important;
+    }
+}
+
+/* Shared footer spacing and layout */
+footer,
+footer#contact,
+#contact {
+    margin-top: 1.6rem !important;
+    padding: 3rem 0 2.6rem !important;
+}
+
+footer [style*="max-width: 1400px"],
+footer .container {
+    width: min(1200px, 100%) !important;
+    max-width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+footer .footer-logo {
+    margin-bottom: 0.5rem !important;
+}
+
+footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    margin-top: 1.2rem !important;
+}
+
+footer .footer-section ul,
+footer .footer-col ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.4rem !important;
+}
+
+footer .footer-office-list {
+    list-style: none !important;
+    display: grid !important;
+    gap: 0.68rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .footer-office-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+footer .footer-icon {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 0.08rem !important;
+    color: #9fc1f0 !important;
+}
+
+footer .footer-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    fill: currentColor !important;
+}
+
+footer .footer-office-item strong {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid rgba(211, 229, 255, 0.2) !important;
+    margin-top: 1.2rem !important;
+    padding-top: 0.95rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.01em !important;
+    color: #b2c8ea !important;
+}
+
+footer .footer-bottom p {
+    margin: 0 !important;
+    line-height: 1.45 !important;
+    color: inherit !important;
+}
+
+@media (min-width: 640px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.2rem !important;
+    }
+
+    footer .footer-bottom {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+footer,
+footer#contact,
+#contact {
+    padding: 1.6rem 0 1.2rem !important;
+    margin-top: 1rem !important;
+}
+.footer-grid {
+    margin-top: 0.8rem !important;
+}
+.footer-bottom {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+}
+.footer-map {
+    margin-top: 0.5rem;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111827;
+}
+.footer-map iframe {
+    width: 100%;
+    min-height: 130px;
+    border: 0;
+    display: block;
+}
+    </style>
+
+    <link rel='stylesheet' href='../css/header-unify.css'>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../">
+                        <img src="../imgs/home/LSA-Logo.png" alt="Lords Skill Academy Logo" width="160" height="48">
+                    </a>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+<ul>
+<li><a href="../">Home</a></li>
+<li class="has-dropdown">
+<button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Programs menu">Programs <span class="dropdown-caret" aria-hidden="true">&#9662;</span></button>
+<div class="dropdown-menu" aria-label="Programs submenu">
+<div class="programs-mega">
+<aside class="program-domains">
+<p class="program-domains-title">Domains</p>
+<ul class="program-domain-list">
+<li><button type="button" class="active" data-program-target="programming" aria-selected="true">School of Programming</button></li>
+<li><button type="button" data-program-target="safety" aria-selected="false">School of Safety</button></li>
+</ul>
+</aside>
+<div class="program-results">
+<section class="program-panel active" data-program-panel="programming">
+<section class="program-group">
+<h4>School of Programming</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../school-of-programming/"><span class="program-card-title">School of Programming</span><span class="program-card-meta">Overview of all programming tracks</span></a>
+<a class="program-card-link" href="../ds/"><span class="program-card-title">Data Science Course</span><span class="program-card-meta">Dedicated data science program page</span></a>
+<a class="program-card-link" href="../full-stack-java/"><span class="program-card-title">Full Stack Development</span><span class="program-card-meta">Dedicated Full Stack Java program page</span></a>
+<a class="program-card-link" href="../python-programming/"><span class="program-card-title">Python and Java Tracks</span><span class="program-card-meta">Dedicated Python program page</span></a>
+</div>
+</section>
+</section>
+<section class="program-panel" data-program-panel="safety">
+<section class="program-group">
+<h4>School of Safety</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../cyber-security/"><span class="program-card-title">Cyber Security Course</span><span class="program-card-meta">Dedicated cyber security course page</span></a>
+<a class="program-card-link" href="../cyber-security/#course-structure"><span class="program-card-title">Ethical Hacking Track</span><span class="program-card-meta">Modules and practical coverage</span></a>
+<a class="program-card-link" href="../cyber-security/#projects"><span class="program-card-title">SOC Analyst Path</span><span class="program-card-meta">Project-based SOC readiness</span></a>
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+</li>
+<li><a href="../faq/">Community Guidelines</a></li>
+<li><a href="../career-guidance/">Career Guidance</a></li>
+<li><a href="../community-events/">Community</a></li>
+<li><a href="../blog/">Blog</a></li>
+<li><a href="../contact-us/">Contact Us</a></li>
+</ul>
+</nav>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-container">
+           
+            <h1>LSA Community Events & Workshops</h1>
+            <p class="hero-description">
+                Learn, connect, and grow through hands-on workshops, webinars, bootcamps, and seminars led by industry experts and passionate educators.
+            </p>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class="section-title">What is the LSA Community?</h2>
+            <p class="section-intro">
+                The LSA Community is a vibrant space where students, learners, alumni, and professionals come together to share knowledge, build skills, and grow careers. Our events are designed to go beyond traditional classroom learningâ€”offering real-world exposure, hands-on practice, and meaningful connections with industry experts.
+            </p>
+            <div style="max-width: 85%; margin: var(--space-xl) auto 0; text-align: center;">
+                <img src="../imgs/community/grp-photo.jpg" alt="Students and professionals collaborating in a community learning environment" width="1200" height="400" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="background-color: var(--primary-light);">
+        <div class="container">
+            <h2 class="section-title">Types of Community Events</h2>
+            <p class="section-intro">
+                We host a variety of events to support different learning styles and goals.
+            </p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">ðŸŽ¥</div>
+                    <h3>Webinars</h3>
+                    <p>Online sessions with industry experts covering trending topics, career advice, and technical deep-dives. Join from anywhere.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">ðŸ› ï¸</div>
+                    <h3>Workshops</h3>
+                    <p>Hands-on, skill-focused sessions where you learn by doing. Build projects, solve problems, and gain practical experience.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">ðŸš€</div>
+                    <h3>Bootcamps</h3>
+                    <p>Intensive short-term training programs designed to fast-track your learning in specific technologies or domains.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">ðŸ“¢</div>
+                    <h3>Seminars</h3>
+                    <p>Industry talks and awareness sessions featuring guest speakers, thought leaders, and successful professionals sharing their journeys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-intro">
+                Register for our upcoming community events and start your learning journey today.
+            </p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="webinar">Webinars</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="bootcamp">Bootcamps</button>
+                <button class="filter-btn" data-filter="seminar">Seminars</button>
+            </div>
+
+            <div class="cards-grid" id="events-container">
+                
+                <div class="event-card" data-type="webinar">
+                    <div class="event-card-header">
+                        <span class="event-type">Webinar</span>
+                        <h3>Introduction to Web Development</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Jan 25, 2026</span>
+                            <span>â° 6:00 PM</span>
+                            <span>ðŸŒ Online</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Learn the fundamentals of HTML, CSS, and JavaScript. Perfect for absolute beginners looking to start their coding journey.</p>
+                        <a href="#register" class="btn btn-primary">Register Free</a>
+                    </div>
+                </div>
+
+                
+                <div class="event-card" data-type="workshop">
+                    <div class="event-card-header">
+                        <span class="event-type">Workshop</span>
+                        <h3>Hands-On Python for Data Science</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Feb 1, 2026</span>
+                            <span>â° 10:00 AM</span>
+                            <span>ðŸ“ Offline</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Build real data analysis projects using Python, Pandas, and Matplotlib. Bring your laptop for this interactive workshop.</p>
+                        <a href="#register" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+
+                
+                <div class="event-card" data-type="bootcamp">
+                    <div class="event-card-header">
+                        <span class="event-type">Bootcamp</span>
+                        <h3>React.js Intensive Bootcamp</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Feb 10-14, 2026</span>
+                            <span>â° 5 Days</span>
+                            <span>ðŸŒ Online</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Master React fundamentals in 5 intensive days. Build 3 projects, understand hooks, state management, and deployment.</p>
+                        <a href="#register" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+
+                
+                <div class="event-card" data-type="seminar">
+                    <div class="event-card-header">
+                        <span class="event-type">Seminar</span>
+                        <h3>Career Paths in AI & Machine Learning</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Feb 8, 2026</span>
+                            <span>â° 4:00 PM</span>
+                            <span>ðŸŒ Online</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Industry leaders share insights on AI/ML career opportunities, skills needed, and how to break into the field.</p>
+                        <a href="#register" class="btn btn-primary">Register Free</a>
+                    </div>
+                </div>
+
+                
+                <div class="event-card" data-type="workshop">
+                    <div class="event-card-header">
+                        <span class="event-type">Workshop</span>
+                        <h3>Git & GitHub for Beginners</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Feb 15, 2026</span>
+                            <span>â° 2:00 PM</span>
+                            <span>ðŸ“ Offline</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Learn version control essentials, collaborate on projects, and build your GitHub portfolio from scratch.</p>
+                        <a href="#register" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+
+                
+                <div class="event-card" data-type="webinar">
+                    <div class="event-card-header">
+                        <span class="event-type">Webinar</span>
+                        <h3>Cybersecurity Basics for Everyone</h3>
+                        <div class="event-meta">
+                            <span>ðŸ“… Feb 20, 2026</span>
+                            <span>â° 7:00 PM</span>
+                            <span>ðŸŒ Online</span>
+                        </div>
+                    </div>
+                    <div class="event-card-body">
+                        <p>Understand common threats, secure your digital life, and explore cybersecurity as a career path.</p>
+                        <a href="#register" class="btn btn-primary">Register Free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="background-color: var(--primary-light);">
+        <div class="container">
+            <h2 class="section-title">Past Events & Highlights</h2>
+            <p class="section-intro">
+                See what our community has accomplished together.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                        <img src="../imgs/community/Python-HackDay.jpg" alt="Participants in Python workshop building data visualization projects" width="400" height="250">
+                        <span class="event-type-badge">Workshop</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Python Data Workshop</h4>
+                        <div class="event-date">ðŸ“… November 15, 2025</div>
+                        <p>Participants learned Python data analysis using Pandas and Matplotlib. Hands-on projects included building visualizations, cleaning datasets, and creating interactive dashboards with real-world applications.</p>
+                        <div class="gallery-actions">
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/company/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                            </div>
+                            <a href="#" class="view-photos-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19v-14c0-1.104-.896-2-2-2h-14c-1.104 0-2 .896-2 2v14c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2zm-11.5-10c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm11.5 10h-20v-2l4-5 4 5 4.5-6 7.5 8v0zm-8-7l-3 4h-10v-11h18v11l-5-4z"/></svg>
+                                View Photos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                        <img src="../imgs/community/meetup.jpg" alt="Community members at LSA event" width="400" height="250">
+                        <span class="event-type-badge">Meetup</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Community Workshop</h4>
+                        <div class="event-date">ðŸ“… October 28, 2025</div>
+                        <p>Community members collaborated on tech projects and shared knowledge. Networking sessions connected students with professionals. Hands-on activities fostered skill development and teamwork in supportive environment.</p>
+                        <div class="gallery-actions">
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/company/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                            </div>
+                            <a href="#" class="view-photos-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19v-14c0-1.104-.896-2-2-2h-14c-1.104 0-2 .896-2 2v14c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2zm-11.5-10c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm11.5 10h-20v-2l4-5 4 5 4.5-6 7.5 8v0zm-8-7l-3 4h-10v-11h18v11l-5-4z"/></svg>
+                                View Photos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-image">
+                        <img src="../imgs/community/Hack-a-Mini.jpg" alt="Students collaborating during community event" width="400" height="250">
+                        <span class="event-type-badge">Hackathon</span>
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Community Gathering</h4>
+                        <div class="event-date">ðŸ“… September 20, 2025</div>
+                        <p>Students built innovative projects during intensive coding marathon. Teams tackled real problems with creative solutions. Mentors guided participants through challenges while fostering collaboration and technical growth experience.</p>
+                        <div class="gallery-actions">
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/company/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/lordsskillacademy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Share on Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                            </div>
+                            <a href="#" class="view-photos-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19v-14c0-1.104-.896-2-2-2h-14c-1.104 0-2 .896-2 2v14c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2zm-11.5-10c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm11.5 10h-20v-2l4-5 4 5 4.5-6 7.5 8v0zm-8-7l-3 4h-10v-11h18v11l-5-4z"/></svg>
+                                View Photos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class="section-title">Watch Past Sessions</h2>
+            <p class="section-intro">
+                Catch up on webinars, workshops, and seminars you might have missed. Learn at your own pace.
+            </p>
+            <div class="video-grid">
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/FsYTit41U_s" 
+                            title="Introduction to Web Development Webinar"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Introduction to Web Development</h4>
+                        <p>Full webinar recording from December 2025 â€¢ 1.2K views</p>
+                    </div>
+                </div>
+
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/FsYTit41U_s" 
+                            title="Python for Data Science Workshop Highlights"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Python for Data Science Workshop</h4>
+                        <p>Workshop highlights from November 2025 â€¢ 890 views</p>
+                    </div>
+                </div>
+
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/FsYTit41U_s" 
+                            title="Career Guidance Session - AI & ML Paths"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Career Paths in AI & Machine Learning</h4>
+                        <p>Industry expert seminar from October 2025 â€¢ 1.5K views</p>
+                    </div>
+                </div>
+
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/FsYTit41U_s" 
+                            title="React Bootcamp Project Showcase"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>React Bootcamp - Project Showcase</h4>
+                        <p>Student projects from our 5-day intensive bootcamp â€¢ 750 views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="background-color: var(--primary-light);">
+        <div class="container">
+            <h2 class="section-title">Why Join LSA Community Events?</h2>
+            <p class="section-intro">
+                Our events offer more than just learningâ€”they open doors to opportunities, connections, and confidence.
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸ“–</div>
+                    <div class="benefit-content">
+                        <h3>Learn Beyond the Syllabus</h3>
+                        <p>Gain practical skills that textbooks and classrooms can't teachâ€”real tools, real projects, real results.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸ¢</div>
+                    <div class="benefit-content">
+                        <h3>Industry Exposure</h3>
+                        <p>Interact with professionals, understand market trends, and see how concepts apply in the real world.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸ¤</div>
+                    <div class="benefit-content">
+                        <h3>Networking Opportunities</h3>
+                        <p>Connect with peers, mentors, and industry leaders who can guide and support your journey.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸ’ª</div>
+                    <div class="benefit-content">
+                        <h3>Build Skill Confidence</h3>
+                        <p>Hands-on practice helps you master skills faster and gain the confidence to apply them professionally.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸŽ¯</div>
+                    <div class="benefit-content">
+                        <h3>Career Clarity</h3>
+                        <p>Discover what excites you, explore different paths, and make informed career decisions.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">ðŸŒŸ</div>
+                    <div class="benefit-content">
+                        <h3>Community Support</h3>
+                        <p>Join a network of learners and professionals who celebrate growth and support each other's success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class="section-title">Meet Our Speakers & Mentors</h2>
+            <p class="section-intro">
+                Learn from experienced professionals and passionate educators who bring real-world insights to every session.
+            </p>
+            <div class="cards-grid" style="grid-template-columns: 1fr;">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="../imgs/community/mentee.png" alt="Dr. Rajesh Kumar - Data Science Expert" width="80" height="80">
+                    </div>
+                    <div class="speaker-info">
+                        <h4>Dr. Rajesh Kumar</h4>
+                        <p class="speaker-role">Data Science Expert & AI Consultant</p>
+                        <p>10+ years in data science and machine learning. Former lead at major tech firms. Passionate about making AI accessible to everyone.</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="../imgs/community/mentee.png" alt="Priya Sharma - Full-Stack Developer" width="80" height="80">
+                    </div>
+                    <div class="speaker-info">
+                        <h4>Priya Sharma</h4>
+                        <p class="speaker-role">Full-Stack Developer & Tech Educator</p>
+                        <p>Specializes in web development with React, Node.js, and cloud technologies. Mentored 500+ students into successful tech careers.</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="../imgs/community/mentee.png" alt="Amit Verma - Cybersecurity Specialist" width="80" height="80">
+                    </div>
+                    <div class="speaker-info">
+                        <h4>Amit Verma</h4>
+                        <p class="speaker-role">Cybersecurity Specialist & Ethical Hacker</p>
+                        <p>Certified ethical hacker with expertise in network security, penetration testing, and secure software development practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="background: linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%); border-top: 1px solid #dbe7fb; border-bottom: 1px solid #dbe7fb;">
+        <div class="container">
+            <h2 class="section-title">HackUnion: Learn by Building</h2>
+            <p class="section-intro">
+                A student-driven builder community focused on collaboration, mentorship, and real-world project building. HackUnion is the community where code meets collaboration.
+            </p>
+            
+            <div style="margin: var(--section-gap) 0;">
+                <div style="background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%); border: 1px solid #dbe7fb; border-radius: 18px; padding: clamp(1.5rem, 3vw, 2rem); box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);">
+                    <div style="max-width: 720px; margin: 0 auto;">
+                        <h3 style="color: #0c4a9a; font-size: 1.3rem; margin-bottom: 1rem;">About HackUnion</h3>
+                        <p style="color: #4d5f7b; margin-bottom: 0.9rem;">HackUnion is more than just an event—it's a mindset. We believe in the power of building, learning, and creating together. Whether you're working on your first project or shipping your tenth, HackUnion is your community.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                            <div style="padding: 1rem; background: #ecf3ff; border-radius: 12px; border-left: 4px solid #0c4a9a;">
+                                <h4 style="color: #07346f; font-size: 1rem; margin-bottom: 0.3rem;">Builder Mindset</h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #4d5f7b;">Ship projects, iterate, and learn from real feedback.</p>
+                            </div>
+                            <div style="padding: 1rem; background: #ecf3ff; border-radius: 12px; border-left: 4px solid #0c4a9a;">
+                                <h4 style="color: #07346f; font-size: 1rem; margin-bottom: 0.3rem;">Mentorship</h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #4d5f7b;">Learn from experienced builders and give back to the community.</p>
+                            </div>
+                            <div style="padding: 1rem; background: #ecf3ff; border-radius: 12px; border-left: 4px solid #0c4a9a;">
+                                <h4 style="color: #07346f; font-size: 1rem; margin-bottom: 0.3rem;">Collaboration</h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #4d5f7b;">Work with peers, share knowledge, and build together.</p>
+                            </div>
+                            <div style="padding: 1rem; background: #ecf3ff; border-radius: 12px; border-left: 4px solid #0c4a9a;">
+                                <h4 style="color: #07346f; font-size: 1rem; margin-bottom: 0.3rem;">Inclusive Community</h4>
+                                <p style="margin: 0; font-size: 0.9rem; color: #4d5f7b;">All skill levels welcome—from beginners to seasoned developers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 0.7rem;">HackUnion Event Formats</h2>
+            <p class="section-intro">
+                Participate in diverse formats designed to inspire learning, collaboration, and innovation.
+            </p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 style="color: #0c4a9a; margin-top: 0;">Meetups</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Frequency:</strong> Monthly | <strong>Format:</strong> In-person & Online</p>
+                    <p>Casual gatherings where builders network, share projects, discuss challenges, and find collaborators. Perfect for connecting with the community.</p>
+                    <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.65rem 1.2rem; background: #0c4a9a; color: #fff; border-radius: 10px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 style="color: #0c4a9a; margin-top: 0;">Builders Day</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Frequency:</strong> Quarterly | <strong>Format:</strong> Full Day Event</p>
+                    <p>Intensive one-day workshops focused on shipping projects. Build something real, get feedback from mentors, and celebrate your work.</p>
+                    <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.65rem 1.2rem; background: #0c4a9a; color: #fff; border-radius: 10px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 style="color: #0c4a9a; margin-top: 0;">Builders Guild</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Frequency:</strong> Weekly | <strong>Format:</strong> Online Community</p>
+                    <p>An exclusive group for consistent builders. Weekly check-ins, mentorship calls, and accountability partners to help you ship faster.</p>
+                    <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.65rem 1.2rem; background: #0c4a9a; color: #fff; border-radius: 10px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 style="color: #0c4a9a; margin-top: 0;">Hackathon</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Frequency:</strong> Annual | <strong>Format:</strong> 24-48 Hour Challenge</p>
+                    <p>Competitive and collaborative hackathons where teams build, innovate, and compete. Network with top talent and win prizes.</p>
+                    <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.65rem 1.2rem; background: #0c4a9a; color: #fff; border-radius: 10px; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="background: linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%); border-top: 1px solid #dbe7fb; border-bottom: 1px solid #dbe7fb;">
+        <div class="container">
+            <h2 class="section-title">HackUnion Community Impact</h2>
+            <p class="section-intro">
+                Celebrating the growth, achievements, and community we've built together.
+            </p>
+            <div class="cards-grid" style="margin-top: var(--section-gap);">
+                <div style="background: #ffffff; border: 1px solid #dbe7fb; border-radius: 18px; padding: 1.5rem; text-align: center; box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: #0c4a9a; margin-bottom: 0.5rem;">2000+</div>
+                    <h4 style="color: #10213a; margin-bottom: 0.5rem;">Students Impacted</h4>
+                    <p style="color: #4d5f7b; margin: 0; font-size: 0.9rem;">From beginners to intermediate builders joining our community.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #dbe7fb; border-radius: 18px; padding: 1.5rem; text-align: center; box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: #9f1239; margin-bottom: 0.5rem;">500+</div>
+                    <h4 style="color: #10213a; margin-bottom: 0.5rem;">Projects Built</h4>
+                    <p style="color: #4d5f7b; margin: 0; font-size: 0.9rem;">Real, shipped projects created during our events and community.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #dbe7fb; border-radius: 18px; padding: 1.5rem; text-align: center; box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: #0c4a9a; margin-bottom: 0.5rem;">150+</div>
+                    <h4 style="color: #10213a; margin-bottom: 0.5rem;">Events Hosted</h4>
+                    <p style="color: #4d5f7b; margin: 0; font-size: 0.9rem;">Meetups, workshops, and hackathons building our community together.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #dbe7fb; border-radius: 18px; padding: 1.5rem; text-align: center; box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: #9f1239; margin-bottom: 0.5rem;">40+</div>
+                    <h4 style="color: #10213a; margin-bottom: 0.5rem;">Partners</h4>
+                    <p style="color: #4d5f7b; margin: 0; font-size: 0.9rem;">Companies and organizations supporting our mission to build together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="container">
+            <div class="cta-section" id="register">
+                <h2>Be Part of a Learning Community That Grows Together</h2>
+                <p>
+                    Join thousands of learners, build meaningful connections, and take your skills to the next level. Our community events are designed to inspire, educate, and empower you.
+                </p>
+                <div class="cta-buttons">
+                    <a href="../contact-us/" class="btn btn-white">Join the LSA Community</a>
+                    <a href="#events-container" class="btn btn-secondary">Browse Upcoming Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+            <footer id="contact">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+            <div class="footer-logo">
+                <img src="../imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="../school-of-programming/">Programming</a></li>
+                        <li><a href="../ds/">Data Science</a></li>
+                        <li><a href="../career-guidance/">Career Guidance</a></li>
+                        <li><a href="../trainers/">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../community-events/">Community Events</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="../about-us/">About Us</a></li>
+                        <li><a href="../contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="../terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-office">
+                    <h3>LSA Office</h3>
+                    <ul class="footer-office-list">
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5zm2.2-.5 6.8 5.53L18.8 5zM19 18.5V7.04l-6.37 5.18a1 1 0 0 1-1.26 0L5 7.04V18.5z"></path>
+                                </svg>
+                            </span>
+                            <a href="mailto:enquiry@lordsskillacademy.com">enquiry@lordsskillacademy.com</a>
+                        </li>
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
+                                </svg>
+                            </span>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </li>
+                    </ul>
+                    <div class="footer-map" aria-label="LSA office map">
+                        <iframe
+                            title="Lords Skill Academy Office Location"
+                            src="https://maps.google.com/maps?q=Lords%20Skill%20Academy%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lords Skill Academy. All rights reserved.</p>
+                <p>Crafted with &#10084; for future innovators.</p>
+                <p>Designed &amp; Developed by AV Digitals for Lords Skill Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        // ==========================================
+        // SMOOTH SCROLLING FOR ANCHOR LINKS
+        // ==========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ==========================================
+        // EVENT FILTERING
+        // ==========================================
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const eventCards = document.querySelectorAll('.event-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter events
+                eventCards.forEach(card => {
+                    const cardType = card.getAttribute('data-type');
+                    
+                    if (filterValue === 'all' || cardType === filterValue) {
+                        card.style.display = 'block';
+                        // Add fade-in animation
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ==========================================
+        // FADE-IN ANIMATION CSS (dynamic)
+        // ==========================================
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // ==========================================
+        // ACCESSIBILITY: KEYBOARD NAVIGATION
+        // ==========================================
+        filterButtons.forEach(button => {
+            button.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+    </script>
+    <script>
+        (function() {
+            const glow = document.querySelector('.cursor-glow');
+            if (!glow) return;
+
+            let currentX = window.innerWidth / 2;
+            let currentY = window.innerHeight / 2;
+            let targetX = currentX;
+            let targetY = currentY;
+            let size = 24;
+            let t = 0;
+
+            function updateSize() {
+                size = glow.offsetWidth / 2 || 24;
+            }
+
+            updateSize();
+            window.addEventListener('resize', updateSize);
+
+            function animate() {
+                t += 0.04;
+                const wobbleX = Math.sin(t) * 4;
+                const wobbleY = Math.cos(t * 0.9) * 4;
+
+                currentX += (targetX - currentX) * 0.14;
+                currentY += (targetY - currentY) * 0.14;
+                glow.style.transform = `translate3d(${currentX - size + wobbleX}px, ${currentY - size + wobbleY}px, 0)`;
+                requestAnimationFrame(animate);
+            }
+
+            function parseRgb(color) {
+                const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+                if (!match) return null;
+                return {
+                    r: parseInt(match[1], 10),
+                    g: parseInt(match[2], 10),
+                    b: parseInt(match[3], 10),
+                    a: match[4] !== undefined ? parseFloat(match[4]) : 1
+                };
+            }
+
+            function getEffectiveBgColor(el) {
+                let node = el;
+                while (node && node !== document.documentElement) {
+                    const bg = window.getComputedStyle(node).backgroundColor;
+                    const rgb = parseRgb(bg);
+                    if (rgb && rgb.a > 0) {
+                        return rgb;
+                    }
+                    node = node.parentElement;
+                }
+                return { r: 255, g: 255, b: 255, a: 1 };
+            }
+
+            function updateGlowColor(x, y) {
+                const el = document.elementFromPoint(x, y);
+                if (!el) return;
+
+                const bg = getEffectiveBgColor(el);
+                const luminance = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
+
+                if (luminance > 0.55) {
+                    glow.style.setProperty('--glow-core', 'rgba(37, 99, 235, 0.55)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.32)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 18px rgba(37, 99, 235, 0.35)';
+                } else {
+                    glow.style.setProperty('--glow-core', 'rgba(56, 189, 248, 0.6)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.35)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.32)';
+                }
+            }
+
+            window.addEventListener('mousemove', (event) => {
+                targetX = event.clientX;
+                targetY = event.clientY;
+                glow.style.opacity = '1';
+                updateGlowColor(event.clientX, event.clientY);
+            });
+
+            window.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+
+            animate();
+        })();
+
+        /**
+         * HAMBURGER MENU TOGGLE
+         */
+        (function() {
+            const hamburgerBtn = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (!hamburgerBtn || !navMenu) return;
+
+            hamburgerBtn.addEventListener('click', function() {
+                const isOpen = navMenu.classList.toggle('active');
+                hamburgerBtn.classList.toggle('active', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            // Close menu when clicking on a link
+            const links = navMenu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideHeader = event.target.closest('header');
+                if (!isClickInsideHeader && navMenu.classList.contains('active')) {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+
+<script src='../js/programs-mega-menu.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

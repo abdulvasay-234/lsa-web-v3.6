@@ -1,0 +1,3633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="../imgs/Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../imgs/Favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../imgs/Favicon/apple-touch-icon.png">
+	<link rel="shortcut icon" href="../imgs/Favicon/favicon.ico">
+	<link rel="manifest" href="../imgs/Favicon/site.webmanifest">
+	<meta name="description" content="Join Lords Skill Academy's Full Stack Java Course with hands-on projects, mentor support, interview preparation, and career guidance. Beginner-friendly 4-month job-focused training.">
+	<meta name="keywords" content="full stack java course, full stack java training, beginner full stack java program, spring boot course, react course, mysql course, career support, software developer training, java backend course">
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="author" content="Lords Skill Academy">
+	<meta name="theme-color" content="#2142a4">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="canonical" href="https://lordsskillacademy.com/full-stack-java/">
+	
+    <link rel='stylesheet' href='../css/global.css'>
+<meta property="og:type" content="website">
+	<meta property="og:title" content="Full Stack Java Course | Lords Skill Academy">
+	<meta property="og:description" content="4-month beginner to intermediate Full Stack Java training with projects, mentor support, interview preparation, and placement-focused guidance.">
+	<meta property="og:url" content="https://lordsskillacademy.com/full-stack-java/">
+	<meta property="og:site_name" content="Lords Skill Academy">
+	<meta property="og:image" content="https://lordsskillacademy.com/imgs/programming/full-stack-java.jpg">
+	<meta property="og:image:alt" content="Full Stack Java classroom training at Lords Skill Academy">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Full Stack Java Course | Lords Skill Academy">
+	<meta name="twitter:description" content="Hands-on Full Stack Java training with projects, mentors, and career support.">
+	<meta name="twitter:image" content="https://lordsskillacademy.com/imgs/programming/full-stack-java.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml">
+	<style>
+		:root {
+			--ds-bg: #f5f8ff;
+			--ds-surface: #ffffff;
+			--ds-surface-alt: #f7fbff;
+			--ds-text: #10213a;
+			--ds-muted: #4d5f7b;
+			--ds-primary: #0c4a9a;
+			--ds-primary-strong: #07346f;
+			--ds-accent: #9f1239;
+			--ds-warm: #f59e0b;
+			--ds-border: #dbe7fb;
+			--ds-shadow: 0 14px 40px rgba(16, 33, 58, 0.1);
+			--ds-radius: 18px;
+			--ds-container: min(1160px, 92vw);
+			--section-gap: clamp(3rem, 7vw, 5rem);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Plus Jakarta Sans', 'Manrope', 'Segoe UI', sans-serif;
+			color: var(--ds-text);
+			background:
+				radial-gradient(circle at 92% 8%, rgba(159, 18, 57, 0.14), transparent 24%),
+				radial-gradient(circle at 5% 32%, rgba(12, 74, 154, 0.12), transparent 22%),
+				var(--ds-bg);
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		p,
+		li {
+			color: var(--ds-muted);
+		}
+
+		.container {
+			width: var(--ds-container);
+			margin: 0 auto;
+		}
+
+		main section {
+			padding: var(--section-gap) 0;
+		}
+
+		.section-head {
+			margin-bottom: clamp(1.3rem, 3vw, 2rem);
+		}
+
+		.section-kicker {
+			font-size: 0.78rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--ds-primary);
+			font-weight: 700;
+			margin-bottom: 0.55rem;
+		}
+
+		.section-title {
+			font-size: clamp(1.6rem, 3vw, 2.35rem);
+			line-height: 1.2;
+			font-weight: 800;
+			margin-bottom: 0.7rem;
+			color: var(--ds-text);
+		}
+
+		.section-subtitle {
+			max-width: 720px;
+			font-size: clamp(0.98rem, 1.6vw, 1.06rem);
+		}
+
+		.explore-courses {
+			background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+			border-top: 1px solid #d8e6fb;
+			border-bottom: 1px solid #d8e6fb;
+		}
+
+		.explore-courses-grid {
+			display: grid;
+			gap: 0.9rem;
+			grid-template-columns: 1fr;
+		}
+
+		.explore-course-card {
+			padding: 1rem;
+			border: 1px solid #d7e6fb;
+			border-radius: 14px;
+			background: linear-gradient(155deg, #ffffff 0%, #f4f9ff 100%);
+			box-shadow: 0 9px 20px rgba(16, 33, 58, 0.08);
+		}
+
+		.explore-course-card h3 {
+			margin-bottom: 0.4rem;
+		}
+
+		.explore-course-card p {
+			margin-bottom: 0.75rem;
+		}
+
+		@media (min-width: 700px) {
+			.explore-courses-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+		}
+
+		.breadcrumb-nav {
+			padding: 0.75rem 0 0;
+		}
+
+		.breadcrumb-nav ol {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.4rem;
+			font-size: 0.86rem;
+		}
+
+		.breadcrumb-nav li {
+			color: #46608a;
+		}
+
+		.breadcrumb-nav li + li::before {
+			content: '/';
+			margin-right: 0.4rem;
+			color: #7c92b5;
+		}
+
+		.breadcrumb-nav a {
+			color: #1e4f98;
+			font-weight: 600;
+			text-decoration: none;
+		}
+
+		.breadcrumb-nav a:hover {
+			text-decoration: underline;
+		}
+
+		.btn-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.8rem;
+		}
+
+		.btn {
+			border: 0;
+			border-radius: 12px;
+			padding: 0.85rem 1.25rem;
+			font-weight: 700;
+			font-size: 0.95rem;
+			text-decoration: none;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 44px;
+			transition: 0.24s ease;
+		}
+
+		.btn-primary {
+			background: linear-gradient(135deg, var(--ds-primary), #2563eb);
+			color: #ffffff;
+			box-shadow: 0 10px 22px rgba(37, 99, 235, 0.28);
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 15px 26px rgba(37, 99, 235, 0.34);
+		}
+
+		.btn-secondary {
+			background: #ffffff;
+			border: 1px solid var(--ds-border);
+			color: var(--ds-primary-strong);
+		}
+
+		.btn-secondary:hover {
+			border-color: #adc8f8;
+			background: #f8fbff;
+		}
+
+		.badge-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.55rem;
+			margin: 1.35rem 0 1.5rem;
+		}
+
+		.meta-badge {
+			background: #ecf3ff;
+			border: 1px solid #cde0ff;
+			color: #16417f;
+			border-radius: 999px;
+			padding: 0.35rem 0.75rem;
+			font-size: 0.82rem;
+			font-weight: 700;
+		}
+
+		.grid {
+			display: grid;
+			gap: 1rem;
+		}
+
+		.card {
+			background: var(--ds-surface);
+			border: 1px solid var(--ds-border);
+			border-radius: var(--ds-radius);
+			padding: 1.1rem;
+			box-shadow: 0 8px 18px rgba(16, 33, 58, 0.06);
+		}
+
+		.card h3,
+		.card h4 {
+			margin-bottom: 0.45rem;
+			color: var(--ds-text);
+		}
+
+		.icon-mark {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 10px;
+			background: linear-gradient(160deg, #e8f0ff, #fbe7ee);
+			color: var(--ds-primary-strong);
+			border: 1px solid #cfe1ff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+			font-size: 0.78rem;
+			margin-bottom: 0.55rem;
+			overflow: hidden;
+		}
+
+		.icon-mark svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+
+		.hero {
+			padding: clamp(2.9rem, 6vw, 4.8rem) 0 clamp(2.5rem, 6vw, 4rem);
+			background-color: #2142a4;
+			background-image:
+				linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+				linear-gradient(180deg, #2848ad 0%, #213f9a 100%);
+			background-size: 44px 44px, 44px 44px, 100% 100%;
+		}
+
+		.hero-wrap {
+			display: grid;
+			gap: 1.4rem;
+			align-items: center;
+		}
+
+		.hero-left,
+		.hero-right {
+			min-width: 0;
+		}
+
+		.hero-title {
+			font-size: clamp(2.25rem, 5vw, 4.35rem);
+			line-height: 1.05;
+			font-weight: 800;
+			color: #eff4ff;
+			margin-bottom: 1.05rem;
+			letter-spacing: -0.02em;
+		}
+
+		.hero-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.42rem;
+			padding: 0.48rem 1rem;
+			border-radius: 999px;
+			font-size: 1rem;
+			font-weight: 700;
+			color: #d8e4ff;
+			background: rgba(126, 159, 240, 0.5);
+			border: 1px solid rgba(195, 215, 255, 0.38);
+		}
+
+		.hero-meta-stack {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.65rem;
+		}
+
+		.hero-batch {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.55rem 1.05rem;
+			border-radius: 10px;
+			background: linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%);
+			color: #ffffff;
+			font-size: 0.98rem;
+			font-weight: 800;
+			min-width: 228px;
+			box-shadow: 0 9px 20px rgba(127, 29, 29, 0.32);
+		}
+
+		.hero-desc {
+			margin-top: 1.1rem;
+			max-width: 620px;
+			color: #e4edff;
+			font-size: clamp(1rem, 1.7vw, 1.15rem);
+			line-height: 1.6;
+		}
+
+		.hero-seo-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.45rem;
+			margin-top: 0.95rem;
+		}
+
+		.hero-seo-links a {
+			font-size: 0.8rem;
+			font-weight: 700;
+			color: #dbe8ff;
+			text-decoration: none;
+			border: 1px solid rgba(219, 232, 255, 0.45);
+			border-radius: 999px;
+			padding: 0.24rem 0.58rem;
+			background: rgba(16, 38, 78, 0.28);
+		}
+
+		.hero-seo-links a:hover {
+			background: rgba(219, 232, 255, 0.18);
+			border-color: rgba(219, 232, 255, 0.72);
+		}
+
+		.hero-cta-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-top: 1.45rem;
+		}
+
+		.hero-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 88px;
+			padding: 0.8rem 1.7rem;
+			text-decoration: none;
+			border-radius: 10px;
+			font-size: clamp(1.02rem, 1.6vw, 1.1rem);
+			font-weight: 800;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			min-width: 272px;
+		}
+
+		.hero-btn:hover {
+			transform: translateY(-2px);
+		}
+
+		.hero-btn-primary {
+			background: linear-gradient(180deg, #ffc31a 0%, #f3af00 100%);
+			color: #1343af;
+			box-shadow: 0 10px 24px rgba(234, 177, 24, 0.42);
+		}
+
+		.hero-btn-secondary {
+			background: #f7f8fc;
+			border: 1px solid rgba(203, 216, 255, 0.72);
+			color: #1d43a0;
+			box-shadow: 0 10px 24px rgba(7, 29, 86, 0.22);
+		}
+
+		.hero-image {
+			width: 100%;
+			height: clamp(210px, 24vw, 300px);
+			border-radius: 16px;
+			object-fit: cover;
+			box-shadow: 0 15px 28px rgba(4, 16, 52, 0.36);
+			border: 1px solid rgba(183, 205, 255, 0.45);
+		}
+
+		.hero-metrics {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.85rem;
+			margin-top: 1rem;
+		}
+
+		.hero-metric-card {
+			padding: 0.9rem 0.8rem;
+			border-radius: 10px;
+			border: 1px solid rgba(179, 202, 255, 0.4);
+			background: rgba(95, 129, 214, 0.5);
+			text-align: center;
+		}
+
+		.hero-metric-label {
+			font-size: 0.86rem;
+			font-weight: 600;
+			letter-spacing: 0.01em;
+			color: #cddaff;
+			text-transform: uppercase;
+		}
+
+		.hero-metric-value {
+			margin-top: 0.3rem;
+			font-size: clamp(1.35rem, 2vw, 2rem);
+			line-height: 1;
+			font-weight: 800;
+			color: #f4f8ff;
+		}
+
+		.hero-points {
+			margin-top: 0.95rem;
+			list-style: none;
+			padding: 0.95rem 1.1rem;
+			border-radius: 12px;
+			border: 1px solid rgba(173, 197, 255, 0.45);
+			background: rgba(84, 113, 193, 0.58);
+			display: grid;
+			gap: 0.45rem;
+		}
+
+		.hero-points li {
+			color: #e5edff;
+			font-size: clamp(0.9rem, 1.3vw, 1.04rem);
+		}
+
+		.hero-points li::before {
+			content: "*";
+			color: #ffd447;
+			margin-right: 0.45rem;
+			font-weight: 800;
+		}
+
+		.syllabus-shell {
+			position: relative;
+			overflow: hidden;
+			background:
+				radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.16), transparent 35%),
+				radial-gradient(circle at 15% 75%, rgba(59, 130, 246, 0.2), transparent 42%),
+				linear-gradient(150deg, #132e67 0%, #1a3e89 62%, #224ca0 100%);
+			border: 1px solid rgba(170, 201, 255, 0.4);
+			border-radius: 20px;
+			padding: clamp(1rem, 2.5vw, 1.5rem);
+			box-shadow: 0 14px 32px rgba(10, 27, 70, 0.28);
+		}
+
+		.syllabus-shell::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image:
+				linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+			background-size: 44px 44px;
+			opacity: 1;
+			animation: syllabusGridDrift 10s linear infinite;
+			pointer-events: none;
+		}
+
+		.syllabus-shell::after {
+			content: "";
+			position: absolute;
+			inset: -40% -20%;
+			background: linear-gradient(115deg,
+				rgba(255, 255, 255, 0) 42%,
+				rgba(255, 255, 255, 0.34) 50%,
+				rgba(255, 255, 255, 0) 58%);
+			transform: translate3d(-60%, -20%, 0) rotate(2deg);
+			animation: syllabusLineShine 5.5s ease-in-out infinite;
+			pointer-events: none;
+			opacity: 0.65;
+		}
+
+		@keyframes syllabusGridDrift {
+			0% {
+				background-position: 0 0, 0 0;
+			}
+			100% {
+				background-position: 44px 44px, 44px 44px;
+			}
+		}
+
+		@keyframes syllabusLineShine {
+			0% {
+				transform: translate3d(-62%, -20%, 0) rotate(2deg);
+				opacity: 0;
+			}
+			15% {
+				opacity: 0.7;
+			}
+			50% {
+				opacity: 0.9;
+			}
+			85% {
+				opacity: 0.5;
+			}
+			100% {
+				transform: translate3d(62%, 20%, 0) rotate(2deg);
+				opacity: 0;
+			}
+		}
+
+		.syllabus-shell > * {
+			position: relative;
+			z-index: 1;
+		}
+
+		.syllabus-tabs {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.7rem;
+			margin-bottom: 1.05rem;
+		}
+
+		.syllabus-tabs-wrap {
+			display: block;
+			margin-bottom: 1.05rem;
+		}
+
+		.syllabus-scroll-arrow {
+			display: none;
+			appearance: none;
+			border: 1px solid rgba(188, 214, 255, 0.5);
+			background: rgba(245, 251, 255, 0.92);
+			color: #173566;
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			font-size: 1.4rem;
+			line-height: 1;
+			cursor: pointer;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.syllabus-scroll-arrow.is-hidden {
+			display: none !important;
+		}
+
+		.syllabus-tab {
+			appearance: none;
+			border: 1px solid rgba(184, 210, 255, 0.48);
+			background: rgba(240, 248, 255, 0.9);
+			backdrop-filter: blur(2px);
+			border-radius: 14px;
+			padding: 0.95rem 0.8rem;
+			text-align: center;
+			cursor: pointer;
+			transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+		}
+
+		.syllabus-tab small {
+			display: block;
+			font-size: 0.82rem;
+			font-weight: 600;
+			color: #6b7280;
+			margin-bottom: 0.28rem;
+		}
+
+		.syllabus-tab strong {
+			display: block;
+			font-size: 1rem;
+			line-height: 1.3;
+			color: #15396f;
+		}
+
+		.syllabus-tab.active {
+			border-color: rgba(159, 18, 57, 0.72);
+			box-shadow: 0 0 0 1px rgba(159, 18, 57, 0.72) inset, 0 10px 20px rgba(6, 28, 74, 0.24);
+			background: rgba(248, 252, 255, 0.96);
+		}
+
+		.syllabus-tab.active strong,
+		.syllabus-tab.active small {
+			color: var(--ds-accent);
+		}
+
+		.syllabus-content {
+			background: rgba(233, 242, 255, 0.92);
+			border: 1px solid rgba(174, 202, 255, 0.6);
+			border-radius: 18px;
+			padding: clamp(1rem, 3vw, 1.8rem);
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+		}
+
+		.syllabus-content h3 {
+			font-size: 1.45rem;
+			margin-bottom: 0.85rem;
+			color: #0f2a59;
+		}
+
+		.syllabus-content p {
+			color: #1f3252;
+		}
+
+		.syllabus-topics {
+			list-style: none;
+			display: grid;
+			gap: 0.45rem;
+			max-width: 620px;
+		}
+
+		.syllabus-topics li {
+			font-size: clamp(1rem, 1.7vw, 1.1rem);
+			color: #213a63;
+		}
+
+		.syllabus-topics li::before {
+			content: "\25CB";
+			display: inline-block;
+			margin-right: 0.62rem;
+			color: var(--ds-accent);
+			font-size: 1rem;
+			line-height: 1;
+			transform: translateY(-1px);
+		}
+
+		.syllabus-download-wrap {
+			display: flex;
+			justify-content: center;
+			margin-top: 1.2rem;
+		}
+
+		.syllabus-download-btn {
+			background: linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%);
+			border: 0;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 800;
+			font-size: 1.05rem;
+			padding: 0.85rem 1.55rem;
+			border-radius: 10px;
+			box-shadow: 0 8px 18px rgba(127, 29, 29, 0.3);
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.syllabus-download-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 24px rgba(127, 29, 29, 0.36);
+		}
+
+		.highlights-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.highlights-grid .card {
+			min-height: 136px;
+		}
+
+		.why-list {
+			display: grid;
+			gap: 0.9rem;
+		}
+
+		.why-item {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			align-items: start;
+			gap: 0.9rem;
+			padding: 1rem 1rem 1rem 0.95rem;
+			background: linear-gradient(150deg, #ffffff 0%, #f7fbff 100%);
+			border: 1px solid #d6e4fa;
+			border-radius: 14px;
+			box-shadow: 0 8px 20px rgba(14, 24, 44, 0.08);
+			transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+		}
+
+		.why-item:hover {
+			transform: translateY(-3px);
+			border-color: #b9cceb;
+			box-shadow: 0 14px 28px rgba(20, 44, 86, 0.14);
+		}
+
+		.why-step {
+			min-width: 40px;
+			height: 40px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+			font-size: 0.82rem;
+			letter-spacing: 0.05em;
+			border-radius: 10px;
+			background: linear-gradient(180deg, #0c4a9a 0%, #1d4ed8 100%);
+			color: #ffffff;
+			box-shadow: 0 7px 14px rgba(12, 74, 154, 0.24);
+		}
+
+		.why-copy h3 {
+			margin-bottom: 0.3rem;
+		}
+
+		.why-copy p {
+			margin: 0;
+		}
+
+		.learner-list {
+			display: grid;
+			gap: 0.8rem;
+		}
+
+		.learner-item {
+			display: grid;
+			grid-template-columns: 10px 1fr;
+			gap: 0.85rem;
+			align-items: start;
+			padding: 0.9rem 0.95rem;
+			border-radius: 12px;
+			background: #f8fbff;
+			border: 1px solid #d8e5fb;
+			box-shadow: 0 6px 16px rgba(18, 40, 79, 0.08);
+			transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+		}
+
+		.learner-item:hover {
+			transform: translateY(-3px);
+			border-color: #acc4e8;
+			box-shadow: 0 12px 22px rgba(18, 40, 79, 0.14);
+		}
+
+		.learner-accent {
+			width: 10px;
+			height: 100%;
+			min-height: 56px;
+			border-radius: 999px;
+			background: linear-gradient(180deg, #0c4a9a 0%, #9f1239 100%);
+		}
+
+		.learner-copy h3 {
+			margin-bottom: 0.25rem;
+		}
+
+		.learner-copy p {
+			margin: 0;
+		}
+
+		.project-panel {
+			background: linear-gradient(155deg, #ffffff 0%, #f7fbff 100%);
+			border: 1px solid #d9e6fb;
+			border-radius: 14px;
+			overflow: hidden;
+			box-shadow: 0 8px 20px rgba(16, 33, 58, 0.08);
+			transition: border-color 0.24s ease, box-shadow 0.24s ease;
+		}
+
+		.project-panel[open] {
+			border-color: #b8cfee;
+			box-shadow: 0 14px 28px rgba(16, 33, 58, 0.14);
+		}
+
+		.project-summary {
+			cursor: pointer;
+			list-style: none;
+			padding: 1rem 1.15rem;
+			position: relative;
+		}
+
+		.project-summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.project-summary::after {
+			content: '+';
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 26px;
+			height: 26px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: #e8f0ff;
+			color: #0c4a9a;
+			font-weight: 800;
+			line-height: 1;
+		}
+
+		.project-panel[open] .project-summary::after {
+			content: '-';
+		}
+
+		.project-summary h3 {
+			margin-bottom: 0.4rem;
+			padding-right: 2rem;
+		}
+
+		.project-summary p {
+			margin: 0;
+			padding-right: 2rem;
+		}
+
+		.project-body {
+			border-top: 1px solid #e1edff;
+			padding: 0.95rem 1.15rem 1.1rem;
+		}
+
+		.project-body p {
+			margin-bottom: 0.55rem;
+		}
+
+		.project-body ul {
+			margin: 0;
+			padding-left: 1.1rem;
+			display: grid;
+			gap: 0.3rem;
+		}
+
+		#career-support {
+			background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+			border-top: 1px solid #d8e8ff;
+			border-bottom: 1px solid #d8e8ff;
+		}
+
+		.career-support-shell {
+			display: grid;
+			gap: 1.25rem;
+		}
+
+		.career-support-intro {
+			position: relative;
+			padding: 1.2rem;
+			border-radius: 16px;
+			background: linear-gradient(155deg, #ffffff 0%, #f3f8ff 100%);
+			border: 1px solid #d4e5ff;
+			overflow: hidden;
+			box-shadow: 0 14px 30px rgba(17, 38, 72, 0.12);
+		}
+
+		.career-support-intro::before {
+			content: '';
+			position: absolute;
+			right: -48px;
+			top: -52px;
+			width: 145px;
+			height: 145px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(31, 92, 193, 0.22) 0%, rgba(31, 92, 193, 0) 72%);
+			pointer-events: none;
+		}
+
+		.career-support-intro h3 {
+			margin-bottom: 0.45rem;
+			color: #0f3368;
+		}
+
+		.career-support-intro p {
+			margin-bottom: 0.85rem;
+		}
+
+		.career-visual {
+			display: grid;
+			grid-template-columns: 44px 1fr;
+			gap: 0.65rem;
+			align-items: center;
+			margin-bottom: 0.8rem;
+		}
+
+		.career-visual svg {
+			width: 44px;
+			height: 44px;
+			color: #0f4aa5;
+		}
+
+		.career-visual strong {
+			display: block;
+			font-size: 1rem;
+			color: #0e2f63;
+		}
+
+		.career-visual span {
+			font-size: 0.9rem;
+			color: #3b4f72;
+		}
+
+		.career-badges {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.45rem;
+			margin: 0;
+			padding: 0;
+		}
+
+		.career-badges li {
+			padding: 0.36rem 0.62rem;
+			border-radius: 999px;
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.02em;
+			background: #e8f0ff;
+			color: #183a73;
+			border: 1px solid #cfe0fa;
+			transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+		}
+
+		.career-badges li:hover {
+			transform: translateY(-2px);
+			border-color: #bfd4f4;
+			box-shadow: 0 8px 16px rgba(24, 58, 115, 0.12);
+		}
+
+		.career-road {
+			display: grid;
+			counter-reset: careerStep;
+			gap: 0.8rem;
+		}
+
+		.career-step {
+			position: relative;
+			display: grid;
+			grid-template-columns: 44px 1fr;
+			align-items: center;
+			gap: 0.8rem;
+			padding: 0.94rem 0.9rem;
+			background: #ffffff;
+			border: 1px solid #d9e8ff;
+			border-radius: 14px;
+			box-shadow: 0 10px 22px rgba(16, 33, 58, 0.08);
+			transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+			animation: careerStepReveal 0.62s ease both;
+		}
+
+		.career-step:nth-child(1) {
+			animation-delay: 0.04s;
+		}
+
+		.career-step:nth-child(2) {
+			animation-delay: 0.12s;
+		}
+
+		.career-step:nth-child(3) {
+			animation-delay: 0.2s;
+		}
+
+		.career-step:nth-child(4) {
+			animation-delay: 0.28s;
+		}
+
+		.career-step:hover {
+			transform: translateY(-3px);
+			border-color: #bfd4f4;
+			box-shadow: 0 16px 28px rgba(16, 44, 84, 0.14);
+		}
+
+		.career-step::before {
+			counter-increment: careerStep;
+			content: counter(careerStep, decimal-leading-zero);
+			position: absolute;
+			right: 0.72rem;
+			top: 0.62rem;
+			font-size: 0.7rem;
+			font-weight: 800;
+			letter-spacing: 0.08em;
+			color: #8fa7ce;
+		}
+
+		.career-step::after {
+			content: '';
+			position: absolute;
+			left: 21px;
+			top: calc(100% + 2px);
+			width: 2px;
+			height: 14px;
+			background: linear-gradient(180deg, #205ec0 0%, #9f1239 100%);
+			background-size: 100% 20px;
+			animation: careerConnectorFlow 1.9s linear infinite;
+		}
+
+		.career-step:last-child::after {
+			display: none;
+		}
+
+		.career-step-icon {
+			width: 44px;
+			height: 44px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 12px;
+			background: linear-gradient(180deg, #0f4aa5 0%, #1d4ed8 100%);
+			color: #ffffff;
+			box-shadow: 0 9px 16px rgba(15, 74, 165, 0.26);
+			transition: transform 0.24s ease, box-shadow 0.24s ease;
+		}
+
+		.career-step:hover .career-step-icon {
+			transform: translateY(-1px) scale(1.03);
+			box-shadow: 0 12px 20px rgba(15, 74, 165, 0.32);
+		}
+
+		.career-step-icon svg {
+			width: 22px;
+			height: 22px;
+		}
+
+		.career-step h3 {
+			margin-bottom: 0.28rem;
+			color: #112f63;
+			font-size: 1.02rem;
+		}
+
+		.career-step p {
+			margin: 0;
+			font-size: 0.95rem;
+		}
+
+		#certification {
+			background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+			border-top: 1px solid #dbe7ff;
+			border-bottom: 1px solid #dbe7ff;
+		}
+
+		.certification-shell {
+			display: grid;
+			gap: 1rem;
+		}
+
+		.certificate-preview-card {
+			position: relative;
+			padding: 1rem;
+			border-radius: 18px;
+			border: 1px solid #d4e3fb;
+			background: linear-gradient(160deg, #ffffff 0%, #f3f8ff 100%);
+			box-shadow: 0 14px 30px rgba(17, 38, 72, 0.12);
+			overflow: hidden;
+		}
+
+		.certificate-preview-card::before {
+			content: '';
+			position: absolute;
+			left: -40px;
+			bottom: -55px;
+			width: 145px;
+			height: 145px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(159, 18, 57, 0.2) 0%, rgba(159, 18, 57, 0) 70%);
+			pointer-events: none;
+		}
+
+		.certificate-preview-card h3 {
+			margin-bottom: 0.3rem;
+			color: #112f63;
+		}
+
+		.certificate-preview-card p {
+			margin-bottom: 0.75rem;
+		}
+
+		.certificate-placeholder {
+			position: relative;
+			border: 2px dashed #b8cdee;
+			border-radius: 14px;
+			background: repeating-linear-gradient(
+				45deg,
+				rgba(15, 74, 165, 0.06) 0,
+				rgba(15, 74, 165, 0.06) 8px,
+				rgba(255, 255, 255, 0.4) 8px,
+				rgba(255, 255, 255, 0.4) 16px
+			);
+			padding: 0.9rem;
+			min-height: 250px;
+			display: grid;
+			place-items: center;
+			transition: border-color 0.22s ease, box-shadow 0.22s ease;
+		}
+
+		.certificate-placeholder:hover {
+			border-color: #9f1239;
+			box-shadow: 0 10px 24px rgba(17, 38, 72, 0.14);
+		}
+
+		.certificate-placeholder svg {
+			width: min(100%, 430px);
+			height: auto;
+			display: block;
+		}
+
+		.certificate-placeholder-note {
+			position: absolute;
+			left: 0.7rem;
+			right: 0.7rem;
+			bottom: 0.65rem;
+			font-size: 0.78rem;
+			font-weight: 700;
+			text-align: center;
+			padding: 0.38rem 0.6rem;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.92);
+			border: 1px solid #d1e1f8;
+			color: #1f3c70;
+		}
+
+		.certification-points {
+			display: grid;
+			gap: 0.72rem;
+		}
+
+		.cert-point {
+			display: grid;
+			grid-template-columns: 40px 1fr;
+			align-items: start;
+			gap: 0.72rem;
+			padding: 0.86rem 0.9rem;
+			border-radius: 14px;
+			background: #ffffff;
+			border: 1px solid #d8e6fb;
+			box-shadow: 0 10px 22px rgba(17, 38, 72, 0.09);
+			transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+		}
+
+		.cert-point:hover {
+			transform: translateY(-3px);
+			border-color: #bfd2f0;
+			box-shadow: 0 15px 28px rgba(17, 38, 72, 0.13);
+		}
+
+		.cert-icon {
+			width: 40px;
+			height: 40px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 11px;
+			background: linear-gradient(180deg, #0f4aa5 0%, #1d4ed8 100%);
+			color: #ffffff;
+			box-shadow: 0 8px 16px rgba(15, 74, 165, 0.25);
+		}
+
+		.cert-icon svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		.cert-point h3 {
+			margin-bottom: 0.3rem;
+			color: #112f63;
+			font-size: 1rem;
+		}
+
+		.cert-point p {
+			margin: 0;
+		}
+
+		@keyframes careerStepReveal {
+			0% {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes careerConnectorFlow {
+			0% {
+				background-position: 0 0;
+			}
+			100% {
+				background-position: 0 20px;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.career-step,
+			.career-step::after {
+				animation: none;
+			}
+
+			.career-step,
+			.career-step-icon,
+			.career-badges li {
+				transition: none;
+			}
+		}
+
+		.benefits-grid,
+		.structure-grid,
+		.tools-grid,
+		.projects-grid,
+		.career-grid,
+		.cert-grid,
+		.audience-grid,
+		.mentors-grid,
+		.partners-grid,
+		.gallery-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.journey {
+			background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+			border-top: 1px solid #d9e8ff;
+			border-bottom: 1px solid #d9e8ff;
+		}
+
+		.journey-title-highlight {
+			color: inherit;
+		}
+
+		.journey-timeline {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 2.5rem;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 1rem 0;
+		}
+
+		.journey-timeline-svg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			transform: none;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		.journey-road-path {
+			fill: none;
+			stroke: #b91c1c;
+			stroke-width: 2.8;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			opacity: 0.98;
+			filter: drop-shadow(0 0 3px rgba(185, 28, 28, 0.24));
+		}
+
+		.journey-road-glow-orb {
+			fill: #ffd8dc;
+			filter: drop-shadow(0 0 10px rgba(185, 28, 28, 0.48));
+			opacity: 0.92;
+		}
+
+		.journey-road-glow-core {
+			fill: #ffffff;
+			opacity: 0.98;
+		}
+
+		.journey-road-glow-halo {
+			fill: rgba(248, 113, 113, 0.26);
+			filter: drop-shadow(0 0 14px rgba(185, 28, 28, 0.34));
+		}
+
+		.journey-road-node {
+			fill: #991b1b;
+			stroke: #ffffff;
+			stroke-width: 1.3;
+		}
+
+		.journey-road-nodes {
+			display: none;
+		}
+
+		.journey-item {
+			position: relative;
+			display: flex;
+			z-index: 1;
+			width: 100%;
+		}
+
+		.journey-left {
+			justify-content: flex-end;
+			padding-right: calc(50% + 1.5rem);
+		}
+
+		.journey-left::before {
+			content: none;
+			display: none;
+		}
+
+		.journey-right {
+			justify-content: flex-start;
+			padding-left: calc(50% + 1.5rem);
+		}
+
+		.journey-right::before {
+			content: none;
+			display: none;
+		}
+
+		.journey-box {
+			background: #ffffff;
+			border: 1px solid var(--ds-border);
+			border-radius: 16px;
+			padding: 1.8rem;
+			width: 100%;
+			max-width: 360px;
+			box-shadow: 0 2px 8px rgba(16, 33, 58, 0.04);
+			transition: all 0.3s ease;
+			position: relative;
+		}
+
+		.journey-left .journey-box::after,
+		.journey-right .journey-box::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			box-sizing: border-box;
+			width: 11px;
+			height: 11px;
+			transform: translateY(-50%);
+			background: #991b1b;
+			opacity: 0.95;
+			border-radius: 50%;
+			border: 1px solid #ffe6ea;
+			box-shadow:
+				0 0 0 1px rgba(153, 27, 27, 0.34),
+				0 0 8px rgba(185, 28, 28, 0.34),
+				0 11px 0 -3px rgba(185, 28, 28, 0.34),
+				0 21px 0 -4px rgba(185, 28, 28, 0.26),
+				0 31px 0 -4px rgba(185, 28, 28, 0.2),
+				0 40px 0 -5px rgba(185, 28, 28, 0.14);
+			z-index: 3;
+		}
+
+		.journey-left .journey-box::after {
+			right: -14px;
+		}
+
+		.journey-right .journey-box::after {
+			left: -14px;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.journey-road-glow-halo animateMotion,
+			.journey-road-glow-orb animateMotion,
+			.journey-road-glow-core animateMotion {
+				display: none;
+			}
+		}
+
+		.journey-box:hover {
+			box-shadow: 0 8px 24px rgba(16, 33, 58, 0.12);
+			border-color: #c7d9f7;
+		}
+
+		.journey-box-title {
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: #10213a;
+			margin-bottom: 0.6rem;
+		}
+
+		.journey-box-desc {
+			font-size: 0.95rem;
+			color: #4d5f7b;
+			line-height: 1.5;
+			margin-bottom: 1rem;
+		}
+
+		.journey-check {
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: #0c4a9a;
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+
+		.journey-cta-wrap {
+			display: flex;
+			justify-content: center;
+			margin-top: 2.5rem;
+			padding-top: 1.5rem;
+			border-top: 1px solid #d9e8ff;
+		}
+
+		.faq-wrap {
+			display: grid;
+			gap: 0.75rem;
+		}
+
+		.faq-item {
+			background: #ffffff;
+			border: 1px solid var(--ds-border);
+			border-radius: 12px;
+			overflow: hidden;
+		}
+
+		.faq-item summary {
+			cursor: pointer;
+			list-style: none;
+			padding: 1rem;
+			font-weight: 700;
+			color: #193456;
+			position: relative;
+		}
+
+		.faq-item summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.faq-item summary::after {
+			content: '+';
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			color: var(--ds-primary);
+			font-size: 1.2rem;
+		}
+
+		.faq-item[open] summary::after {
+			content: '-';
+		}
+
+		.faq-answer {
+			padding: 0 1rem 1rem;
+			border-top: 1px solid #eaf1ff;
+		}
+
+		.final-cta {
+			padding-bottom: var(--section-gap);
+		}
+
+		.final-cta .cta-shell {
+			background: linear-gradient(145deg, #0f2f56, #0b457f);
+			border-radius: 24px;
+			padding: clamp(1.3rem, 4vw, 2.4rem);
+			color: #d9e8ff;
+			text-align: center;
+			box-shadow: var(--ds-shadow);
+		}
+
+		.final-cta h2 {
+			color: #ffffff;
+			font-size: clamp(1.5rem, 4vw, 2.4rem);
+			margin-bottom: 0.9rem;
+		}
+
+		.final-cta p {
+			color: #d9e8ff;
+			margin-bottom: 1.15rem;
+		}
+
+		.cursor-glow {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: radial-gradient(
+				circle,
+				var(--glow-core, rgba(56, 189, 248, 0.55)) 0%,
+				var(--glow-mid, rgba(59, 130, 246, 0.3)) 35%,
+				var(--glow-edge, rgba(59, 130, 246, 0)) 70%
+			);
+			box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+			pointer-events: none;
+			z-index: 9999;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+			mix-blend-mode: normal;
+			transform: translate3d(-9999px, -9999px, 0);
+			will-change: transform, opacity, background;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.cursor-glow {
+				display: none;
+			}
+		}
+
+		.whatsapp-widget {
+			position: fixed;
+			right: 1rem;
+			bottom: 1rem;
+			z-index: 1200;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+		}
+
+		.whatsapp-toggle {
+			width: 62px;
+			height: 62px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, #25d366, #128c7e);
+			color: #ffffff;
+			display: grid;
+			place-items: center;
+			box-shadow: 0 12px 28px rgba(18, 140, 126, 0.35);
+			animation: whatsappFloat 2.2s ease-in-out infinite;
+			border: 2px solid rgba(255, 255, 255, 0.85);
+		}
+
+		.whatsapp-toggle:hover {
+			transform: scale(1.05);
+			box-shadow: 0 16px 30px rgba(18, 140, 126, 0.45);
+		}
+
+		.whatsapp-popup {
+			background: #ffffff;
+			color: #0f172a;
+			font-weight: 600;
+			font-size: 0.9rem;
+			line-height: 1.3;
+			padding: 0.55rem 0.75rem;
+			border-radius: 10px;
+			border: 1px solid #e2e8f0;
+			box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16);
+			white-space: nowrap;
+			animation: whatsappPopupPulse 2.6s ease-in-out infinite;
+		}
+
+		@keyframes whatsappFloat {
+			0%, 100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-8px);
+			}
+		}
+
+		@keyframes whatsappPopupPulse {
+			0%, 100% {
+				opacity: 0.9;
+				transform: translateY(0);
+			}
+			50% {
+				opacity: 1;
+				transform: translateY(-3px);
+			}
+		}
+
+		@media (max-width: 767px) {
+			.whatsapp-widget {
+				right: 0.75rem;
+				bottom: 0.75rem;
+				gap: 0.5rem;
+			}
+
+			.whatsapp-toggle {
+				width: 56px;
+				height: 56px;
+			}
+
+			.whatsapp-popup {
+				font-size: 0.82rem;
+				padding: 0.45rem 0.6rem;
+			}
+		}
+
+		.gallery-grid img,
+		.mentor-photo,
+		.partner-logo {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 12px;
+		}
+
+		.gallery-grid .card {
+			padding: 0;
+			overflow: hidden;
+			min-height: 170px;
+		}
+
+		.mentor-photo-wrap {
+			height: 220px;
+			margin-bottom: 0.8rem;
+		}
+
+		.partner-card {
+			min-height: 110px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.8rem;
+		}
+
+		.partners-single {
+			display: flex;
+			justify-content: center;
+		}
+
+		.partners-single .partner-card {
+			width: min(100%, 980px);
+			min-height: 0;
+			padding: 0.55rem;
+			border-radius: 16px;
+			background: linear-gradient(155deg, #ffffff 0%, #f5f9ff 100%);
+			border: 1px solid #d6e6fb;
+			box-shadow: 0 12px 26px rgba(16, 33, 58, 0.1);
+			height: auto;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.partners-single .partner-logo {
+			width: 100%;
+			height: auto;
+			max-height: 420px;
+			object-fit: contain;
+			border-radius: 12px;
+			background: #ffffff;
+		}
+
+		#mentors {
+			background: linear-gradient(180deg, #f7fbff 0%, #eef5ff 100%);
+			border-top: 1px solid #d9e8ff;
+			border-bottom: 1px solid #d9e8ff;
+		}
+
+		.mentors-showcase {
+			display: grid;
+			gap: 1rem;
+		}
+
+		.mentor-profile {
+			background: linear-gradient(155deg, #ffffff 0%, #f4f9ff 100%);
+			border: 1px solid #d5e6fb;
+			border-radius: 16px;
+			padding: 0.72rem;
+			width: 100%;
+			max-width: 390px;
+			margin: 0 auto;
+			box-shadow: 0 12px 26px rgba(16, 33, 58, 0.1);
+			transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+		}
+
+		.mentor-profile:hover {
+			transform: translateY(-4px);
+			border-color: #bfd4f4;
+			box-shadow: 0 16px 30px rgba(16, 44, 84, 0.15);
+		}
+
+		.mentor-profile .mentor-photo-wrap {
+			width: 100%;
+			max-width: 100%;
+			height: clamp(220px, 34vw, 265px);
+			margin-bottom: 0.78rem;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 12px;
+			overflow: hidden;
+		}
+
+		.mentor-meta {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			flex-wrap: wrap;
+			margin-bottom: 0.5rem;
+		}
+
+		.mentor-years {
+			display: inline-flex;
+			align-items: center;
+			padding: 0.24rem 0.58rem;
+			border-radius: 999px;
+			font-size: 0.76rem;
+			font-weight: 800;
+			letter-spacing: 0.03em;
+			color: #ffffff;
+			background: linear-gradient(180deg, #9f1239 0%, #7f1d1d 100%);
+			box-shadow: 0 7px 14px rgba(127, 29, 29, 0.28);
+		}
+
+		.mentor-bio {
+			font-size: 0.92rem;
+			line-height: 1.45;
+			color: #28426b;
+			margin-bottom: 0.5rem;
+		}
+
+		.mentor-profile h3 {
+			margin-bottom: 0.22rem;
+			color: #0f3368;
+		}
+
+		.mentor-role {
+			display: inline-block;
+			margin-bottom: 0.65rem;
+			font-size: 0.8rem;
+			font-weight: 800;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: #1e3f75;
+			background: #eaf2ff;
+			border: 1px solid #ccdef7;
+			border-radius: 999px;
+			padding: 0.24rem 0.62rem;
+		}
+
+		.mentor-profile p {
+			margin-bottom: 0.42rem;
+		}
+
+		.mentor-focus {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.42rem;
+			margin: 0.7rem 0 0;
+			padding: 0;
+		}
+
+		.mentor-focus li {
+			font-size: 0.78rem;
+			font-weight: 700;
+			padding: 0.3rem 0.58rem;
+			border-radius: 999px;
+			background: #e8f0ff;
+			color: #17396f;
+			border: 1px solid #cadcf6;
+		}
+
+		.mentors-cta-wrap {
+			display: flex;
+			justify-content: center;
+			margin-top: 1.2rem;
+		}
+
+		footer {
+			background: #11233c;
+			color: #d2e2ff;
+			padding: 3rem 0 6rem;
+			margin-top: 1.6rem;
+		}
+
+		.footer-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.2rem;
+			margin-top: 1.2rem;
+		}
+
+		.footer-logo {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		.footer-title,
+		.footer-section h3 {
+			color: #ffffff;
+			margin-bottom: 0.55rem;
+			font-size: 1rem;
+		}
+
+		.footer-col ul,
+		.footer-section ul {
+			list-style: none;
+			display: grid;
+			gap: 0.4rem;
+			padding: 0;
+			margin: 0;
+		}
+
+		.footer-col a,
+		.footer-section a {
+			color: #d2e2ff;
+			text-decoration: none;
+		}
+
+		.footer-col a:hover,
+		.footer-section a:hover {
+			color: #6ee7df;
+		}
+
+		.footer-bottom {
+			border-top: 1px solid rgba(211, 229, 255, 0.2);
+			margin-top: 1.2rem;
+			padding-top: 1rem;
+			font-size: 0.88rem;
+			color: #c0d5f4;
+		}
+
+		.nav-menu ul {
+			align-items: center;
+		}
+
+		@media (min-width: 640px) {
+			.syllabus-tabs {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			.highlights-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			.structure-grid,
+			.audience-grid,
+			.partners-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.benefits-grid,
+			.tools-grid,
+			.projects-grid,
+			.career-grid,
+			.cert-grid,
+			.mentors-grid,
+			.gallery-grid,
+			.footer-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+		}
+
+		@media (min-width: 900px) {
+			.syllabus-tabs {
+				grid-template-columns: repeat(6, minmax(0, 1fr));
+			}
+
+			.hero-wrap {
+				grid-template-columns: 1.04fr 0.96fr;
+				gap: 2rem;
+				align-items: center;
+			}
+
+			.hero-metrics {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+
+			.benefits-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			.why-list {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.learner-list {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.career-support-shell {
+				grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+				align-items: start;
+				gap: 1.2rem;
+			}
+
+			.certification-shell {
+				grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+				align-items: start;
+				gap: 1.2rem;
+			}
+
+			.career-support-intro {
+				padding: 1.35rem;
+				position: sticky;
+				top: 96px;
+			}
+
+			.certificate-preview-card {
+				padding: 1.2rem;
+				position: sticky;
+				top: 96px;
+			}
+
+			.mentors-showcase {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1.1rem;
+				justify-items: center;
+			}
+
+			.structure-grid,
+			.tools-grid,
+			.projects-grid,
+			.career-grid,
+			.cert-grid,
+			.audience-grid,
+			.partners-grid,
+			.gallery-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			.mentors-grid,
+			.footer-grid {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+
+			.journey-timeline {
+				gap: 3rem;
+			}
+
+			.journey-box {
+				padding: 2rem;
+			}
+		}
+
+		@media (max-width: 899px) {
+			.journey-timeline-svg {
+				opacity: 0.9;
+				z-index: 0;
+			}
+
+			.journey-item {
+				width: 100%;
+				justify-content: center !important;
+			}
+
+			.journey-left {
+				padding-right: 0;
+			}
+
+			.journey-right {
+				padding-left: 0;
+			}
+
+			.journey-left::before,
+			.journey-right::before {
+				display: none;
+			}
+
+			.journey-box {
+				max-width: min(72vw, 320px);
+				width: 100%;
+			}
+
+			.journey-left .journey-box {
+				transform: translateX(-18%);
+			}
+
+			.journey-right .journey-box {
+				transform: translateX(18%);
+			}
+		}
+
+		@media (max-width: 639px) {
+			.hero-btn {
+				min-width: 100%;
+				min-height: 76px;
+			}
+
+			.journey-timeline {
+				gap: 1.5rem;
+			}
+
+			.journey-box {
+				padding: 1.2rem;
+			}
+
+			.journey-box-title {
+				font-size: 1rem;
+			}
+
+			.journey-box-desc {
+				font-size: 0.88rem;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.syllabus-tabs-wrap {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.45rem;
+			}
+
+			.syllabus-tabs {
+				display: flex;
+				overflow-x: auto;
+				scroll-behavior: smooth;
+				scroll-snap-type: x mandatory;
+				gap: 0.6rem;
+				margin-bottom: 0;
+				padding-bottom: 0.15rem;
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+
+			.syllabus-tabs::-webkit-scrollbar {
+				display: none;
+			}
+
+			.syllabus-tab {
+				min-width: 210px;
+				flex: 0 0 auto;
+				scroll-snap-align: start;
+			}
+
+			.syllabus-scroll-arrow {
+				display: inline-flex;
+				flex-shrink: 0;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.syllabus-shell::before,
+			.syllabus-shell::after {
+				animation: none;
+			}
+
+			*,
+			*::before,
+			*::after {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.breadcrumb-nav {
+				padding-top: 0.5rem;
+			}
+
+			.hero-seo-links a {
+				font-size: 0.76rem;
+			}
+		}
+	
+</style>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://lordsskillacademy.com/#organization",
+					"name": "Lords Skill Academy",
+					"url": "https://lordsskillacademy.com/",
+					"logo": "https://lordsskillacademy.com/imgs/home/LSA-Logo.png"
+				},
+				{
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://lordsskillacademy.com/"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Full Stack Java Course",
+							"item": "https://lordsskillacademy.com/full-stack-java/"
+						}
+					]
+				},
+				{
+					"@type": "Course",
+					"name": "Full Stack Java Course",
+					"description": "Beginner to intermediate Full Stack Java training with backend, frontend, database projects, and interview readiness support.",
+					"provider": {
+						"@type": "Organization",
+						"@id": "https://lordsskillacademy.com/#organization"
+					},
+					"educationalLevel": "Beginner to Intermediate",
+					"courseCode": "LSA-FSJ-4M",
+					"timeRequired": "P4M",
+					"teaches": [
+						"Java and object-oriented programming fundamentals",
+						"Spring Boot API development",
+						"React-based frontend development",
+						"SQL and NoSQL data modeling",
+						"Project storytelling and interview preparation"
+					],
+					"hasCourseInstance": {
+						"@type": "CourseInstance",
+						"courseMode": ["Classroom", "Hybrid"],
+						"duration": "P4M"
+					}
+				},
+				{
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "Do I need prior coding experience for this course?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "No. The program starts from fundamentals and gradually moves to intermediate concepts."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Will I work on real projects?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Yes. You will complete portfolio-ready projects that reflect practical business-style analysis tasks."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Is this course suitable for working professionals?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Yes. The pace and support model are designed to help both full-time learners and professionals."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What career support is included?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "You get resume and LinkedIn support, mock interviews, project storytelling, and mentorship."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How can I enroll in the next batch?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Use the Apply Now or Talk to a Career Advisor buttons to connect with the admissions team."
+							}
+						}
+					]
+				}
+			]
+		}
+	</script>
+                <style id="local-header-footer-fixes">
+/* Shared header alignment across all pages */
+
+@keyframes headerLogoOrbit {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-4px) rotate(-0.6deg);
+    }
+}
+
+@keyframes headerSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header,
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-bottom: 1px solid #dbe8ff;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+header .container,
+.header .container,
+header .container-wide,
+.header .container-wide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+header nav,
+.header-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.38rem 0.85rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 1rem;
+}
+
+.logo,
+header nav > a:first-child {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.logo img {
+    width: clamp(112px, 14vw, 156px);
+    height: auto;
+    object-fit: contain;
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 4px;
+    animation: headerLogoOrbit 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #1e40af;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu ul,
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul,
+.nav-links {
+    justify-content: flex-end !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-links a:hover,
+.nav-links li a:hover {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+    text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+}
+
+.nav-menu a::after,
+.nav-links a::after,
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #1e40af);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-links a:hover::after,
+.nav-links li a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+}
+
+@media (max-width: 991px) {
+    .hamburger-menu {
+        display: flex !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        display: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 62px !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column !important;
+        gap: 0.4rem;
+        padding: 0.85rem 1rem !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12) !important;
+        border-bottom: 1px solid #dbe8ff;
+        z-index: 1190;
+        animation: headerSlideDown 0.3s ease-out;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.35rem;
+        width: 100%;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a {
+        width: 100%;
+        padding: 0.75rem 0.4rem;
+        display: block;
+    }
+
+    .nav-menu a::after,
+    .nav-links a::after,
+    .nav-links li a::after {
+        bottom: 0.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        margin-left: auto !important;
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+    }
+
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a {
+        padding: 0.4rem 0.55rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo img {
+        animation: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active,
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a,
+    .hamburger-menu span {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Shared programs mega-menu */
+.nav-menu > ul {
+    align-items: center;
+}
+
+.nav-menu .has-dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.nav-menu .dropdown-toggle:hover,
+.nav-menu .has-dropdown.open .dropdown-toggle {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+}
+
+.nav-menu .dropdown-caret {
+    font-size: 0.72rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-menu .has-dropdown.open .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-menu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #dbe8ff;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    min-width: 640px;
+    overflow: hidden;
+    z-index: 1210;
+}
+
+.nav-menu .programs-mega {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 320px;
+}
+
+.nav-menu .program-domains {
+    padding: 1.05rem;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+.nav-menu .program-domains-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.65rem;
+    color: #1f2937;
+}
+
+.nav-menu .program-domain-list {
+    list-style: none;
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+}
+
+.nav-menu .program-domain-list button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.72rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-menu .program-domain-list button:hover,
+.nav-menu .program-domain-list button.active {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.nav-menu .program-results {
+    padding: 1rem 1.05rem;
+}
+
+.nav-menu .program-panel {
+    display: none;
+}
+
+.nav-menu .program-panel.active {
+    display: block;
+}
+
+.nav-menu .program-group {
+    margin-bottom: 0.95rem;
+}
+
+.nav-menu .program-group:last-child {
+    margin-bottom: 0;
+}
+
+.nav-menu .program-group h4 {
+    margin: 0 0 0.55rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.nav-menu .program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.nav-menu .program-card-link {
+    display: block;
+    padding: 0.72rem 0.78rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+.nav-menu .program-card-title {
+    display: block;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.18rem;
+}
+
+.nav-menu .program-card-meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.nav-menu .dropdown-menu a::after,
+.nav-menu .program-domain-list button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.nav-menu .dropdown-menu a:hover {
+    transform: none;
+    text-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .nav-menu .has-dropdown:hover .dropdown-menu,
+    .nav-menu .has-dropdown:focus-within .dropdown-menu,
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: calc(100% + 0.45rem);
+        left: 0;
+        transform: none;
+        width: min(860px, 88vw);
+    }
+
+    .nav-menu .program-card-link:hover {
+        border-color: #fecaca;
+        background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    }
+
+    .nav-menu .program-card-link:hover .program-card-title {
+        color: #b91c1c;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 0.3rem;
+        width: 100%;
+        transform: none;
+    }
+
+    .nav-menu .programs-mega {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .nav-menu .program-domains {
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-menu .program-domains-title {
+        font-size: 1rem;
+    }
+
+    .nav-menu .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Final consistency override for pages with local header/nav styles */
+header,
+.header {
+    padding: 0 !important;
+}
+
+header nav,
+.header-content {
+    max-width: min(1200px, 100%) !important;
+    width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 0.38rem 0.85rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
+}
+
+.nav-menu {
+    margin-left: auto !important;
+}
+
+.nav-menu > ul {
+    gap: 1.25rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a,
+.nav-menu .dropdown-toggle {
+    padding: 0.4rem 0.55rem !important;
+}
+
+@media (max-width: 991px) {
+    .nav-menu.active,
+    .nav-links.active {
+        padding: 0.85rem 1rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        gap: 0.35rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a,
+    .nav-menu.active .dropdown-toggle {
+        padding: 0.75rem 0.4rem !important;
+    }
+}
+
+/* Shared footer spacing and layout */
+footer,
+footer#contact,
+#contact {
+    margin-top: 1.6rem !important;
+    padding: 3rem 0 2.6rem !important;
+}
+
+footer [style*="max-width: 1400px"],
+footer .container {
+    width: min(1200px, 100%) !important;
+    max-width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+footer .footer-logo {
+    margin-bottom: 0.5rem !important;
+}
+
+footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    margin-top: 1.2rem !important;
+}
+
+footer .footer-section ul,
+footer .footer-col ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.4rem !important;
+}
+
+footer .footer-office-list {
+    list-style: none !important;
+    display: grid !important;
+    gap: 0.68rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .footer-office-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+footer .footer-icon {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 0.08rem !important;
+    color: #9fc1f0 !important;
+}
+
+footer .footer-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    fill: currentColor !important;
+}
+
+footer .footer-office-item strong {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid rgba(211, 229, 255, 0.2) !important;
+    margin-top: 1.2rem !important;
+    padding-top: 0.95rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.01em !important;
+    color: #b2c8ea !important;
+}
+
+footer .footer-bottom p {
+    margin: 0 !important;
+    line-height: 1.45 !important;
+    color: inherit !important;
+}
+
+@media (min-width: 640px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.2rem !important;
+    }
+
+    footer .footer-bottom {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+footer,
+footer#contact,
+#contact {
+    padding: 1.6rem 0 1.2rem !important;
+    margin-top: 1rem !important;
+}
+.footer-grid {
+    margin-top: 0.8rem !important;
+}
+.footer-bottom {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+}
+.footer-map {
+    margin-top: 0.5rem;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111827;
+}
+.footer-map iframe {
+    width: 100%;
+    min-height: 130px;
+    border: 0;
+    display: block;
+}
+    </style>
+
+	<link rel='stylesheet' href='../css/header-unify.css'>
+</head>
+<body>
+	<div class="cursor-glow" aria-hidden="true"></div>
+	<header class="header">
+		<div class="container">
+			<div class="header-content">
+				<div class="logo">
+					<a href="../" aria-label="Lords Skill Academy Home">
+						<img src="../imgs/home/LSA-Logo.png" alt="Lords Skill Academy" width="160" height="48">
+					</a>
+				</div>
+				<button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+<ul>
+<li><a href="../">Home</a></li>
+<li class="has-dropdown">
+<button class="dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Programs menu">Programs <span class="dropdown-caret" aria-hidden="true">&#9662;</span></button>
+<div class="dropdown-menu" aria-label="Programs submenu">
+<div class="programs-mega">
+<aside class="program-domains">
+<p class="program-domains-title">Domains</p>
+<ul class="program-domain-list">
+<li><button type="button" class="active" data-program-target="programming" aria-selected="true">School of Programming</button></li>
+<li><button type="button" data-program-target="safety" aria-selected="false">School of Safety</button></li>
+</ul>
+</aside>
+<div class="program-results">
+<section class="program-panel active" data-program-panel="programming">
+<section class="program-group">
+<h4>School of Programming</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../school-of-programming/"><span class="program-card-title">School of Programming</span><span class="program-card-meta">Overview of all programming tracks</span></a>
+<a class="program-card-link" href="../full-stack-java/"><span class="program-card-title">Full Stack Java Course</span><span class="program-card-meta">Dedicated full stack java program page</span></a>
+<a class="program-card-link" href="../full-stack-java/"><span class="program-card-title">Full Stack Development</span><span class="program-card-meta">Dedicated Full Stack Java program page</span></a>
+<a class="program-card-link" href="../python-programming/"><span class="program-card-title">Python and Java Tracks</span><span class="program-card-meta">Dedicated Python program page</span></a>
+</div>
+</section>
+</section>
+<section class="program-panel" data-program-panel="safety">
+<section class="program-group">
+<h4>School of Safety</h4>
+<div class="program-cards">
+<a class="program-card-link" href="../cyber-security/"><span class="program-card-title">Cyber Security Course</span><span class="program-card-meta">Dedicated cyber security course page</span></a>
+<a class="program-card-link" href="../cyber-security/#course-structure"><span class="program-card-title">Ethical Hacking Track</span><span class="program-card-meta">Modules and practical coverage</span></a>
+<a class="program-card-link" href="../cyber-security/#projects"><span class="program-card-title">SOC Analyst Path</span><span class="program-card-meta">Project-based SOC readiness</span></a>
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+</li>
+<li><a href="../faq/">Community Guidelines</a></li>
+<li><a href="../career-guidance/">Career Guidance</a></li>
+<li><a href="../community-events/">Community</a></li>
+<li><a href="../blog/">Blog</a></li>
+<li><a href="../contact-us/">Contact Us</a></li>
+</ul>
+</nav>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" id="top">
+			<div class="container hero-wrap">
+				<div class="hero-left">
+					<h1 class="hero-title">Full Stack Java<br>Course</h1>
+					<div class="hero-meta-stack">
+						<div class="hero-pill">&#128197; 4 Months | Beginner to Intermediate</div>
+						<div class="hero-batch">&#128640; BATCH STARTS SOON</div>
+					</div>
+					<p class="hero-desc">Learn how to analyze data, build insights, and solve real-world problems using data. Transform raw data into actionable intelligence that drives business decisions.</p>
+					<div class="hero-cta-row">
+						<a class="hero-btn hero-btn-primary" href="../blog/" aria-label="Download full stack java curriculum">&#128229; Download<br>Curriculum</a>
+						<a class="hero-btn hero-btn-secondary" href="../contact-us/" aria-label="Talk to a career advisor">Talk to a Career<br>Advisor</a>
+					</div>
+					<nav class="hero-seo-links" aria-label="Related learning pages">
+						<a href="../school-of-programming/">Explore Other Courses</a>
+						<a href="../career-guidance/">Career Guidance</a>
+						<a href="../trainers/">Meet Trainers</a>
+						<a href="../Blogs/blog-1/">Read Blog</a>
+					</nav>
+				</div>
+				<div class="hero-right" aria-label="Course Highlights">
+					<img class="hero-image" src="../imgs/programming/full-stack-java.jpg" alt="Full Stack Java classroom training session for beginner learners at Lords Skill Academy" width="1200" height="800" fetchpriority="high" decoding="async" sizes="(max-width: 900px) 100vw, 46vw">
+					<div class="hero-metrics">
+						<article class="hero-metric-card">
+							<div class="hero-metric-label">Program</div>
+							<div class="hero-metric-value">4M</div>
+						</article>
+						<article class="hero-metric-card">
+							<div class="hero-metric-label">Projects</div>
+							<div class="hero-metric-value">3+</div>
+						</article>
+						<article class="hero-metric-card">
+							<div class="hero-metric-label">Support</div>
+							<div class="hero-metric-value">1:1</div>
+						</article>
+						<article class="hero-metric-card">
+							<div class="hero-metric-label">Placement</div>
+							<div class="hero-metric-value">Yes</div>
+						</article>
+					</div>
+					<ul class="hero-points">
+						<li>Industry-aligned modules with guided lab work every week</li>
+						<li>Portfolio-focused projects for interviews and hiring rounds</li>
+						<li>Career support with mock interviews and resume mentoring</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="quick-highlights">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Quick Highlights</p>
+					<h2 class="section-title">Everything Important at a Glance</h2>
+					<p class="section-subtitle">Program highlights and structure snapshot in one place for faster decision-making.</p>
+				</div>
+				<div class="grid highlights-grid">
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5l-3 2v-2H6a2 2 0 0 1-2-2V6zm3 2h10v2H7V8zm0 3h7v2H7v-2z"/></svg></span><h3>Mode</h3><p>Classroom / Hybrid learning format</p></article>
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h1a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V2zm11 8H6v8h12v-8zM6 8h12V6H6v2z"/></svg></span><h3>Weekly Hours</h3><p>8 to 10 guided learning hours per week</p></article>
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M4 5h16v14H4V5zm2 2v10h12V7H6zm2 2h3v3H8V9zm5 0h3v3h-3V9zm-5 5h8v2H8v-2z"/></svg></span><h3>Projects</h3><p>3 portfolio-driven projects with mentor review.</p></article>
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z"/></svg></span><h3>Support</h3><p>Weekly doubt-clearing sessions and feedback loops.</p></article>
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 3l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V7l8-4zm-1 12l5-5-1.4-1.4L11 12.2 9.4 10.6 8 12l3 3z"/></svg></span><h3>Outcome</h3><p>Job-ready workflows and practical confidence in analysis.</p></article>
+					<article class="card"><span class="icon-mark" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3 5h18v10H3V5zm2 2v6h14V7H5zm7 9l4 3H8l4-3z"/></svg></span><h3>Certificate</h3><p>LSA Full Stack Java Completion Certificate</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="explore-courses" id="explore-courses">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">More Programs</p>
+					<h2 class="section-title">Explore More Course Offerings</h2>
+					<p class="section-subtitle">Find additional programs from Lords Skill Academy. These quick links are kept visible for fast navigation.</p>
+				</div>
+				<div class="explore-courses-grid">
+					<article class="explore-course-card">
+						<h3>Cyber Security Course</h3>
+						<p>Learn ethical hacking, vulnerability assessment, SOC basics, and incident response skills.</p>
+						<a class="btn btn-secondary" href="../cyber-security/" aria-label="Open Cyber Security course page">View Course</a>
+					</article>
+					<article class="explore-course-card">
+						<h3>School of Programming</h3>
+						<p>Build strong coding foundations with job-focused programming tracks and practical projects.</p>
+						<a class="btn btn-secondary" href="../school-of-programming/" aria-label="Open School of Programming page">View Program</a>
+					</article>
+					<article class="explore-course-card">
+						<h3>More Courses Coming Soon</h3>
+						<p>New specializations will be announced soon. Connect with us to get notified when they open.</p>
+						<a class="btn btn-secondary" href="../contact-us/" aria-label="Contact us for upcoming courses">Get Updates</a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="why-course">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Why This Course</p>
+					<h2 class="section-title">What You Will Gain</h2>
+					<p class="section-subtitle">This program merges technical depth, real practice, and career preparation so you build capability, not just theory.</p>
+				</div>
+				<div class="why-list">
+					<article class="why-item"><span class="why-step">01</span><div class="why-copy"><h3>Job-Ready Skills</h3><p>Learn to clean, analyze, and present data using modern workflows.</p></div></article>
+					<article class="why-item"><span class="why-step">02</span><div class="why-copy"><h3>Hands-On Learning</h3><p>Every module includes labs and exercises tied to practical use-cases.</p></div></article>
+					<article class="why-item"><span class="why-step">03</span><div class="why-copy"><h3>Mentor Support</h3><p>Get guidance from experienced mentors on concepts and execution.</p></div></article>
+					<article class="why-item"><span class="why-step">04</span><div class="why-copy"><h3>Practical Projects</h3><p>Build end-to-end mini case studies to strengthen your portfolio.</p></div></article>
+					<article class="why-item"><span class="why-step">05</span><div class="why-copy"><h3>Career Preparation</h3><p>Interview strategy, profile polish, and project storytelling support.</p></div></article>
+				</div>
+			</div>
+		</section>
+
+		<section id="who-for">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Who Is This Course For?</p>
+					<h2 class="section-title">Built for Diverse Learners</h2>
+				</div>
+				<div class="learner-list">
+					<article class="learner-item"><span class="learner-accent" aria-hidden="true"></span><div class="learner-copy"><h3>Students</h3><p>Build practical data skills early and stand out in internships.</p></div></article>
+					<article class="learner-item"><span class="learner-accent" aria-hidden="true"></span><div class="learner-copy"><h3>Fresh Graduates</h3><p>Bridge the gap between academic learning and hiring expectations.</p></div></article>
+					<article class="learner-item"><span class="learner-accent" aria-hidden="true"></span><div class="learner-copy"><h3>Career Switchers</h3><p>Transition into data-driven roles with structured guidance.</p></div></article>
+					<article class="learner-item"><span class="learner-accent" aria-hidden="true"></span><div class="learner-copy"><h3>Working Professionals</h3><p>Upskill with job-relevant tools and project-based practice.</p></div></article>
+				</div>
+			</div>
+		</section>
+
+		<section id="syllabus">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Syllabus</p>
+					<h2 class="section-title">Modules You Will Learn</h2>
+				</div>
+				<div class="syllabus-shell" data-syllabus>
+					<div class="syllabus-tabs-wrap">
+						<button class="syllabus-scroll-arrow is-hidden" type="button" aria-label="Scroll syllabus tabs left" data-syllabus-prev>&#8249;</button>
+						<div class="syllabus-tabs" role="tablist" aria-label="Course modules">
+							<button class="syllabus-tab active" type="button" role="tab" aria-selected="true" data-module="1"><small>Course 1</small><strong>Java Foundations and OOP</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="2"><small>Course 2</small><strong>Spring Boot Backend Development</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="3"><small>Course 3</small><strong>Frontend with React and JavaScript</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="4"><small>Course 4</small><strong>SQL, NoSQL, and Data Modeling</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="5"><small>Course 5</small><strong>API Security, Testing, and DevOps Basics</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="6"><small>Course 6</small><strong>Capstone Projects and Career Preparation</strong></button>
+						</div>
+						<button class="syllabus-scroll-arrow" type="button" aria-label="Scroll syllabus tabs right" data-syllabus-next>&#8250;</button>
+					</div>
+					<div class="syllabus-content" data-syllabus-content>
+						<h3>Java Foundations and OOP</h3>
+						<p><strong>Topics covered:</strong></p>
+						<ul class="syllabus-topics">
+							<li>Java syntax, data types, and operators</li>
+							<li>Control flow, methods, and exception handling</li>
+							<li>Classes, objects, inheritance, and polymorphism</li>
+							<li>Collections framework and practical coding patterns</li>
+							<li>Problem-solving exercises for coding confidence</li>
+						</ul>
+					</div>
+					<div class="syllabus-download-wrap">
+						<a class="syllabus-download-btn" href="../blog/">Download Syllabus</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Projects</p>
+					<h2 class="section-title">Build Practical Portfolio Projects</h2>
+				</div>
+				<div class="grid projects-grid">
+					<details class="project-panel">
+						<summary class="project-summary">
+							<h3>Sales Data Analysis Dashboard</h3>
+							<p>Analyze multi-month sales trends and create visual dashboards to track product and region performance.</p>
+						</summary>
+						<div class="project-body">
+							<p><strong>Skills:</strong> Data cleaning, aggregation, visualization, insight reporting.</p>
+							<ul>
+								<li>Build KPI dashboards for monthly/quarterly views</li>
+								<li>Identify top products, regions, and revenue drop-offs</li>
+								<li>Present decision-ready recommendations</li>
+							</ul>
+						</div>
+					</details>
+					<details class="project-panel">
+						<summary class="project-summary">
+							<h3>Customer Behavior Analysis</h3>
+							<p>Study customer patterns to identify retention opportunities, segmentation insights, and behavior signals.</p>
+						</summary>
+						<div class="project-body">
+							<p><strong>Skills:</strong> SQL analysis, cohort logic, exploratory profiling.</p>
+							<ul>
+								<li>Segment users by purchase and activity trends</li>
+								<li>Track repeat behavior using cohort tables</li>
+								<li>Recommend actions to improve retention</li>
+							</ul>
+						</div>
+					</details>
+					<details class="project-panel">
+						<summary class="project-summary">
+							<h3>Exploratory Data Analysis Report</h3>
+							<p>Perform full EDA on a real dataset and publish a structured report with actionable findings.</p>
+						</summary>
+						<div class="project-body">
+							<p><strong>Skills:</strong> EDA framework, statistical checks, data storytelling.</p>
+							<ul>
+								<li>Detect anomalies, missing values, and key correlations</li>
+								<li>Use charts to explain patterns clearly</li>
+								<li>Deliver a concise findings report for stakeholders</li>
+							</ul>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<section class="journey" id="journey">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Learning Journey</p>
+					<h2 class="section-title"><span class="journey-title-highlight">Full Stack Java Learning Journey:</span> Your Path to Career Readiness</h2>
+				</div>
+				<div class="journey-timeline">
+					<svg class="journey-timeline-svg" viewBox="0 0 210 1000" preserveAspectRatio="none" aria-hidden="true">
+						<path id="journey-road-main" class="journey-road-path" d="" />
+						<circle class="journey-road-glow-halo" r="9.2">
+							<animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+								<mpath href="#journey-road-main"></mpath>
+							</animateMotion>
+						</circle>
+						<circle class="journey-road-glow-orb" r="5.6">
+							<animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+								<mpath href="#journey-road-main"></mpath>
+							</animateMotion>
+						</circle>
+						<circle class="journey-road-glow-core" r="2.4">
+							<animateMotion dur="4.4s" repeatCount="indefinite" rotate="auto">
+								<mpath href="#journey-road-main"></mpath>
+							</animateMotion>
+						</circle>
+						<g class="journey-road-nodes"></g>
+					</svg>
+					<div class="journey-item journey-left">
+						<div class="journey-box">
+							<h3 class="journey-box-title">Concept Clarity</h3>
+							<p class="journey-box-desc">Master foundational full stack java concepts, Python basics, and analytical thinking through structured lessons and guided exercises.</p>
+							<div class="journey-check">&#10003;</div>
+						</div>
+					</div>
+					<div class="journey-item journey-right">
+						<div class="journey-box">
+							<h3 class="journey-box-title">Hands-On Labs</h3>
+							<p class="journey-box-desc">Apply theory to practice with real datasets. Work through SQL, pandas, NumPy, and visualization tools in controlled lab environments.</p>
+							<div class="journey-check">&#10003;</div>
+						</div>
+					</div>
+					<div class="journey-item journey-left">
+						<div class="journey-box">
+							<h3 class="journey-box-title">Real-World Projects</h3>
+							<p class="journey-box-desc">Build 3 portfolio-ready projects analyzing actual data, solving business problems, and creating actionable insights.</p>
+							<div class="journey-check">&#10003;</div>
+						</div>
+					</div>
+					<div class="journey-item journey-right">
+						<div class="journey-box">
+							<h3 class="journey-box-title">Weekly Assessments</h3>
+							<p class="journey-box-desc">Evaluate your progress through regular quizzes, assignments, and mentor feedback to ensure continuous skill development.</p>
+							<div class="journey-check">&#10003;</div>
+						</div>
+					</div>
+					<div class="journey-item journey-left">
+						<div class="journey-box">
+							<h3 class="journey-box-title">Career Readiness</h3>
+							<p class="journey-box-desc">Polish your resume, practice interviews, master storytelling, and prepare for entry-level full stack java opportunities.</p>
+							<div class="journey-check">&#10003;</div>
+						</div>
+					</div>
+				</div>
+				<div class="journey-cta-wrap">
+					<button class="btn btn-primary">Download Course Brochure</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="career-support">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Career Support</p>
+					<h2 class="section-title">From Learning to Interviews</h2>
+				</div>
+				<div class="career-support-shell">
+					<aside class="career-support-intro">
+						<h3>Your Interview Readiness Track</h3>
+						<p>Move from learner to candidate with a step-by-step support system designed for real hiring conversations.</p>
+						<div class="career-visual" aria-hidden="true">
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6v1h-2v-1H5a2 2 0 0 1-2-2V5zm2 0v13h6V5H5zm8 5v8h6v-8h-6z"/>
+							</svg>
+							<div>
+								<strong>Mentor-led checkpoints</strong>
+								<span>Feedback loops at every stage of preparation</span>
+							</div>
+						</div>
+						<ul class="career-badges">
+							<li>Resume polish</li>
+							<li>Mock rounds</li>
+							<li>Storytelling drills</li>
+							<li>Job mapping</li>
+						</ul>
+					</aside>
+					<div class="career-road">
+						<article class="career-step">
+							<span class="career-step-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M4 5h16v14H4V5zm2 2v10h12V7H6zm2 2h3v2H8V9zm0 3h6v2H8v-2z"/></svg>
+							</span>
+							<div>
+								<h3>Resume and LinkedIn Guidance</h3>
+								<p>Shape a profile that clearly matches entry-level data role expectations.</p>
+							</div>
+						</article>
+						<article class="career-step">
+							<span class="career-step-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3 4h18v12H3V4zm2 2v8h14V6H5zm3 11h8v2H8v-2z"/></svg>
+							</span>
+							<div>
+								<h3>Mock Interviews</h3>
+								<p>Practice technical and HR rounds and learn exactly where to improve.</p>
+							</div>
+						</article>
+						<article class="career-step">
+							<span class="career-step-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2l2.9 6 6.6.8-4.9 4.4 1.4 6.4L12 16.8 6 19.6l1.4-6.4L2.5 8.8 9 8z"/></svg>
+							</span>
+							<div>
+								<h3>Project Storytelling</h3>
+								<p>Present your projects with business outcomes, not just code and charts.</p>
+							</div>
+						</article>
+						<article class="career-step">
+							<span class="career-step-icon" aria-hidden="true">
+								<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2l7 4v6c0 5-3.4 8.7-7 10-3.6-1.3-7-5-7-10V6l7-4zm-1 11l4-4-1.4-1.4L11 10.2 9.4 8.6 8 10l3 3z"/></svg>
+							</span>
+							<div>
+								<h3>Placement and Mentorship</h3>
+								<p>Get role mapping, application support, and mentor guidance until interview stage.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="certification">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Certification</p>
+					<h2 class="section-title">Recognition That Supports Your Career</h2>
+				</div>
+				<div class="certification-shell">
+					<aside class="certificate-preview-card">
+						<h3>Certificate Preview</h3>
+						<p>Add your sample certificate here so learners can see how the final credential looks.</p>
+						<div class="certificate-placeholder">
+							<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sample certificate placeholder">
+								<rect x="10" y="10" width="620" height="380" rx="14" fill="#ffffff" stroke="#0f4aa5" stroke-width="3"/>
+								<rect x="28" y="28" width="584" height="344" rx="10" fill="#f7faff" stroke="#d4e4ff" stroke-width="2"/>
+								<circle cx="320" cy="86" r="34" fill="#e9f0ff" stroke="#9f1239" stroke-width="2"/>
+								<path d="M320 68l8 16 18 3-13 12 3 18-16-8-16 8 3-18-13-12 18-3z" fill="#9f1239"/>
+								<text x="320" y="156" text-anchor="middle" font-size="30" font-weight="700" fill="#0f3368">Certificate of Completion</text>
+								<line x1="150" y1="210" x2="490" y2="210" stroke="#9bb8e4" stroke-width="2"/>
+								<text x="320" y="245" text-anchor="middle" font-size="17" fill="#37527d">This certifies that</text>
+								<text x="320" y="278" text-anchor="middle" font-size="22" font-weight="700" fill="#1f3f76">Student Name</text>
+								<text x="320" y="307" text-anchor="middle" font-size="16" fill="#3c5883">has successfully completed Full Stack Java Program</text>
+								<line x1="92" y1="336" x2="248" y2="336" stroke="#9bb8e4" stroke-width="2"/>
+								<line x1="392" y1="336" x2="548" y2="336" stroke="#9bb8e4" stroke-width="2"/>
+								<text x="170" y="356" text-anchor="middle" font-size="13" fill="#496289">Instructor Signature</text>
+								<text x="470" y="356" text-anchor="middle" font-size="13" fill="#496289">Authorized Signatory</text>
+							</svg>
+							<p class="certificate-placeholder-note">Placeholder: Replace this SVG block with your sample certificate image</p>
+						</div>
+					</aside>
+					<div class="certification-points">
+						<article class="cert-point">
+							<span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2l7 4v6c0 5-3.4 8.7-7 10-3.6-1.3-7-5-7-10V6l7-4zm-1 11l4-4-1.4-1.4L11 10.2 9.4 8.6 8 10l3 3z"/></svg></span>
+							<div><h3>Official LSA Completion Certificate</h3><p>Receive recognized completion proof from Lords Skill Academy.</p></div>
+						</article>
+						<article class="cert-point">
+							<span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M4 5h16v14H4V5zm2 2v10h12V7H6zm2 2h8v2H8V9zm0 4h8v2H8v-2z"/></svg></span>
+							<div><h3>Assessment-Backed Validation</h3><p>Skills are validated through practical checkpoints and assignments.</p></div>
+						</article>
+						<article class="cert-point">
+							<span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3 5h18v10H3V5zm2 2v6h14V7H5zm7 9l4 3H8l4-3z"/></svg></span>
+							<div><h3>Portfolio Evidence</h3><p>Show verified project work that supports your interview narrative.</p></div>
+						</article>
+						<article class="cert-point">
+							<span class="cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 3l8 4v6c0 5-3.4 8.7-8 10-4.6-1.3-8-5-8-10V7l8-4zm0 4l-3 1.5v3.5c0 2.7 1.6 4.9 3 5.8 1.4-.9 3-3.1 3-5.8V8.5L12 7z"/></svg></span>
+							<div><h3>Career-Focused Recognition</h3><p>Designed to strengthen your profile for entry-level data opportunities.</p></div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="mentors">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Trainers and Mentors</p>
+					<h2 class="section-title">Learn from Industry Practitioners</h2>
+				</div>
+				<div class="mentors-showcase">
+					<article class="mentor-profile">
+						<div class="mentor-photo-wrap"><img class="mentor-photo" src="../imgs/Trainers/mentor.jpg" alt="Senior data mentor teaching analytics and project storytelling" width="900" height="1200" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 24vw"></div>
+						<h3>Senior Data Mentor</h3>
+						<div class="mentor-meta">
+							<p class="mentor-role">Lead Mentor</p>
+							<span class="mentor-years">8+ Years Experience</span>
+						</div>
+						<p class="mentor-bio">Helps learners convert raw datasets into clear business stories and portfolio-ready case studies.</p>
+						<p><strong>Expertise:</strong> Python analytics, dashboards, business storytelling.</p>
+						<ul class="mentor-focus">
+							<li>Data Analytics</li>
+							<li>Business Insights</li>
+							<li>Portfolio Coaching</li>
+						</ul>
+					</article>
+					<article class="mentor-profile">
+						<div class="mentor-photo-wrap"><img class="mentor-photo" src="../imgs/Trainers/trainer.png" alt="Python and SQL trainer guiding students in practical lab sessions" width="900" height="1200" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 24vw"></div>
+						<h3>Java and Full Stack Trainer</h3>
+						<div class="mentor-meta">
+							<p class="mentor-role">Technical Trainer</p>
+							<span class="mentor-years">6+ Years Experience</span>
+						</div>
+						<p class="mentor-bio">Specializes in Java, Spring Boot, and full stack mentorship with project-driven lab training.</p>
+						<p><strong>Expertise:</strong> Java architecture, API development, full stack labs.</p>
+						<ul class="mentor-focus">
+							<li>Java Foundations</li>
+							<li>Spring Boot APIs</li>
+							<li>Hands-On Labs</li>
+						</ul>
+					</article>
+				</div>
+				<div class="mentors-cta-wrap">
+					<a class="btn btn-secondary" href="../trainers/">See More Trainers</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="hiring-partners">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Hiring Partners</p>
+					<h2 class="section-title">Trusted by Career-Focused Ecosystem Partners</h2>
+				</div>
+				<div class="partners-single">
+					<article class="card partner-card"><img class="partner-logo" src="../imgs/programming/hiring-partner.png" alt="Hiring partner network and ecosystem collaboration logos" width="1600" height="600" loading="lazy" decoding="async" sizes="(max-width: 1024px) 100vw, 70vw"></article>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">Student Gallery</p>
+					<h2 class="section-title">Classroom and Learning Moments</h2>
+				</div>
+				<div class="grid gallery-grid">
+					<article class="card"><img src="../imgs/programming/full-stack-java.jpg" alt="Full Stack Java classroom image with mentor-led lecture" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+					<article class="card"><img src="../imgs/programming/Labs.jpg" alt="Students practicing SQL and Python in a data lab" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+					<article class="card"><img src="../imgs/home/stu-collab.jpg" alt="Students collaborating on data analytics project tasks" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+					<article class="card"><img src="../imgs/community/meetup.jpg" alt="Community event image with learners discussing projects" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+					<article class="card"><img src="../imgs/community/grp-photo.jpg" alt="Full Stack Java batch group photo at learning center" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+					<article class="card"><img src="../imgs/home/hero-img.png" alt="Learner coding and analyzing datasets during practical session" width="1200" height="800" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 31vw"></article>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq">
+			<div class="container">
+				<div class="section-head">
+					<p class="section-kicker">FAQ</p>
+					<h2 class="section-title">Common Questions</h2>
+				</div>
+				<div class="faq-wrap">
+					<details class="faq-item">
+						<summary>Do I need prior coding experience for this course?</summary>
+						<div class="faq-answer"><p>No. The program starts from fundamentals and gradually moves to intermediate concepts.</p></div>
+					</details>
+					<details class="faq-item">
+						<summary>Will I work on real projects?</summary>
+						<div class="faq-answer"><p>Yes. You will complete portfolio-ready projects that reflect practical business-style analysis tasks.</p></div>
+					</details>
+					<details class="faq-item">
+						<summary>Is this course suitable for working professionals?</summary>
+						<div class="faq-answer"><p>Yes. The pace and support model are designed to help both full-time learners and professionals.</p></div>
+					</details>
+					<details class="faq-item">
+						<summary>What career support is included?</summary>
+						<div class="faq-answer"><p>You get resume and LinkedIn support, mock interviews, project storytelling, and mentorship.</p></div>
+					</details>
+					<details class="faq-item">
+						<summary>How can I enroll in the next batch?</summary>
+						<div class="faq-answer"><p>Use the Apply Now or Talk to a Career Advisor buttons to connect with the admissions team.</p></div>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<section class="final-cta" id="final-cta">
+			<div class="container">
+				<div class="cta-shell">
+					<h2>Ready to Build a Career in Full Stack Java?</h2>
+					<p>Seats are limited for the upcoming batch. Speak with our team and map your learning path.</p>
+					<div class="btn-row" style="justify-content:center;">
+						<a class="btn btn-primary" href="../contact-us/">Apply Now</a>
+						<a class="btn btn-secondary" href="../contact-us/">Talk to a Career Advisor</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer id="contact">
+<div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+<div class="footer-logo">
+<img src="../imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+</div>
+
+<div class="footer-grid">
+<div class="footer-section">
+<h3>Courses</h3>
+<ul>
+<li><a href="../school-of-programming/">Programming</a></li>
+<li><a href="../ds/">Data Science</a></li>
+<li><a href="../career-guidance/">Career Guidance</a></li>
+<li><a href="../trainers/">Our Trainers</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Resources</h3>
+<ul>
+<li><a href="../blog/">Blog</a></li>
+<li><a href="../community-events/">Community Events</a></li>
+<li><a href="../faq/">FAQ</a></li>
+<li><a href="../about-us/">About Us</a></li>
+<li><a href="../contact-us/">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Legal</h3>
+<ul>
+<li><a href="../privacy-policy/">Privacy Policy</a></li>
+<li><a href="../terms-and-conditions/">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+
+<div class="footer-section footer-office">
+<h3>LSA Office</h3>
+<ul class="footer-office-list">
+<li class="footer-office-item">
+<span class="footer-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" role="img" focusable="false">
+<path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5zm2.2-.5 6.8 5.53L18.8 5zM19 18.5V7.04l-6.37 5.18a1 1 0 0 1-1.26 0L5 7.04V18.5z"></path>
+</svg>
+</span>
+<a href="mailto:enquiry@lordsskillacademy.com">enquiry@lordsskillacademy.com</a>
+</li>
+<li class="footer-office-item">
+<span class="footer-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" role="img" focusable="false">
+<path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
+</svg>
+</span>
+<a href="tel:+919876543210">+91 98765 43210</a>
+</li>
+</ul>
+<div class="footer-map" aria-label="LSA office map">
+<iframe
+title="Lords Skill Academy Office Location"
+src="https://maps.google.com/maps?q=Lords%20Skill%20Academy%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2026 Lords Skill Academy. All rights reserved.</p>
+<p>Crafted with &#10084; for future innovators.</p>
+<p>Designed &amp; Developed by AV Digitals for Lords Skill Academy</p>
+</div>
+</div>
+</footer>
+<script>
+		(function () {
+			const timeline = document.querySelector('.journey-timeline');
+			if (!timeline) {
+				return;
+			}
+
+			const svg = timeline.querySelector('.journey-timeline-svg');
+			const roadPath = timeline.querySelector('.journey-road-path');
+			const nodesGroup = timeline.querySelector('.journey-road-nodes');
+
+			if (!svg || !roadPath || !nodesGroup) {
+				return;
+			}
+
+			let resizeTimer;
+
+			function drawJourneyRoad() {
+				const items = Array.from(timeline.querySelectorAll('.journey-item'));
+				if (items.length < 2) {
+					return;
+				}
+
+				const timelineRect = timeline.getBoundingClientRect();
+				const svgWidth = svg.clientWidth || 210;
+				const points = [];
+
+				items.forEach(function (item) {
+					const box = item.querySelector('.journey-box');
+					if (!box) {
+						return;
+					}
+
+					const boxRect = box.getBoundingClientRect();
+					const y = (boxRect.top - timelineRect.top) + (boxRect.height * 0.5);
+					const x = item.classList.contains('journey-left')
+						? ((boxRect.right - timelineRect.left) + 9)
+						: ((boxRect.left - timelineRect.left) - 9);
+
+					points.push({
+						x: x,
+						y: y,
+						side: item.classList.contains('journey-left') ? 'left' : 'right'
+					});
+				});
+
+				if (points.length < 2) {
+					return;
+				}
+
+				const allPoints = points;
+				const viewHeight = Math.max(Math.ceil(points[points.length - 1].y + 24), 120);
+
+				svg.setAttribute('viewBox', '0 0 ' + svgWidth + ' ' + viewHeight);
+
+				let d = 'M ' + allPoints[0].x.toFixed(1) + ' ' + allPoints[0].y.toFixed(1);
+
+				if (allPoints.length === 2) {
+					d += ' L ' + allPoints[1].x.toFixed(1) + ' ' + allPoints[1].y.toFixed(1);
+				} else {
+					for (let i = 1; i < allPoints.length; i += 1) {
+						const prev = allPoints[i - 1];
+						const curr = allPoints[i];
+						const dy = curr.y - prev.y;
+						const c1x = prev.x;
+						const c2x = curr.x;
+						const c1y = prev.y + dy * 0.52;
+						const c2y = curr.y - dy * 0.52;
+
+						d += ' C ' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) +
+							' ' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) +
+							' ' + curr.x.toFixed(1) + ' ' + curr.y.toFixed(1);
+					}
+				}
+
+				roadPath.setAttribute('d', d);
+				nodesGroup.innerHTML = '';
+			}
+
+			function scheduleRoadDraw() {
+				window.clearTimeout(resizeTimer);
+				resizeTimer = window.setTimeout(drawJourneyRoad, 120);
+			}
+
+			window.addEventListener('resize', scheduleRoadDraw);
+			window.addEventListener('load', scheduleRoadDraw);
+			scheduleRoadDraw();
+		})();
+</script>
+<script src='../js/programs-mega-menu.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

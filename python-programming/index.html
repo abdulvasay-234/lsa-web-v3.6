@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../imgs/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../imgs/Favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../imgs/Favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../imgs/Favicon/favicon.ico">
+    <link rel="manifest" href="../imgs/Favicon/site.webmanifest">
+    <meta name="description" content="Python Programming course at Lords Skill Academy for beginners with projects, logic building, and career-focused mentorship.">
+    <meta name="keywords" content="python programming course, beginner python, python training, coding fundamentals">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lordsskillacademy.com/python-programming/">
+    
+    <link rel='stylesheet' href='../css/global.css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg:#f5f8ff; --surface:#fff; --text:#10213a; --muted:#4d5f7b; --primary:#0c4a9a; --border:#dbe7fb; --radius:18px; --container:min(1160px,92vw); }
+        *{margin:0;padding:0;box-sizing:border-box;} body{font-family:'Plus Jakarta Sans','Segoe UI',sans-serif;color:var(--text);background:radial-gradient(circle at 92% 8%, rgba(159,18,57,.14), transparent 24%),radial-gradient(circle at 5% 32%, rgba(12,74,154,.12), transparent 22%),var(--bg);line-height:1.6;}
+        .container{width:var(--container);margin:0 auto;} main section{padding:clamp(3rem,7vw,5rem) 0;} .section-head{margin-bottom:1.5rem;} .section-kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-bottom:.5rem;} .section-title{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;font-weight:800;margin-bottom:.6rem;} .section-subtitle{max-width:740px;color:var(--muted);} 
+        .hero{padding:clamp(3rem,7vw,5.4rem) 0;background:linear-gradient(180deg,#2848ad 0%,#213f9a 100%);color:#fff;} .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08;margin-bottom:.9rem;} .hero p{max-width:720px;color:#d8e4ff;}
+        .badge-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem;} .badge{background:rgba(255,255,255,.12);border:1px solid rgba(203,216,255,.5);color:#eaf2ff;border-radius:999px;padding:.35rem .7rem;font-size:.82rem;font-weight:700;}
+        .grid{display:grid;gap:1rem;} .cards-2{grid-template-columns:repeat(2,minmax(0,1fr));} .cards-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+        .card{background:linear-gradient(155deg,#fff 0%,#f4f9ff 100%);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem;box-shadow:0 8px 20px rgba(16,33,58,.07);} .card h3{margin-bottom:.45rem;} .card p,.card li{color:var(--muted);} 
+        .list{list-style:none;display:grid;gap:.45rem;} .list li{position:relative;padding-left:1rem;} .list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#1d4ed8;position:absolute;left:0;top:.55rem;}
+        .soft{background:linear-gradient(180deg,#eef5ff 0%,#f7fbff 100%);border-top:1px solid #d8e6fb;border-bottom:1px solid #d8e6fb;}
+        .btn-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem;} .btn{border:0;border-radius:12px;padding:.8rem 1.2rem;min-height:44px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;} .btn-primary{background:linear-gradient(135deg,#0c4a9a,#2563eb);color:#fff;} .btn-secondary{background:#fff;color:#07346f;border:1px solid var(--border);} 
+        @media (max-width:900px){.cards-2,.cards-3{grid-template-columns:1fr;}}
+    </style>
+                <style id="local-header-footer-fixes">
+/* Shared header alignment across all pages */
+
+@keyframes headerLogoOrbit {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-4px) rotate(-0.6deg);
+    }
+}
+
+@keyframes headerSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header,
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-bottom: 1px solid #dbe8ff;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.06);
+    backdrop-filter: blur(6px);
+}
+
+header .container,
+.header .container,
+header .container-wide,
+.header .container-wide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+header nav,
+.header-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.38rem 0.85rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 1rem;
+}
+
+.logo,
+header nav > a:first-child {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.logo img {
+    width: clamp(112px, 14vw, 156px);
+    height: auto;
+    object-fit: contain;
+    background-color: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 4px;
+    animation: headerLogoOrbit 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #1e40af;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu ul,
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul,
+.nav-links {
+    justify-content: flex-end !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.nav-links a:hover,
+.nav-links li a:hover {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+    text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+}
+
+.nav-menu a::after,
+.nav-links a::after,
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, #1e40af);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-links a:hover::after,
+.nav-links li a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+}
+
+@media (max-width: 991px) {
+    .hamburger-menu {
+        display: flex !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        display: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 62px !important;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column !important;
+        gap: 0.4rem;
+        padding: 0.85rem 1rem !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12) !important;
+        border-bottom: 1px solid #dbe8ff;
+        z-index: 1190;
+        animation: headerSlideDown 0.3s ease-out;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.35rem;
+        width: 100%;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a {
+        width: 100%;
+        padding: 0.75rem 0.4rem;
+        display: block;
+    }
+
+    .nav-menu a::after,
+    .nav-links a::after,
+    .nav-links li a::after {
+        bottom: 0.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .nav-menu,
+    .nav-links {
+        margin-left: auto !important;
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 1.25rem;
+        margin-left: auto;
+    }
+
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a {
+        padding: 0.4rem 0.55rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo img {
+        animation: none;
+    }
+
+    .nav-menu.active,
+    .nav-links.active,
+    .nav-menu a,
+    .nav-links a,
+    .nav-links li a,
+    .hamburger-menu span {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Shared programs mega-menu */
+.nav-menu > ul {
+    align-items: center;
+}
+
+.nav-menu .has-dropdown {
+    position: relative;
+}
+
+.nav-menu .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: #4b5563;
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.nav-menu .dropdown-toggle:hover,
+.nav-menu .has-dropdown.open .dropdown-toggle {
+    color: #1e3a8a;
+    background: rgba(30, 64, 175, 0.08);
+    transform: translateY(-1px);
+}
+
+.nav-menu .dropdown-caret {
+    font-size: 0.72rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-menu .has-dropdown.open .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-menu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background: #ffffff;
+    border: 1px solid #dbe8ff;
+    border-radius: 14px;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    min-width: 640px;
+    overflow: hidden;
+    z-index: 1210;
+}
+
+.nav-menu .programs-mega {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 320px;
+}
+
+.nav-menu .program-domains {
+    padding: 1.05rem;
+    background: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+}
+
+.nav-menu .program-domains-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.65rem;
+    color: #1f2937;
+}
+
+.nav-menu .program-domain-list {
+    list-style: none;
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+}
+
+.nav-menu .program-domain-list button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.72rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #1f2937;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.nav-menu .program-domain-list button:hover,
+.nav-menu .program-domain-list button.active {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.nav-menu .program-results {
+    padding: 1rem 1.05rem;
+}
+
+.nav-menu .program-panel {
+    display: none;
+}
+
+.nav-menu .program-panel.active {
+    display: block;
+}
+
+.nav-menu .program-group {
+    margin-bottom: 0.95rem;
+}
+
+.nav-menu .program-group:last-child {
+    margin-bottom: 0;
+}
+
+.nav-menu .program-group h4 {
+    margin: 0 0 0.55rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.nav-menu .program-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.nav-menu .program-card-link {
+    display: block;
+    padding: 0.72rem 0.78rem;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+.nav-menu .program-card-title {
+    display: block;
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.18rem;
+}
+
+.nav-menu .program-card-meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.nav-menu .dropdown-menu a::after,
+.nav-menu .program-domain-list button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.nav-menu .dropdown-menu a:hover {
+    transform: none;
+    text-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .nav-menu .has-dropdown:hover .dropdown-menu,
+    .nav-menu .has-dropdown:focus-within .dropdown-menu,
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+        position: absolute;
+        top: calc(100% + 0.45rem);
+        left: 0;
+        transform: none;
+        width: min(860px, 88vw);
+    }
+
+    .nav-menu .program-card-link:hover {
+        border-color: #fecaca;
+        background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    }
+
+    .nav-menu .program-card-link:hover .program-card-title {
+        color: #b91c1c;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-menu .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-top: 0.3rem;
+        width: 100%;
+        transform: none;
+    }
+
+    .nav-menu .programs-mega {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .nav-menu .program-domains {
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-menu .program-domains-title {
+        font-size: 1rem;
+    }
+
+    .nav-menu .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu .has-dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Final consistency override for pages with local header/nav styles */
+header,
+.header {
+    padding: 0 !important;
+}
+
+header nav,
+.header-content {
+    max-width: min(1200px, 100%) !important;
+    width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 0.38rem 0.85rem !important;
+    gap: 1rem !important;
+    align-items: center !important;
+}
+
+.nav-menu {
+    margin-left: auto !important;
+}
+
+.nav-menu > ul {
+    gap: 1.25rem !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-menu a,
+.nav-links a,
+.nav-links li a,
+.nav-menu .dropdown-toggle {
+    padding: 0.4rem 0.55rem !important;
+}
+
+@media (max-width: 991px) {
+    .nav-menu.active,
+    .nav-links.active {
+        padding: 0.85rem 1rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .nav-menu.active ul,
+    .nav-links.active {
+        gap: 0.35rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu.active a,
+    .nav-links.active a,
+    .nav-links.active li a,
+    .nav-menu.active .dropdown-toggle {
+        padding: 0.75rem 0.4rem !important;
+    }
+}
+
+/* Shared footer spacing and layout */
+footer,
+footer#contact,
+#contact {
+    margin-top: 1.6rem !important;
+    padding: 3rem 0 2.6rem !important;
+}
+
+footer [style*="max-width: 1400px"],
+footer .container {
+    width: min(1200px, 100%) !important;
+    max-width: min(1200px, 100%) !important;
+    margin: 0 auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+footer .footer-logo {
+    margin-bottom: 0.5rem !important;
+}
+
+footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    margin-top: 1.2rem !important;
+}
+
+footer .footer-section ul,
+footer .footer-col ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.4rem !important;
+}
+
+footer .footer-office-list {
+    list-style: none !important;
+    display: grid !important;
+    gap: 0.68rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .footer-office-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.6rem !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+footer .footer-icon {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 0.08rem !important;
+    color: #9fc1f0 !important;
+}
+
+footer .footer-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    fill: currentColor !important;
+}
+
+footer .footer-office-item strong {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid rgba(211, 229, 255, 0.2) !important;
+    margin-top: 1.2rem !important;
+    padding-top: 0.95rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.01em !important;
+    color: #b2c8ea !important;
+}
+
+footer .footer-bottom p {
+    margin: 0 !important;
+    line-height: 1.45 !important;
+    color: inherit !important;
+}
+
+@media (min-width: 640px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (min-width: 900px) {
+    footer .footer-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.2rem !important;
+    }
+
+    footer .footer-bottom {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+footer,
+footer#contact,
+#contact {
+    padding: 1.6rem 0 1.2rem !important;
+    margin-top: 1rem !important;
+}
+.footer-grid {
+    margin-top: 0.8rem !important;
+}
+.footer-bottom {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+}
+.footer-map {
+    margin-top: 0.5rem;
+    border: 1px solid #4b5563;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111827;
+}
+.footer-map iframe {
+    width: 100%;
+    min-height: 130px;
+    border: 0;
+    display: block;
+}
+    </style>
+
+    <link rel='stylesheet' href='../css/header-unify.css'>
+</head>
+<body>
+    <header class="header"><div class="container"><div class="header-content"><div class="logo"><a href="../"><img src="../imgs/home/LSA-Logo.png" alt="Lords Skill Academy Logo" width="160" height="48"></a></div><button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button><nav class="nav-menu" id="nav-menu" aria-label="Main Navigation"><ul><li><a href="../">Home</a></li><li><a href="../school-of-programming/">Programs</a></li><li><a href="../career-guidance/">Career Guidance</a></li><li><a href="../community-events/">Community</a></li><li><a href="../blog/">Blog</a></li><li><a href="../contact-us/">Contact Us</a></li></ul></nav></div></div></header>
+
+    <main>
+        <section class="hero"><div class="container"><p class="section-kicker" style="color:#cbd8ff;">School of Programming</p><h1>Python Programming Course</h1><p>Start from zero and build strong coding foundations through practical Python projects and guided mentorship.</p><div class="badge-row"><span class="badge">1 Month</span><span class="badge">3 Projects</span><span class="badge">Beginner Friendly</span></div></div></section>
+
+        <section><div class="container"><div class="section-head"><p class="section-kicker">Program Value</p><h2 class="section-title">Why This Course</h2></div><div class="grid cards-3"><article class="card"><h3>Strong Fundamentals</h3><p>Learn syntax, problem-solving, and coding logic correctly from day one.</p></article><article class="card"><h3>Hands-On Practice</h3><p>Build scripts and mini projects to turn theory into practical skill.</p></article><article class="card"><h3>Future-Ready Base</h3><p>Create a foundation for Data Science, Web Development, and Automation.</p></article></div></div></section>
+
+        <section class="soft"><div class="container"><div class="section-head"><p class="section-kicker">Curriculum</p><h2 class="section-title">Learning Roadmap</h2><p class="section-subtitle">A practical sequence focused on confidence, coding habits, and execution.</p></div><div class="grid cards-2"><article class="card"><h3>Core Python</h3><ul class="list"><li>Variables, loops, conditions, and functions</li><li>Writing readable and structured code</li></ul></article><article class="card"><h3>Data Structures</h3><ul class="list"><li>Lists, tuples, sets, and dictionaries</li><li>Problem-solving with collections</li></ul></article><article class="card"><h3>OOP Basics</h3><ul class="list"><li>Classes, objects, inheritance</li><li>Reusable program design</li></ul></article><article class="card"><h3>Practical Projects</h3><ul class="list"><li>Automation scripts and utility apps</li><li>Simple API and file-handling workflows</li></ul></article></div></div></section>
+
+        <section><div class="container"><div class="section-head"><p class="section-kicker">Career Outcome</p><h2 class="section-title">Where This Leads</h2></div><div class="grid cards-3"><article class="card"><h3>Python Developer (Beginner)</h3><p>Start with foundational coding and scripting responsibilities.</p></article><article class="card"><h3>Automation Support Roles</h3><p>Build tools that improve workflow and productivity.</p></article><article class="card"><h3>Next-Level Specializations</h3><p>Move into DS, backend, QA automation, or analytics tracks.</p></article></div><div class="btn-row"><a class="btn btn-primary" href="https://wa.me/919963051403?text=hello%20Lords%20skill%20academy%20iam%20intrested%20in%20Python%20program%20can%20you%20share%20more%20info%20on%20this" target="_blank" rel="noopener noreferrer">Contact Career Advisor</a><a class="btn btn-secondary" href="../school-of-programming/">Back to School of Programming</a></div></div></section>
+    </main>
+
+        <footer id="contact">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+            <div class="footer-logo">
+                <img src="../imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="../school-of-programming/">Programming</a></li>
+                        <li><a href="../ds/">Data Science</a></li>
+                        <li><a href="../career-guidance/">Career Guidance</a></li>
+                        <li><a href="../trainers/">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../community-events/">Community Events</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                        <li><a href="../about-us/">About Us</a></li>
+                        <li><a href="../contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="../terms-and-conditions/">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-office">
+                    <h3>LSA Office</h3>
+                    <ul class="footer-office-list">
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5zm2.2-.5 6.8 5.53L18.8 5zM19 18.5V7.04l-6.37 5.18a1 1 0 0 1-1.26 0L5 7.04V18.5z"></path>
+                                </svg>
+                            </span>
+                            <a href="mailto:enquiry@lordsskillacademy.com">enquiry@lordsskillacademy.com</a>
+                        </li>
+                        <li class="footer-office-item">
+                            <span class="footer-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                                    <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
+                                </svg>
+                            </span>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </li>
+                    </ul>
+                    <div class="footer-map" aria-label="LSA office map">
+                        <iframe
+                            title="Lords Skill Academy Office Location"
+                            src="https://maps.google.com/maps?q=Lords%20Skill%20Academy%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lords Skill Academy. All rights reserved.</p>
+                <p>Crafted with &#10084; for future innovators.</p>
+                <p>Designed &amp; Developed by AV Digitals for Lords Skill Academy</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/programs-mega-menu.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
