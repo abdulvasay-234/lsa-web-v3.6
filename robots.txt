@@ -1,0 +1,7 @@
+# Lords Skill Academy robots directives
+User-agent: *
+Allow: /
+Allow: /imgs/
+Allow: /css/
+
+Sitemap: https://lordsskillacademy.com/sitemap.xml
