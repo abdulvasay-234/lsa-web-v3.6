@@ -675,6 +675,60 @@
             }
         }
 
+        .placement-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+            background: rgba(8, 24, 55, 0.72);
+        }
+
+        .placement-modal[hidden] {
+            display: none;
+        }
+
+        .placement-modal-card {
+            position: relative;
+            width: min(100%, 680px);
+            max-height: calc(100vh - 2rem);
+            overflow: auto;
+            padding: 0.5rem;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 24px 70px rgba(4, 18, 46, 0.35);
+        }
+
+        .placement-modal-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 11px;
+        }
+
+        .placement-modal-close {
+            position: absolute;
+            top: 0.8rem;
+            right: 0.8rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 0;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #10213a;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(4, 18, 46, 0.24);
+        }
+
+        .placement-modal-close:hover,
+        .placement-modal-close:focus-visible {
+            background: #9f1239;
+            color: #ffffff;
+        }
+
         .affiliation-support {
             font-size: clamp(0.875rem, 2vw, 1rem);
             color: #6b7280;
@@ -1978,11 +2032,11 @@
                     <div class="liet-scroll">
                         <div class="liet-item">
                            
-                            <span class="liet-text">Cyber Security Course starting on 25 August, 2026</span>
+                            <span class="liet-text">Data Science With Gen AI New batch starting from 15 September, 2026</span>
                         </div>
                         <div class="liet-item">
                            
-                            <span class="liet-text">2-Day DevOps Bootcamp Starting on 25 August, 2026</span>
+                            <span class="liet-text">Cyber Security New batch starting from 15 September, 2026</span>
                         </div>
                     </div>
                 </div>
@@ -2570,7 +2624,7 @@
                                     <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
                                 </svg>
                             </span>
-                            <a href="tel:+919876543210">+91 98765 43210</a>
+                            <a href="tel:+919963051403">+91 9963051403</a>
                         </li>
                     </ul>
                     <div class="footer-map" aria-label="LSA office map">
@@ -2606,8 +2660,36 @@
         </a>
     </div>
 
+    <div class="placement-modal" id="placement-modal" role="dialog" aria-modal="true" aria-labelledby="placement-modal-title">
+        <div class="placement-modal-card">
+            <button class="placement-modal-close" type="button" aria-label="Close placement announcement">&times;</button>
+            <h2 id="placement-modal-title" class="sr-only">Placement announcement</h2>
+            <img class="placement-modal-image" src="./imgs/placement/zehra-placement.jpg" alt="Zehra placement announcement" width="1200" height="800">
+        </div>
+    </div>
+
     
     <script>
+        (function () {
+            const modal = document.getElementById('placement-modal');
+            const closeButton = modal && modal.querySelector('.placement-modal-close');
+            if (!modal || !closeButton) {
+                return;
+            }
+
+            closeButton.addEventListener('click', function () {
+                modal.hidden = true;
+            });
+
+            modal.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    modal.hidden = true;
+                }
+            });
+
+            closeButton.focus();
+        })();
+
         /**
          * IMPACT COUNTERS - animate when visible
          */

@@ -2121,7 +2121,7 @@ footer#contact,
                         </div>
                         <h3>Phone and WhatsApp</h3>
                         <p>Talk to us directly for quick clarification on courses, schedules, and learning path recommendations.</p>
-                        <a href="tel:+919963051403">+91 99630 51403</a>
+                        <a href="tel:+919963051403">+91 9963051403</a>
                     </article>
 
                     <article class="contact-card">
@@ -2151,6 +2151,7 @@ footer#contact,
             </div>
         </section>
 
+        <!-- Temporarily disabled enquiry form.
         <section class="contact-form reveal">
             <div class="container">
                 <div class="section-head" style="text-align: center;">
@@ -2216,6 +2217,7 @@ footer#contact,
                 </div>
             </div>
         </section>
+        -->
 
         <section class="map-section reveal">
             <div class="container">
@@ -2235,7 +2237,7 @@ footer#contact,
                             <li>Guidance on timelines, fees, and career outcomes</li>
                         </ul>
                         <div class="visit-cta">
-                            <a class="call-btn" href="tel:+919876543210">Call to Schedule Visit</a>
+                            <a class="call-btn" href="tel:+919963051403">Call to Schedule Visit</a>
                             <a class="dir-btn" href="https://maps.google.com/?q=Lords+Skill+Academy+Hyderabad" target="_blank" rel="noopener noreferrer">Get Directions</a>
                         </div>
                     </article>
@@ -2443,7 +2445,7 @@ footer#contact,
                                     <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
                                 </svg>
                             </span>
-                            <a href="tel:+919963051403">+91 99630 51403</a>
+                            <a href="tel:+919963051403">+91 9963051403</a>
                         </li>
                     </ul>
                     <div class="footer-map" aria-label="LSA office map">
@@ -2582,6 +2584,7 @@ footer#contact,
         }
 
         // Form submission
+        if (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             clearFormMessage();
@@ -2626,6 +2629,7 @@ footer#contact,
                 clearFormMessage();
             }, 6000);
         });
+        }
 
         // Real-time validation on blur
         document.querySelectorAll('#enquiryForm input, #enquiryForm select, #enquiryForm textarea').forEach(field => {

@@ -1580,6 +1580,60 @@
 			}
 		}
 
+		.placement-modal {
+			position: fixed;
+			inset: 0;
+			z-index: 2000;
+			display: grid;
+			place-items: center;
+			padding: 1rem;
+			background: rgba(8, 24, 55, 0.72);
+		}
+
+		.placement-modal[hidden] {
+			display: none;
+		}
+
+		.placement-modal-card {
+			position: relative;
+			width: min(100%, 680px);
+			max-height: calc(100vh - 2rem);
+			overflow: auto;
+			padding: 0.5rem;
+			background: #ffffff;
+			border-radius: 16px;
+			box-shadow: 0 24px 70px rgba(4, 18, 46, 0.35);
+		}
+
+		.placement-modal-image {
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: 11px;
+		}
+
+		.placement-modal-close {
+			position: absolute;
+			top: 0.8rem;
+			right: 0.8rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			border: 0;
+			border-radius: 50%;
+			background: #ffffff;
+			color: #10213a;
+			font-size: 1.6rem;
+			line-height: 1;
+			cursor: pointer;
+			box-shadow: 0 4px 14px rgba(4, 18, 46, 0.24);
+		}
+
+		.placement-modal-close:hover,
+		.placement-modal-close:focus-visible {
+			background: #9f1239;
+			color: #ffffff;
+		}
+
 		@media (max-width: 767px) {
 			.whatsapp-widget {
 				right: 0.75rem;
@@ -2934,11 +2988,11 @@ footer#contact,
 					<h1 class="hero-title">Data Science<br>Course</h1>
 					<div class="hero-meta-stack">
 						<div class="hero-pill">&#128197; 4 Months | Beginner to Intermediate</div>
-						<div class="hero-batch">&#128640; BATCH STARTS SOON</div>
+						<div class="hero-batch">&#128640; NEW BATCH STARTING FROM 15 SEPTEMBER, 2026</div>
 					</div>
 					<p class="hero-desc">Learn how to analyze data, build insights, and solve real-world problems using data. Transform raw data into actionable intelligence that drives business decisions.</p>
 					<div class="hero-cta-row">
-						<a class="hero-btn hero-btn-primary" href="../blog/" aria-label="Download data science curriculum">&#128229; Download<br>Curriculum</a>
+						<a class="hero-btn hero-btn-primary" href="https://drive.google.com/drive/folders/1apl6mHg0mC_M-Q4v4LOKA3c3bGkh4vqU?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open data science syllabus">&#128229; Download<br>Curriculum</a>
 						<a class="hero-btn hero-btn-secondary" href="../contact-us/" aria-label="Talk to a career advisor">Talk to a Career<br>Advisor</a>
 					</div>
 					<nav class="hero-seo-links" aria-label="Related learning pages">
@@ -2949,7 +3003,7 @@ footer#contact,
 					</nav>
 				</div>
 				<div class="hero-right" aria-label="Course Highlights">
-					<img class="hero-image" src="../imgs/ds-course/f13458688.jpg" alt="Data Science classroom training session for beginner learners at Lords Skill Academy" width="1200" height="800" fetchpriority="high" decoding="async" sizes="(max-width: 900px) 100vw, 46vw">
+					<img class="hero-image" src="../imgs/ds-course/2SP00638.jpg" alt="Data Science classroom training session for beginner learners at Lords Skill Academy" width="1200" height="800" fetchpriority="high" decoding="async" sizes="(max-width: 900px) 100vw, 46vw">
 					<div class="hero-metrics">
 						<article class="hero-metric-card">
 							<div class="hero-metric-label">Program</div>
@@ -3064,16 +3118,16 @@ footer#contact,
 					<div class="syllabus-tabs-wrap">
 						<button class="syllabus-scroll-arrow is-hidden" type="button" aria-label="Scroll syllabus tabs left" data-syllabus-prev>&#8249;</button>
 						<div class="syllabus-tabs" role="tablist" aria-label="Course modules">
-							<button class="syllabus-tab active" type="button" role="tab" aria-selected="true" data-module="1"><small>Course 1</small><strong>Python Foundations</strong></button>
-							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="2"><small>Course 2</small><strong>Data Analysis Essentials</strong></button>
-							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="3"><small>Course 3</small><strong>Statistics for Data Science</strong></button>
-							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="4"><small>Course 4</small><strong>SQL and Data Modeling</strong></button>
-							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="5"><small>Course 5</small><strong>Visualization and Storytelling</strong></button>
-							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" data-module="6"><small>Course 6</small><strong>Projects and Career Preparation</strong></button>
+							<button class="syllabus-tab active" type="button" role="tab" aria-selected="true" aria-controls="syllabus-content" data-module="1"><small>Course 1</small><strong>Python Foundations</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" aria-controls="syllabus-content" data-module="2"><small>Course 2</small><strong>Data Analysis Essentials</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" aria-controls="syllabus-content" data-module="3"><small>Course 3</small><strong>Statistics for Data Science</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" aria-controls="syllabus-content" data-module="4"><small>Course 4</small><strong>SQL and Data Modeling</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" aria-controls="syllabus-content" data-module="5"><small>Course 5</small><strong>Visualization and Storytelling</strong></button>
+							<button class="syllabus-tab" type="button" role="tab" aria-selected="false" aria-controls="syllabus-content" data-module="6"><small>Course 6</small><strong>Projects and Career Preparation</strong></button>
 						</div>
 						<button class="syllabus-scroll-arrow" type="button" aria-label="Scroll syllabus tabs right" data-syllabus-next>&#8250;</button>
 					</div>
-					<div class="syllabus-content" data-syllabus-content>
+					<div class="syllabus-content" id="syllabus-content" role="tabpanel" aria-live="polite" data-syllabus-content>
 						<h3>Python Foundations</h3>
 						<p><strong>Topics covered:</strong></p>
 						<ul class="syllabus-topics">
@@ -3085,7 +3139,7 @@ footer#contact,
 						</ul>
 					</div>
 					<div class="syllabus-download-wrap">
-						<a class="syllabus-download-btn" href="../blog/">Download Syllabus</a>
+						<a class="syllabus-download-btn" href="https://drive.google.com/drive/folders/1apl6mHg0mC_M-Q4v4LOKA3c3bGkh4vqU?usp=sharing" target="_blank" rel="noopener noreferrer">Download Syllabus</a>
 					</div>
 				</div>
 			</div>
@@ -3339,11 +3393,11 @@ footer#contact,
 				</div>
 				<div class="mentors-showcase">
 					<article class="mentor-profile">
-						<div class="mentor-photo-wrap"><img class="mentor-photo" src="../imgs/Trainers/mentor.jpg" alt="Senior data mentor teaching analytics and project storytelling" width="900" height="1200" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 24vw"></div>
-						<h3>Senior Data Mentor</h3>
+						<div class="mentor-photo-wrap"><img class="mentor-photo" src="../imgs/Trainers/Fareed.png" alt="Fareed teaching data analytics and project storytelling" width="900" height="1200" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 24vw"></div>
+						<h3>Fareed</h3>
 						<div class="mentor-meta">
-							<p class="mentor-role">Lead Mentor</p>
-							<span class="mentor-years">8+ Years Experience</span>
+							<p class="mentor-role">Lead Trainer</p>
+							<span class="mentor-years">15+ Years Experience</span>
 						</div>
 						<p class="mentor-bio">Helps learners convert raw datasets into clear business stories and portfolio-ready case studies.</p>
 						<p><strong>Expertise:</strong> Python analytics, dashboards, business storytelling.</p>
@@ -3351,21 +3405,6 @@ footer#contact,
 							<li>Data Analytics</li>
 							<li>Business Insights</li>
 							<li>Portfolio Coaching</li>
-						</ul>
-					</article>
-					<article class="mentor-profile">
-						<div class="mentor-photo-wrap"><img class="mentor-photo" src="../imgs/Trainers/trainer.png" alt="Python and SQL trainer guiding students in practical lab sessions" width="900" height="1200" loading="lazy" decoding="async" sizes="(max-width: 900px) 100vw, 24vw"></div>
-						<h3>Python and SQL Trainer</h3>
-						<div class="mentor-meta">
-							<p class="mentor-role">Technical Trainer</p>
-							<span class="mentor-years">6+ Years Experience</span>
-						</div>
-						<p class="mentor-bio">Specializes in beginner-friendly SQL and Python training with practical lab-driven mentoring.</p>
-						<p><strong>Expertise:</strong> SQL modeling, ETL basics, practical labs.</p>
-						<ul class="mentor-focus">
-							<li>Python Foundations</li>
-							<li>SQL Practice</li>
-							<li>Hands-On Labs</li>
 						</ul>
 					</article>
 				</div>
@@ -3502,7 +3541,7 @@ footer#contact,
 <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.4 22 2 13.6 2 3a1 1 0 0 1 1-1h4.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.24 1.01z"></path>
 </svg>
 </span>
-<a href="tel:+919876543210">+91 98765 43210</a>
+<a href="tel:+919963051403">+91 9963051403</a>
 </li>
 </ul>
 <div class="footer-map" aria-label="LSA office map">
@@ -3524,7 +3563,118 @@ allowfullscreen>
 </div>
 </div>
 </footer>
+<div class="placement-modal" id="placement-modal" role="dialog" aria-modal="true" aria-labelledby="placement-modal-title">
+	<div class="placement-modal-card">
+		<button class="placement-modal-close" type="button" aria-label="Close placement announcement">&times;</button>
+		<h2 id="placement-modal-title" class="sr-only">Placement announcement</h2>
+		<img class="placement-modal-image" src="../imgs/placement/zehra-placement.jpg" alt="Zehra placement announcement" width="1200" height="800">
+	</div>
+</div>
 <script>
+		(function () {
+			const modal = document.getElementById('placement-modal');
+			const closeButton = modal && modal.querySelector('.placement-modal-close');
+			if (!modal || !closeButton) {
+				return;
+			}
+
+			closeButton.addEventListener('click', function () {
+				modal.hidden = true;
+			});
+
+			modal.addEventListener('keydown', function (event) {
+				if (event.key === 'Escape') {
+					modal.hidden = true;
+				}
+			});
+
+			closeButton.focus();
+		})();
+
+		(function () {
+			const syllabus = document.querySelector('[data-syllabus]');
+			if (!syllabus) {
+				return;
+			}
+
+			const tabs = Array.from(syllabus.querySelectorAll('[data-module]'));
+			const content = syllabus.querySelector('[data-syllabus-content]');
+			const tabsContainer = syllabus.querySelector('.syllabus-tabs');
+			const previousButton = syllabus.querySelector('[data-syllabus-prev]');
+			const nextButton = syllabus.querySelector('[data-syllabus-next]');
+			const modules = {
+				1: { title: 'Python Foundations', topics: ['Python syntax, variables, and data types', 'Control flow and functions', 'Lists, dictionaries, tuples, and sets', 'File handling and exception basics', 'Mini exercises for coding confidence'] },
+				2: { title: 'Data Analysis Essentials', topics: ['NumPy arrays and vectorized operations', 'Pandas Series and DataFrames', 'Cleaning missing and inconsistent data', 'Grouping, aggregation, and filtering', 'Exploratory analysis with real datasets'] },
+				3: { title: 'Statistics for Data Science', topics: ['Descriptive statistics and distributions', 'Probability concepts and sampling', 'Correlation and regression basics', 'Hypothesis testing and confidence intervals', 'Interpreting statistical results'] },
+				4: { title: 'SQL and Data Modeling', topics: ['Queries, filters, sorting, and joins', 'Aggregations and subqueries', 'Window functions for analysis', 'Relational data modeling fundamentals', 'Build reports from connected tables'] },
+				5: { title: 'Visualization and Storytelling', topics: ['Choosing the right chart for the question', 'Matplotlib and Seaborn workflows', 'Dashboards and visual design principles', 'Finding patterns and communicating insights', 'Presenting findings to decision-makers'] },
+				6: { title: 'Projects and Career Preparation', topics: ['Build an end-to-end data project', 'Create a portfolio-ready case study', 'Resume and GitHub profile guidance', 'Mock interviews and practical assessments', 'Career planning for entry-level roles'] }
+			};
+
+			function selectModule(moduleNumber, shouldFocus) {
+				const module = modules[moduleNumber];
+				if (!module || !content) {
+					return;
+				}
+
+				tabs.forEach(function (tab) {
+					const isSelected = tab.dataset.module === String(moduleNumber);
+					tab.classList.toggle('active', isSelected);
+					tab.setAttribute('aria-selected', String(isSelected));
+					tab.tabIndex = isSelected ? 0 : -1;
+				});
+
+				content.innerHTML = '<h3>' + module.title + '</h3><p><strong>Topics covered:</strong></p><ul class="syllabus-topics">' + module.topics.map(function (topic) {
+					return '<li>' + topic + '</li>';
+				}).join('') + '</ul>';
+
+				if (shouldFocus) {
+					const selectedTab = tabs.find(function (tab) {
+						return tab.dataset.module === String(moduleNumber);
+					});
+					if (selectedTab) {
+						selectedTab.focus();
+					}
+				}
+			}
+
+			tabs.forEach(function (tab, index) {
+				tab.tabIndex = index === 0 ? 0 : -1;
+				tab.addEventListener('click', function () {
+					selectModule(tab.dataset.module, false);
+				});
+				tab.addEventListener('keydown', function (event) {
+					const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+					if (!direction) {
+						return;
+					}
+					event.preventDefault();
+					const nextIndex = (index + direction + tabs.length) % tabs.length;
+					selectModule(tabs[nextIndex].dataset.module, true);
+				});
+			});
+
+			function updateScrollButtons() {
+				if (!tabsContainer || !previousButton || !nextButton) {
+					return;
+				}
+				previousButton.classList.toggle('is-hidden', tabsContainer.scrollLeft <= 1);
+				nextButton.classList.toggle('is-hidden', tabsContainer.scrollLeft + tabsContainer.clientWidth >= tabsContainer.scrollWidth - 1);
+			}
+
+			if (tabsContainer && previousButton && nextButton) {
+				previousButton.addEventListener('click', function () {
+					tabsContainer.scrollBy({ left: -tabsContainer.clientWidth * 0.8, behavior: 'smooth' });
+				});
+				nextButton.addEventListener('click', function () {
+					tabsContainer.scrollBy({ left: tabsContainer.clientWidth * 0.8, behavior: 'smooth' });
+				});
+				tabsContainer.addEventListener('scroll', updateScrollButtons, { passive: true });
+				window.addEventListener('resize', updateScrollButtons);
+				updateScrollButtons();
+			}
+		})();
+
 		(function () {
 			const timeline = document.querySelector('.journey-timeline');
 			if (!timeline) {
